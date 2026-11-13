@@ -1,17 +1,18 @@
 # World War I study guide
 
-A static, interactive study guide based on the supplied classroom slides, Paris Peace Conference handouts, and three homework reading bundles.
+A static, interactive study guide based on the supplied classroom slides, Paris Peace Conference handouts, three homework reading bundles, royal telegrams, Western Front accounts, and two Crash Course video transcripts.
 
 Live guide: https://wwi-unit-study-guide.themaclan-2484.chatgpt.site
 
 ## Included
 
-- **Summary:** 14 detailed sections covering the slide deck.
+- **Summary:** 18 searchable, printable sections: the original 14 slide sections plus four sections covering the telegrams, Western Front accounts, and videos.
 - **Slides:** all 127 original slides, with navigation and the original PDF.
 - **Readings:** three detailed summaries, each followed by the original textbook photographs (4, 3, and 5 pages).
 - **Quiz:** 87 multiple-choice questions based only on the slide deck with 4–10 choices, explanations, topic filters, and source links.
 - **Practice tests:** five distinct tests, each with 5 political-cartoon questions, 10 content multiple-choice questions, 7 blanks, and 2 short answers. All multiple-choice questions use only the slides, including combination choices and chronology.
 - **Timeline:** 84 sourced dates and periods, with search and theme/era filters.
+- **Extra Information:** six source guides covering the royal-cousins background, all ten Willy–Nicky telegrams, Clapham’s memoir, Remarque’s novel, and Crash Course 209 and 210. Includes category filters, search, dated telegram paraphrases, a crisis chronology, comparisons, terms, and links to both videos.
 - **Paris Peace Conference:** 17 country and movement perspectives, plus all 21 original document pages.
 
 Practice-test answers unlock after all 24 responses in that individual test are completed and submitted. Objective questions are checked automatically; short answers provide model responses and a four-point self-assessment rubric. Equivalent fill-in wording can be manually credited. Progress is stored in the current browser's local storage; it does not sync between devices.
@@ -36,13 +37,15 @@ npm install
 npm run test:dom
 ```
 
-The first command validates content, assets, slide-only multiple-choice sources, scoring, completion gates, and saved-state migration without installing packages. The DOM check also exercises navigation, all five practice tests, answer visibility, persistence, readings, timeline filters, and the existing quiz. DOM checks are functional checks and do not substitute for visual browser review.
+The first command validates content, assets, slide-only multiple-choice sources, scoring, completion gates, and saved-state migration without installing packages. The DOM check also exercises navigation, all five practice tests, answer visibility, persistence, readings, timeline filters, extra-information search and deep links, summary printing, keyboard navigation, and the existing quiz. DOM checks are functional checks and do not substitute for visual browser review.
 
 ## Content and structure
 
-`dist/` is the deployable website. `app.js` handles the original notes, viewers, and quiz; `extras.js` handles readings, practice tests, and the timeline. Scoring logic is in the two engine modules. JSON files contain the course content. All material is bundled locally: no analytics, tracking, external fonts, or AI grading services are used.
+`dist/` is the deployable website. `app.js` handles the original notes, viewers, and quiz; `extras.js` handles readings, practice tests, and the timeline. The new `supplement.js` module renders Extra Information and contributes its four source-linked summary sections; `extra-information.json` contains the editable study notes and source references. Scoring logic is in the two engine modules. JSON files contain the course content. All material is bundled locally: no analytics, tracking, external fonts, or AI grading services are used.
 
 `source/` contains the editorial scripts used to generate the JSON content. The scripts for readings, practice tests, and the timeline resolve paths relative to this repository. Earlier slide and quiz extraction scripts also document the original preparation and may refer to the original workspace/source PDF path; the ready-to-run content and assets are already in `dist/`.
+
+The new material uses clearly labeled study notes and paraphrases of printed sources, not verbatim transcriptions. Handwritten annotations and worksheet responses are excluded, and no new photographs or annotated scans are published. Clapham is identified as a memoirist; Remarque’s assigned passage is identified as fiction. The six photo references and PDF page references in the new notes point to the supplied class materials.
 
 Historical corrections and conflicting textbook estimates are marked in the guide. Uploaded pages remain unchanged and keep their supplied order. Classroom directions within documents are preserved as source material, not treated as instructions to the application.
 
