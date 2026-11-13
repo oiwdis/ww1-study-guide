@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study guide stats</title>
+<meta name="theme-color" content="#f5f3eb">
+<link rel="stylesheet" href="styles.css">
+<style>
+main.stats{max-width:1240px;padding:26px 32px 72px}
+.stats-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:22px}
+main.stats h1{font-family:var(--serif);font-weight:400;font-size:32px;letter-spacing:-.4px;margin:0}
+.lede{color:var(--muted);font-size:13px;line-height:1.5;margin:6px 0 0;max-width:460px}
+.key-form{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:flex-end}
+.key-form label{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.key-form input[type=password]{width:220px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 10px;font-size:13px}
+.key-form .check{color:var(--ink)}
+#status{min-height:1.2em;font-size:13px;margin:0 0 12px}
+#status.error{color:var(--rust)}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);background:var(--surface);margin:0 0 8px}
+.tile{padding:14px 14px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.tile:nth-child(4n){border-right:0}
+tr.person{cursor:pointer}
+tr.person.selected td,tr.person:hover td{background:#f3f4ec}
+.name-link{background:none;border:0;padding:0;color:var(--green);font:inherit;font-weight:650;border-radius:0;text-align:left}
+.tile b{display:block;font:28px/1 var(--serif);color:var(--ink);margin:0 0 7px}
+.tile span{display:block;font-size:11px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:1.4fr .85fr;gap:42px;align-items:start}
+.cols.even{grid-template-columns:1fr 1fr}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:30px 0 12px}
+main.stats h2{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:0;margin:30px 0 12px}
+.section-head h2{margin:0}
+.section-head select{border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:12px;padding:7px 8px}
+.chart-scroll{overflow-x:auto}
+.chart-scroll svg{display:block;max-width:100%}
+.bar-row{display:grid;grid-template-columns:minmax(108px,150px) 1fr 36px;gap:10px;align-items:center;margin:0 0 8px;font-size:12px}
+.bar-name{color:var(--ink)}
+.bar-n{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.track{display:block;height:7px;background:#e4e7db}
+.track>span{display:block;height:100%;background:var(--green)}
+.table-wrap{overflow-x:auto;border-top:1px solid var(--line)}
+main.stats table{width:100%;border-collapse:collapse;background:transparent;border:0;margin:0;font-size:13px}
+main.stats th,main.stats td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+main.stats th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;background:transparent}
+main.stats th button{background:none;border:0;padding:0;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700;border-radius:0}
+main.stats th button[aria-sort=ascending]::after{content:' \2191'}
+main.stats th button[aria-sort=descending]::after{content:' \2193'}
+tr.attempt{cursor:pointer}
+tr.attempt:hover td{background:#f3f4ec}
+tr.detail td{background:#f7f6f0;padding:12px 14px 16px}
+tr.detail table{font-size:12px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.ok{color:#2d5a38}
+.bad{color:var(--rust)}
+.acc{display:inline-block;width:64px;height:6px;background:#e4e7db;vertical-align:middle;margin-right:8px}
+.acc>span{display:block;height:100%;background:var(--green)}
+.rank{list-style:none;margin:0;padding:0}
+.rank li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.rank b{font-weight:650;font-variant-numeric:tabular-nums}
+.empty{color:var(--muted);font-size:13px;margin:0}
+@media(max-width:900px){
+ main.stats{padding:22px 16px 56px}
+ .stats-head{display:block}
+ .key-form{display:grid;grid-template-columns:1fr auto;justify-content:stretch;margin-top:16px;width:100%}
+ .key-form label:first-child{grid-column:1 / -1;display:grid;grid-template-columns:auto minmax(0,1fr);width:100%}
+ .key-form input[type=password]{width:100%;min-width:0}
+ .key-form .check{grid-column:1 / -1}
+ .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tile{border-bottom:1px solid var(--line)}
+ .tile:nth-child(2n){border-right:0}
+ .cols,.cols.even{grid-template-columns:1fr;gap:8px}
+ .bar-row{grid-template-columns:minmax(0,1fr) auto;gap:4px 8px}
+ .bar-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .track{grid-column:1 / -1}
+ #attempts,#missed{overflow:visible}
+ #attempts table,#attempts thead,#attempts tbody,#missed table,#missed thead,#missed tbody{display:block;width:100%}
+ #attempts thead tr{display:flex;flex-wrap:wrap;gap:8px 14px}
+ #attempts thead th,#missed thead{border:0;padding:0 0 8px}
+ #missed thead{display:none}
+ #attempts tr.attempt{display:grid;grid-template-columns:1fr auto;column-gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+ #attempts tr.attempt td{border:0;padding:0}
+ #attempts tr.attempt td:nth-child(1){font-weight:650}
+ #attempts tr.attempt td:nth-child(2),#attempts tr.attempt td:nth-child(4){text-align:right}
+ #attempts tr.attempt td:nth-child(6){grid-column:1 / -1;color:var(--muted);font-size:12px}
+ #attempts tr.detail,#attempts tr.detail td{display:block}
+ #missed tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
+ #missed td{display:block;border:0;padding:2px 0}
+ #missed td::before{content:attr(data-label);display:block;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+}
+</style>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="./"><span class="book-mark" aria-hidden="true">W</span><span>HISTORY <span class="brand-light">/ STATS</span></span></a></header>
+<main class="stats">
+<div class="stats-head">
+<div>
+<h1>Stats</h1>
+<p class="lede">Study activity, including names entered before a quiz or practice test.</p>
+</div>
+<form class="key-form" id="key-form">
+<label>Stats key <input id="key" type="password" autocomplete="current-password" required></label>
+<button class="btn primary" id="load" type="submit">Load</button>
+<label class="check"><input id="remember" type="checkbox"> Remember on this device</label>
+<button class="btn small ghost" id="forget" type="button">Forget key</button>
+</form>
+</div>
+<p id="status" role="status"></p>
+<div id="report" hidden>
+<div class="tiles" id="tiles"></div>
+<div class="cols">
+<section>
+<h2>Activity</h2>
+<div id="chart"></div>
+</section>
+<section>
+<h2>Events</h2>
+<div id="events"></div>
+</section>
+</div>
+<h2>People</h2>
+<div class="table-wrap" id="people"></div>
+<div class="section-head">
+<h2>Attempts</h2>
+<label>Name <select id="name"><option value="">All names</option></select></label>
+</div>
+<div class="table-wrap" id="attempts"></div>
+<h2>Most-missed questions</h2>
+<div class="table-wrap" id="missed"></div>
+<div class="cols even">
+<section>
+<h2>Top slides</h2>
+<div id="slides"></div>
+</section>
+<section>
+<h2>Top readings</h2>
+<div id="readings"></div>
+</section>
+</div>
+</div>
+</main>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1623854f513a4814b9dbfb2ead5f1b6f"}'></script>
+<script>
+const KEY='wwi-stats-key';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const keyEl=document.querySelector('#key'),rememberEl=document.querySelector('#remember'),statusEl=document.querySelector('#status'),report=document.querySelector('#report'),nameEl=document.querySelector('#name'),loadBtn=document.querySelector('#load');
+const labels={section_view:'Section view',slide_viewed:'Slide viewed',reading_opened:'Reading opened',quiz_started:'Quiz started',quiz_answered:'Quiz answered',quiz_completed:'Quiz completed',practice_started:'Practice started',practice_answered:'Practice answered',practice_completed:'Practice completed',timeline_interaction:'Timeline',paris_viewed:'Paris page',extra_viewed:'Extra information'};
+let data=null,sortKey='ts',sortDir='desc',openId='';
+const label=event=>labels[event]||event;
+const empty=text=>`<p class="empty">${esc(text)}</p>`;
+function duration(ms){const s=Math.max(0,Math.round((Number(ms)||0)/1000));if(s<60)return s+'s';const m=Math.floor(s/60);return m+'m'+(s%60?` ${s%60}s`:'');}
+function when(ts){const d=new Date(ts);return Number.isNaN(d.getTime())?String(ts||''):d.toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}
+function percent(score){return score&&score.attempts?`${score.average_percent}%`:'—';}
+function tile(value,text){return `<div class="tile"><b>${esc(value)}</b><span>${esc(text)}</span></div>`;}
+function chart(days){
+ if(!days.length) return empty('No activity yet.');
+ const max=Math.max(...days.map(d=>Number(d.count)||0),1);
+ const slot=days.length>12?42:56;
+ const w=days.length*slot,h=168,base=132;
+ const bars=days.map((d,i)=>{
+  const count=Number(d.count)||0,bh=Math.max(count?2:0,(count/max)*104),x=i*slot+12,y=base-bh;
+  return `<rect x="${x}" y="${y}" width="22" height="${bh}" fill="#2f4c3d"><title>${esc(d.day)}: ${count} events</title></rect><text x="${x+11}" y="${base+16}" text-anchor="middle" font-size="10" fill="#68716a">${esc(String(d.day||'').slice(5))}</text>`;
+ }).join('');
+ const wide=days.length>12;
+ return `<div class="chart-scroll"><svg viewBox="0 0 ${w} ${h}" ${wide?`width="${w}" height="${h}"`:'width="100%" height="168"'} role="img" aria-label="Events per day">${bars}</svg></div>`;
+}
+function bars(events){
+ if(!events.length) return empty('No events yet.');
+ const rows=[...events].sort((a,b)=>Number(b.count)-Number(a.count));
+ const max=Math.max(...rows.map(row=>Number(row.count)||0),1);
+ return rows.map(row=>`<div class="bar-row"><span class="bar-name">${esc(label(row.event))}</span><span class="track" aria-hidden="true"><span style="width:${Math.max(2,Math.round(Number(row.count)/max*100))}%"></span></span><span class="bar-n">${esc(row.count)}</span></div>`).join('');
+}
+function rank(items,kind){
+ if(!items.length) return empty(kind==='slides'?'No slides viewed yet.':'No readings opened yet.');
+ return `<ol class="rank">${items.map(item=>{const n=String(item.page||'').split('/').pop();const title=kind==='slides'?`Slide ${n}`:`Reading ${n}`;return `<li><span>${esc(title)}</span><b>${esc(item.count)}</b></li>`;}).join('')}</ol>`;
+}
+function selectedName(){return new URLSearchParams(location.search).get('name')||'';}
+function setName(name){
+ const url=new URL(location.href);
+ if(name) url.searchParams.set('name',name); else url.searchParams.delete('name');
+ history.replaceState(null,'',url);
+ openId='';
+ load();
+}
+function filtered(){
+ const rows=[...(data?.recent_attempts||[])];
+ const dir=sortDir==='asc'?1:-1;
+ const value=item=>sortKey==='name'?item.name:sortKey==='type'?(item.kind+(item.letter||'')):sortKey==='status'?item.status:sortKey==='score'?Number(item.percent)||0:sortKey==='duration'?Number(item.duration_ms)||0:item.ts||'';
+ return rows.sort((a,b)=>{const av=value(a),bv=value(b);return av<bv?-dir:av>bv?dir:0;});
+}
+function scoreText(item){
+ if(item.status==='Finished') return `${item.correct}/${item.total} · ${item.percent}%`;
+ return `${item.answered}/${item.question_count??'—'} · ${item.correct} correct`;
+}
+function attemptsTable(){
+ const rows=filtered();
+ if(!data) return '';
+ if(!rows.length) return empty(nameEl.value?'No attempts for this name.':'No attempts yet.');
+ const head=(key,text)=>`<th><button type="button" data-sort="${key}" aria-sort="${sortKey===key?(sortDir==='asc'?'ascending':'descending'):'none'}">${esc(text)}</button></th>`;
+ const body=rows.map(item=>{
+  const id=item.attempt_id||'';
+  const open=openId===id;
+  const type=item.kind==='quiz'?'Quiz':`Practice ${item.letter||''}`.trim();
+  const questions=item.questions||[];
+  const detail=open?`<tr class="detail"><td colspan="6">${questions.length?`<table><thead><tr><th>Question</th><th>Chosen</th><th>Correct answer</th><th>Result</th><th>Time</th></tr></thead><tbody>${questions.map(q=>`<tr><td>${esc(q.stem||q.question_id)}</td><td>${esc(q.chosen_text??'')}</td><td>${esc(q.correct_text??'')}</td><td class="${q.correct==null?'':q.correct?'ok':'bad'}">${q.correct==null?'—':q.correct?'Correct':'Incorrect'}</td><td class="num">${esc(duration(q.time_spent_ms))}</td></tr>`).join('')}</tbody></table>`:empty('No question details for this attempt.')}</td></tr>`:'';
+  return `<tr class="attempt" data-attempt="${esc(id)}" aria-expanded="${open}"><td><button type="button" class="name-link" data-person="${esc(item.name)}">${esc(item.name)}</button></td><td>${esc(type)}</td><td>${esc(item.status)}</td><td class="num">${esc(scoreText(item))}</td><td class="num">${item.duration_ms==null?'—':esc(duration(item.duration_ms))}</td><td class="num">${esc(when(item.ts))}</td></tr>${detail}`;
+ }).join('');
+ return `<table><thead><tr>${head('name','Name')}${head('type','Type')}${head('status','Status')}${head('score','Score')}${head('duration','Duration')}${head('ts','Date')}</tr></thead><tbody>${body}</tbody></table>`;
+}
+function peopleTable(){
+ const rows=data?.people||[];
+ if(!rows.length) return empty('No names yet.');
+ const current=selectedName();
+ return `<table><thead><tr><th>Name</th><th>Attempts</th><th>Questions</th><th>Accuracy</th><th>Best score</th><th>Last active</th></tr></thead><tbody>${rows.map(person=>`<tr class="person${person.name===current?' selected':''}" data-person="${esc(person.name)}"><td>${esc(person.name)}</td><td class="num">${esc(person.attempts)}</td><td class="num">${esc(person.questions_answered)}</td><td class="num">${person.accuracy==null?'—':`${esc(person.accuracy)}%`}</td><td class="num">${person.best_score==null?'—':`${esc(person.best_score)}%`}</td><td class="num">${esc(when(person.last_active))}</td></tr>`).join('')}</tbody></table>`;
+}
+function missedTable(){
+ const rows=data?.most_missed||[];
+ if(!rows.length) return empty('No missed questions yet.');
+ return `<table><thead><tr><th>Question</th><th>Attempts</th><th>Accuracy</th><th>Most common wrong answer</th></tr></thead><tbody>${rows.map(item=>{const width=Math.max(0,Math.min(100,Number(item.accuracy)||0));const wrong=item.most_common_wrong?`${item.most_common_wrong.text} (${item.most_common_wrong.count})`:'';return `<tr><td data-label="Question">${esc(item.stem||item.question_id)}</td><td class="num" data-label="Attempts">${esc(item.correct)}/${esc(item.attempts)}</td><td class="num" data-label="Accuracy"><span class="acc" aria-hidden="true"><span style="width:${width}%"></span></span>${esc(item.accuracy)}%</td><td data-label="Most common wrong answer">${esc(wrong)}</td></tr>`;}).join('')}</tbody></table>`;
+}
+function render(){
+ if(!data) return;
+ report.hidden=false;
+ const quiz=data.quiz_score_average||{},practice=data.practice_score_average||{};
+ document.querySelector('#tiles').innerHTML=tile(data.sessions??0,'Sessions')+tile(data.events??0,'Events')+tile(data.quiz_attempts||0,'Quiz attempts')+tile(data.practice_attempts||0,'Practice attempts')+tile(percent(quiz),'Quiz average, finished')+tile(percent(practice),'Practice average, finished')+tile(data.questions_answered||0,'Questions answered')+tile(data.accuracy==null?'—':`${data.accuracy}%`,'Accuracy');
+ document.querySelector('#chart').innerHTML=chart(data.counts_by_day||[]);
+ document.querySelector('#events').innerHTML=bars(data.counts_by_event||[]);
+ const selected=selectedName();
+ const names=[...new Set((data.people||[]).map(item=>item.name).concat((data.attempts_by_name||[]).map(item=>item.name)))].filter(Boolean).sort();
+ if(selected&&!names.includes(selected)) names.push(selected);
+ nameEl.innerHTML=`<option value="">All names</option>${names.map(name=>`<option>${esc(name)}</option>`).join('')}`;
+ nameEl.value=names.includes(selected)?selected:'';
+ document.querySelector('#people').innerHTML=peopleTable();
+ document.querySelector('#attempts').innerHTML=attemptsTable();
+ document.querySelector('#missed').innerHTML=missedTable();
+ document.querySelector('#slides').innerHTML=rank(data.top_slides||[],'slides');
+ document.querySelector('#readings').innerHTML=rank(data.top_readings||[],'readings');
+}
+async function load(){
+ statusEl.className='';
+ statusEl.textContent='Loading…';
+ loadBtn.disabled=true;
+ try{
+  const name=selectedName();
+  const response=await fetch('/api/stats'+(name?`?name=${encodeURIComponent(name)}`:''),{headers:{authorization:`Bearer ${keyEl.value}`}});
+  if(!response.ok){report.hidden=true;data=null;statusEl.className='error';statusEl.textContent=response.status===401?'The stats key was not accepted.':'The stats could not be loaded.';return;}
+  data=await response.json();
+  if(rememberEl.checked) localStorage.setItem(KEY,keyEl.value); else localStorage.removeItem(KEY);
+  statusEl.textContent='';
+  render();
+ }catch{report.hidden=true;data=null;statusEl.className='error';statusEl.textContent='The stats could not be loaded.';}
+ finally{loadBtn.disabled=false;}
+}
+document.querySelector('#key-form').addEventListener('submit',event=>{event.preventDefault();load();});
+document.querySelector('#forget').addEventListener('click',()=>{localStorage.removeItem(KEY);keyEl.value='';rememberEl.checked=false;data=null;report.hidden=true;statusEl.className='';statusEl.textContent='The saved key was removed.';});
+nameEl.addEventListener('change',()=>setName(nameEl.value));
+document.querySelector('#people').addEventListener('click',event=>{
+ const row=event.target.closest('[data-person]');
+ if(row) setName(row.dataset.person);
+});
+document.querySelector('#attempts').addEventListener('click',event=>{
+ const person=event.target.closest('[data-person]');
+ if(person){setName(person.dataset.person);return;}
+ const sort=event.target.closest('[data-sort]');
+ if(sort){const key=sort.dataset.sort;if(sortKey===key)sortDir=sortDir==='desc'?'asc':'desc';else{sortKey=key;sortDir=key==='name'||key==='type'||key==='status'?'asc':'desc';}document.querySelector('#attempts').innerHTML=attemptsTable();return;}
+ const row=event.target.closest('tr.attempt');
+ if(!row) return;
+ openId=openId===row.dataset.attempt?'':row.dataset.attempt;
+ document.querySelector('#attempts').innerHTML=attemptsTable();
+});
+const saved=localStorage.getItem(KEY);
+if(saved){keyEl.value=saved;rememberEl.checked=true;load();}
+</script>
+</body>
+</html>
