@@ -1,0 +1,323 @@
+{
+  "perspectives": [
+    {
+      "name": "Britain",
+      "leader": "David Lloyd George",
+      "pages": [
+        1
+      ],
+      "tag": "Big Four",
+      "goal": "Protect the British Empire and European security while restoring trade.",
+      "motives": [
+        "Preserve imperial holdings, trade routes, and Britain’s international influence. Indian self-rule was not part of the British delegation’s agenda.",
+        "Secure France, remove the German naval threat, settle territorial disputes, and support a League of Nations.",
+        "Demand reparations to address wartime losses, but rehabilitate Germany sufficiently to stabilize Europe and revive its role as a buyer of British goods."
+      ],
+      "tension": "Punishing Germany too severely could undermine the German recovery Britain needed for trade. Public demands for compensation also limited compromise.",
+      "outcome": "The handout presents Britain as balancing French security demands with the need for a functioning European economy.",
+      "note": null
+    },
+    {
+      "name": "France",
+      "leader": "Georges Clemenceau",
+      "pages": [
+        2
+      ],
+      "tag": "Big Four",
+      "goal": "Prevent another German invasion and obtain compensation for devastation.",
+      "motives": [
+        "Weaken Germany militarily, strategically, and economically after repeated invasions of French territory.",
+        "Seek British and American guarantees of French security and compensation for deaths, destruction, lost production, and damaged land.",
+        "Prioritize practical security over confidence that Wilson’s international principles alone could prevent future attacks."
+      ],
+      "tension": "France wanted a much weaker Germany; Wilson and British leaders feared that an excessively punitive settlement could destabilize Europe.",
+      "outcome": "The handout also describes René Massigli’s attempts at rapprochement with Germany, showing that French policy included diplomatic alternatives. The U.S. Senate did not ratify the proposed American security guarantee.",
+      "note": null
+    },
+    {
+      "name": "Italy",
+      "leader": "Vittorio Orlando",
+      "pages": [
+        3
+      ],
+      "tag": "Big Four",
+      "goal": "Obtain the territorial rewards promised for entering the war on the Allied side.",
+      "motives": [
+        "Invoke the secret Treaty of London (1915), through which Britain and France promised territorial gains in return for Italian participation.",
+        "Use Italy’s heavy casualties and financial losses to argue that sacrifice deserved compensation and great-power status.",
+        "Press claims to former Austro-Hungarian territories and wider imperial gains."
+      ],
+      "tension": "Italian claims conflicted with other national claims, Wilsonian self-determination, and Allied concern about Italian expansion.",
+      "outcome": "Orlando temporarily left the conference in protest. Italy gained territory but did not receive everything its leaders sought; disappointment encouraged a sense of an incomplete victory.",
+      "note": "The handout’s list of colonial rewards is oversimplified. Focus on the Treaty of London promises, competing claims, and Italy’s dissatisfaction rather than memorizing its claim that Italy received “a couple of small German colonies.”"
+    },
+    {
+      "name": "United States",
+      "leader": "Woodrow Wilson",
+      "pages": [
+        4,
+        5
+      ],
+      "tag": "Big Four",
+      "goal": "Create a durable peace through self-determination, diplomacy, and a League of Nations.",
+      "motives": [
+        "Use the Fourteen Points as a basis for a more open international order, with national sovereignty and cooperation instead of recurring war.",
+        "Favor a less punitive treatment of Germany than France sought, while negotiating compromises to secure the League.",
+        "Raise questions about the wishes of people in former Ottoman territories and the conflict between national aspirations and imperial claims."
+      ],
+      "tension": "Wilson’s principles conflicted with Allied security and colonial interests. At home, opponents resisted commitments that might limit U.S. freedom of action.",
+      "outcome": "The League was established, but the U.S. Senate rejected ratification of Versailles. The United States never joined the League and signed separate peace treaties in 1921.",
+      "note": "The handout overstates U.S. rejection of Article 231: Wilson ultimately accepted the treaty containing it. Separate Wilson’s preferred principles from the compromises he actually signed."
+    },
+    {
+      "name": "Japan",
+      "leader": "Saionji Kinmochi & Makino Nobuaki",
+      "pages": [
+        6
+      ],
+      "tag": "Recognition & territory",
+      "goal": "Gain recognition as an equal great power and retain former German interests in Asia and the Pacific.",
+      "motives": [
+        "Obtain German rights in Shandong, including the Kiaochow/Jiaozhou concession, and former German islands north of the equator.",
+        "Rely on wartime occupation and secret Allied agreements to support territorial claims against China’s objections.",
+        "Add a racial-equality provision to the League Covenant to improve international recognition and equal treatment of member-state nationals."
+      ],
+      "tension": "Japan’s Shandong demand conflicted with Chinese sovereignty. Its equality proposal met resistance linked to immigration exclusion, especially from Australia.",
+      "outcome": "Japan secured important territorial gains, while its racial-equality proposal was rejected. The contrast contributed to resentment toward the Western powers.",
+      "note": "Japan signed the Treaty of Versailles and joined the League. Do not treat the handout’s “walked out” wording as a claim that Japan abandoned the final settlement."
+    },
+    {
+      "name": "China",
+      "leader": "Lu Cheng-hsiang & V. K. Wellington Koo",
+      "pages": [
+        7
+      ],
+      "tag": "Sovereignty",
+      "goal": "Recover Shandong and reduce foreign control within China.",
+      "motives": [
+        "Demand the return of German rights in Shandong to China rather than their transfer to Japan.",
+        "Challenge foreign privileges such as extraterritoriality, foreign guards, and leased territories.",
+        "Invoke Wilson’s self-determination and international equality despite China’s internal division between rival governments."
+      ],
+      "tension": "Japan’s wartime agreements and great-power bargaining outweighed China’s appeal to sovereignty. Chinese delegates also faced distrust and pressure at home.",
+      "outcome": "The Shandong decision helped trigger the May Fourth Movement. China refused to sign Versailles. The slide deck later contrasts the 1919 decision with the restoration of Chinese sovereignty in Shandong in 1922.",
+      "note": null
+    },
+    {
+      "name": "Australia",
+      "leader": "Billy Hughes",
+      "pages": [
+        8,
+        9
+      ],
+      "tag": "Empire & security",
+      "goal": "Obtain reparations and control of German New Guinea while preserving the White Australia policy.",
+      "motives": [
+        "Use Australia’s high losses, including the experience of Gallipoli and the ANZACs, to justify compensation and a strong voice in the settlement.",
+        "Expand control in the nearby Pacific, especially former German New Guinea, as a matter of security and influence.",
+        "Oppose Japan’s racial-equality proposal to defend racially exclusionary immigration policy, lobbying Britain in support."
+      ],
+      "tension": "Australia’s racial and territorial priorities conflicted with Japan’s equality proposal and with Wilson’s objections to annexation.",
+      "outcome": "Australia received a Class C mandate over former German New Guinea. Its position illustrates how an imperial dominion could seek its own territorial influence while relying on Britain.",
+      "note": null
+    },
+    {
+      "name": "Romania",
+      "leader": "Queen Marie",
+      "pages": [
+        10
+      ],
+      "tag": "Territory & recognition",
+      "goal": "Secure favorable treatment, promised territorial gains, and recognition of Romania’s wartime claims.",
+      "motives": [
+        "Press the case that Romania’s participation and sacrifices entitled it to the rewards promised in its 1916 agreement with the Entente.",
+        "Counter Allied distrust created by Romania’s wartime reversals and separate peace under severe military pressure.",
+        "Use Queen Marie’s personal diplomacy to gain sympathy and support from the major powers."
+      ],
+      "tension": "Romania wanted promised gains, while the Allies questioned the consequences of its wartime decisions and disputed parts of its demands.",
+      "outcome": "Queen Marie helped advocate Romania’s case; disputes over terms and reparations remained.",
+      "note": "Historical correction: Romania was already independent before WWI, and the postwar settlement greatly enlarged it, including recognition of Transylvania. The handout’s claim that it “never got the land” is misleading. Its most useful theme is the struggle to secure claims and favorable recognition."
+    },
+    {
+      "name": "Vietnam",
+      "leader": "Nguyễn Ái Quốc (later known as Ho Chi Minh)",
+      "pages": [
+        11
+      ],
+      "tag": "Rights under colonial rule",
+      "goal": "Win civil rights, legal equality, and Vietnamese representation within French colonial rule.",
+      "motives": [
+        "Seek amnesty for political prisoners and equal judicial treatment for Vietnamese people and Europeans.",
+        "Demand freedoms of speech, press, association, assembly, travel, and education, including technical schools.",
+        "Replace arbitrary rule with the rule of law and create elected Vietnamese representation in the French parliament."
+      ],
+      "tension": "French imperial interests and the conference’s priorities limited attention to even these moderate demands.",
+      "outcome": "The eight-point petition received no meaningful response from the peacemakers but increased the petitioner’s visibility among Vietnamese activists.",
+      "note": "The 1919 petition did not demand immediate full independence. Distinguish these specific reforms from Ho Chi Minh’s later independence movement."
+    },
+    {
+      "name": "South Africa",
+      "leader": "Jan Smuts",
+      "pages": [
+        12
+      ],
+      "tag": "Reconciliation & empire",
+      "goal": "Reconcile with Germany while retaining reparations, imperial influence, and a South African voice.",
+      "motives": [
+        "Support Wilson’s “peace without victory,” the Fourteen Points, and the League of Nations.",
+        "Hold Germany responsible for monetary damages while opposing a settlement that ruled out reconciliation.",
+        "Support the mandate system for former German colonies and increase South Africa’s influence in international decisions."
+      ],
+      "tension": "Smuts supported international cooperation but worried about U.S. power. His support for some national claims did not extend to racial equality for Black South Africans.",
+      "outcome": "His position shows that support for the League and reconciliation could coexist with imperial ambitions and racial exclusion.",
+      "note": null
+    },
+    {
+      "name": "India",
+      "leader": "Official Indian delegation; Montagu & Singh in the handout",
+      "pages": [
+        13
+      ],
+      "tag": "Representation without independence",
+      "goal": "Secure a recognized international role; Indian nationalists also sought genuine self-government.",
+      "motives": [
+        "India’s official delegates signed the peace treaties and supported the League and Wilsonian principles while India remained under British rule.",
+        "Wartime service strengthened arguments that Indians deserved political rights and self-determination.",
+        "Nationalist demands, associated in the handout with Gandhi and the Indian National Congress, challenged continued British control and their exclusion from effective representation."
+      ],
+      "tension": "Official representation did not mean independence or representation of all Indian political opinion. British imperial interests limited how self-determination was applied.",
+      "outcome": "India joined the League despite lacking self-government. The 1919 Amritsar massacre and continued repression sharpened anger toward British rule.",
+      "note": "The Indian National Congress was founded in 1885; it was not newly created at the time of the conference. Keep the official colonial delegation distinct from nationalist demands."
+    },
+    {
+      "name": "Ottoman lands / Turkish nationalists",
+      "leader": "Mustafa Kemal (later Atatürk)",
+      "pages": [
+        14
+      ],
+      "tag": "Sovereignty",
+      "goal": "Resist foreign partition and secure a sovereign Turkish state.",
+      "motives": [
+        "Draw on military leadership, including defense of the Gallipoli front, to argue for national dignity and the ability to govern without outside domination.",
+        "Reject weak leadership and foreign occupation or partition of Turkish lands.",
+        "Challenge European prejudice and the assumption that defeated Ottoman peoples should simply accept decisions made by the victors."
+      ],
+      "tension": "Allied territorial plans conflicted with Turkish nationalist claims and resistance on the ground.",
+      "outcome": "The handout follows the story beyond Paris: the Turkish independence struggle led to a revised settlement at Lausanne in 1923 and the creation of modern Turkey.",
+      "note": "This sheet presents a Turkish nationalist perspective for the simulation. Mustafa Kemal was not a member of the Paris negotiating delegation; later events should not be confused with decisions he personally made at the conference."
+    },
+    {
+      "name": "Arab claims / Middle East",
+      "leader": "Prince Faisal, supported by T. E. Lawrence",
+      "pages": [
+        15
+      ],
+      "tag": "Independence",
+      "goal": "Obtain Arab independence promised in connection with revolt against Ottoman rule.",
+      "motives": [
+        "Argue that Arab wartime assistance against the Ottomans should be rewarded with self-rule.",
+        "Resist the division of former Ottoman Arab territories into British and French spheres and mandates.",
+        "Appeal to Wilsonian self-determination and seek recognition of Arab leadership and national aspirations."
+      ],
+      "tension": "British and French wartime promises and secret agreements conflicted with Arab expectations; claims in Palestine also overlapped with Zionist goals.",
+      "outcome": "British and French influence predominated in the mandate settlement. The later placement of Faisal in Iraq and Abdullah in Transjordan did not fulfill broad expectations of independent Arab rule.",
+      "note": "Lawrence was a British advocate of Arab claims, not the representative of every Arab community. The later monarchies belong to the post-conference chronology."
+    },
+    {
+      "name": "Zionist movement",
+      "leader": "Chaim Weizmann",
+      "pages": [
+        16,
+        21
+      ],
+      "tag": "National home",
+      "goal": "Secure international support for a Jewish national home in Palestine.",
+      "motives": [
+        "Ask for a British-administered mandate that would facilitate Jewish immigration and settlement.",
+        "Promote self-government and religious freedom while invoking historical ties and the need for refuge from European antisemitism.",
+        "Build on British support expressed in the Balfour Declaration."
+      ],
+      "tension": "Zionist national aspirations overlapped with Arab and Palestinian claims to self-determination in the same territory. The handout’s role-play rhetoric reflects one assigned viewpoint, not a neutral account of those claims.",
+      "outcome": "The mandate framework advanced the national-home project; the handout also looks ahead to Israel’s establishment in 1948 and Palestinian displacement.",
+      "note": "Historical correction: the Balfour Declaration was issued in 1917, not 1916. It supported a “national home for the Jewish people,” not an explicit immediate sovereign state, and also referred to the civil and religious rights of existing non-Jewish communities. Pages 16 and 21 repeat this perspective."
+    },
+    {
+      "name": "Pan-Africanists",
+      "leader": "Blaise Diagne & the Pan-African Congress",
+      "pages": [
+        17
+      ],
+      "tag": "Rights & protection",
+      "goal": "Win international protections against colonial abuse and a path toward African participation in government.",
+      "motives": [
+        "Bring together representatives and supporters from Africa, the Caribbean, and North America to challenge discrimination and oppression.",
+        "Call for an international code protecting African peoples and their rights.",
+        "Advocate eventual participation in self-government; the specific 1919 resolution described here stopped short of demanding immediate full independence."
+      ],
+      "tension": "Even moderate demands challenged the racial hierarchy of colonial rule. The powers that promoted some European national claims remained reluctant to extend the same principles overseas.",
+      "outcome": "The conference powers made no firm commitment to these demands. Pan-African organizing nevertheless created a forum for shared political advocacy.",
+      "note": "Historical correction: Blaise Diagne was Senegalese, not Haitian as the sheet labels him. The later Négritude movement should not be treated as an already established 1919 movement."
+    },
+    {
+      "name": "Brazil",
+      "leader": "Epitácio Pessoa",
+      "pages": [
+        18
+      ],
+      "tag": "Economic recovery",
+      "goal": "Protect economic interests and strengthen relations with the United States.",
+      "motives": [
+        "Seek a place in postwar bargaining after joining the war in 1917 amid German attacks on Brazilian merchant shipping.",
+        "Protect trade and industrial gains made while European economies were occupied with war.",
+        "Secure access to U.S. finance and support as renewed European competition threatened Brazil’s economy."
+      ],
+      "tension": "The handout contrasts public appeals to liberty and peace with economic incentives and elite interests. That is the author’s interpretation of motives, not a direct statement of every Brazilian participant’s views.",
+      "outcome": "Pessoa supported U.S. aims, reflecting the importance of American economic and diplomatic ties to Brazil’s postwar strategy.",
+      "note": null
+    },
+    {
+      "name": "Korea",
+      "leader": "Kim Gyu-sik and other unofficial representatives",
+      "pages": [
+        19,
+        20
+      ],
+      "tag": "Independence",
+      "goal": "End Japanese colonial rule and gain recognition as an independent state.",
+      "motives": [
+        "Invoke Wilson’s self-determination to demand Korean liberation and international recognition.",
+        "Present the suppression of the March First Movement, censorship, and economic exploitation as evidence against continued Japanese rule.",
+        "Seek a hearing through unofficial representatives when an official Korean delegation could not participate."
+      ],
+      "tension": "Korean claims challenged the authority of Japan, an Allied power. The gap between great-power rhetoric and actual support for colonized peoples limited the petition’s influence.",
+      "outcome": "The representatives achieved little at Paris. Their experience became an example of the uneven application of self-determination.",
+      "note": null
+    }
+  ],
+  "comparisons": [
+    [
+      "Germany’s future",
+      "France: weaken Germany for security. Britain: compensation plus commercial recovery. U.S. and Smuts: reconciliation and international cooperation."
+    ],
+    [
+      "Shandong",
+      "China: restore Chinese sovereignty. Japan: retain German rights based on wartime gains and agreements."
+    ],
+    [
+      "Racial equality",
+      "Japan: an equality clause in the League Covenant. Australia: defend exclusionary immigration policy; Smuts also maintained racial exclusion at home."
+    ],
+    [
+      "Former Ottoman lands",
+      "Arab claimants: independence. Zionist movement: a Jewish national home in Palestine. Britain and France: mandates and influence. Turkish nationalists: resist partition."
+    ],
+    [
+      "The reach of self-determination",
+      "Korea sought independence; Vietnam’s 1919 petition sought civil reforms; Pan-Africanists sought legal protection and future participation; Indian nationalists sought self-government. These were related but distinct demands."
+    ],
+    [
+      "Promises and rewards",
+      "Italy and Romania invoked wartime agreements and sacrifice. Brazil emphasized economic interests and U.S. ties. Australia sought compensation and Pacific control."
+    ]
+  ]
+}
