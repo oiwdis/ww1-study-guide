@@ -32,6 +32,13 @@ function event(detail,event='section_view',page='summary'){
  return {session_id:session,event,page,detail};
 }
 
+test('extra information views are accepted analytics events',async()=>{
+ const db=database();
+ assert.equal((await post(db,{session_id:session,event:'section_view',page:'extra',detail:{section:'extra'}})).status,204);
+ assert.equal((await post(db,{session_id:session,event:'extra_viewed',page:'extra/accounts/remarque',detail:{group:'accounts',source:'remarque'}})).status,204);
+ assert.equal((await post(db,{session_id:session,event:'extra_viewed',page:'extra',detail:{group:'notes'}})).status,400);
+});
+
 test('api responses are not stored by the browser',async()=>{
  const db=database();
  const denied=await worker.fetch(new Request('https://ww1.example/api/stats'),{DB:db,STATS_KEY:'test-secret'});

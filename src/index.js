@@ -2,10 +2,11 @@ const MAX_BODY=24576;
 const RATE_LIMIT=200;
 const RATE_WINDOW_MS=60_000;
 const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-const SECTIONS=new Set(['summary','slides','readings','quiz','practice','timeline','paris']);
+const SECTIONS=new Set(['summary','slides','readings','quiz','practice','timeline','paris','extra']);
+const EXTRA_GROUPS=new Set(['all','telegrams','accounts','videos']);
 const INSERT=`INSERT INTO events (id, ts, session_id, event, page, detail, country, ua_family, device_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
-export const EVENTS=['section_view','slide_viewed','reading_opened','quiz_started','quiz_answered','quiz_completed','practice_started','practice_answered','practice_completed','timeline_interaction','paris_viewed'];
+export const EVENTS=['section_view','slide_viewed','reading_opened','quiz_started','quiz_answered','quiz_completed','practice_started','practice_answered','practice_completed','timeline_interaction','paris_viewed','extra_viewed'];
 
 export function cleanName(value){
  return String(value??'').replace(/[\u0000-\u001F\u007F]/g,'').replace(/[<>]/g,'').replace(/\s+/g,' ').trim().slice(0,40);
@@ -69,6 +70,13 @@ export function normalizeDetail(event,input){
   if(reading==null) return null;
   const detail={reading};
   if(input.page!=null){const page=integer(input.page,1,12);if(page==null) return null;detail.page=page;}
+  return detail;
+ }
+ if(event==='extra_viewed'){
+  const group=text(input.group,12);
+  if(!EXTRA_GROUPS.has(group)) return null;
+  const detail={group};
+  if(input.source!=null){const source=text(input.source,40);if(!source||!/^[a-z0-9-]+$/.test(source)) return null;detail.source=source;}
   return detail;
  }
  if(event==='paris_viewed'){

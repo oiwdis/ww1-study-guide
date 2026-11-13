@@ -143,7 +143,7 @@ tr.detail table{font-size:12px}
 const KEY='wwi-stats-key';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const keyEl=document.querySelector('#key'),rememberEl=document.querySelector('#remember'),statusEl=document.querySelector('#status'),report=document.querySelector('#report'),nameEl=document.querySelector('#name'),loadBtn=document.querySelector('#load');
-const labels={section_view:'Section view',slide_viewed:'Slide viewed',reading_opened:'Reading opened',quiz_started:'Quiz started',quiz_answered:'Quiz answered',quiz_completed:'Quiz completed',practice_started:'Practice started',practice_answered:'Practice answered',practice_completed:'Practice completed',timeline_interaction:'Timeline',paris_viewed:'Paris page'};
+const labels={section_view:'Section view',slide_viewed:'Slide viewed',reading_opened:'Reading opened',quiz_started:'Quiz started',quiz_answered:'Quiz answered',quiz_completed:'Quiz completed',practice_started:'Practice started',practice_answered:'Practice answered',practice_completed:'Practice completed',timeline_interaction:'Timeline',paris_viewed:'Paris page',extra_viewed:'Extra information'};
 let data=null,sortKey='ts',sortDir='desc',openId='';
 const label=event=>labels[event]||event;
 const empty=text=>`<p class="empty">${esc(text)}</p>`;

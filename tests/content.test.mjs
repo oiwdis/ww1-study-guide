@@ -13,7 +13,7 @@ test('five unique exams match the requested format and every source resolves',()
  assert.equal(practice.tests.length,5);const stems=new Set(),ids=new Set(),choiceCounts=new Set();
  for(const t of practice.tests){assert.equal(t.questions.length,24);assert.deepEqual(p.sections.map(s=>t.questions.filter(q=>q.section===s).length),[5,10,7,2]);assert.ok(t.questions.some(q=>q.chronology));assert.ok(t.questions.filter(q=>q.statements).length>=2);
   for(const x of t.questions){assert.ok(!stems.has(x.stem));stems.add(x.stem);assert.ok(!ids.has(x.id));ids.add(x.id);x.sources.forEach(source);
-   if(x.type==='mc'){assert.ok(x.options.length>=4&&x.options.length<=8);choiceCounts.add(x.options.length);assert.equal(new Set(x.options).size,x.options.length);assert.ok(x.options[x.answer]);assert.ok(x.explanation.length>30);}
+   if(x.type==='mc'){assert.ok(x.sources.length);assert.ok(x.sources.every(s=>s.kind==='slides'&&s.last<=121),x.id);assert.ok(x.options.length>=4&&x.options.length<=8);choiceCounts.add(x.options.length);assert.equal(new Set(x.options).size,x.options.length);assert.ok(x.options[x.answer]);assert.ok(x.explanation.length>30);}
    if(x.type==='fill'){assert.ok(x.accepted.includes(x.answer));assert.ok(x.explanation);}
    if(x.type==='short'){assert.equal(x.rubric.length,4);assert.ok(x.model.split(' ').length>=70);}
    if(x.cartoon){const c=practice.cartoons[x.cartoon];assert.ok(c);assert.ok(existsSync(join(root,c.image)));assert.ok(c.alt);source(c.source);}
@@ -48,9 +48,26 @@ test('timeline is ordered and has valid source links',()=>{
  assert.equal(timeline.length,84);assert.equal(new Set(timeline.map(e=>e.id)).size,84);
  for(let i=0;i<timeline.length;i++){const e=timeline[i];assert.ok(e.date&&e.title&&e.text&&e.era&&e.topic);e.sources.forEach(source);if(i)assert.ok(timeline[i-1].sort<=e.sort);}
 });
-test('existing 112-question quiz and 148 original pages remain valid',()=>{
- assert.equal(bank.length,112);assert.deepEqual([...new Set(bank.map(x=>x.options.length))].sort((a,b)=>a-b),[4,5,6,7,8,9,10]);
- for(const x of bank){assert.ok(x.options[x.answer]);source(x.source);}
+test('87 slide-only quiz questions and 148 original pages remain valid',()=>{
+ assert.equal(bank.length,87);assert.deepEqual([...new Set(bank.map(x=>x.options.length))].sort((a,b)=>a-b),[4,5,6,7,8,9,10]);
+ for(const x of bank){assert.ok(x.options[x.answer]);source(x.source);assert.equal(x.source.kind,'slides');assert.notEqual(x.topic,'Paris perspectives');}
  const a=q.newAttempt(bank,{randomize:false}),perfect=Object.fromEntries(bank.map(x=>[x.id,x.answer]));assert.ok(q.validAttempt(a,bank));assert.equal(q.grade(bank,a.ids,perfect).percent,100);
  const pages=json('assets/page-index.json');assert.equal(pages.length,148);for(const page of pages)assert.ok(existsSync(join(root,`assets/${page.section}/${String(page.number).padStart(3,'0')}.webp`)));
+});
+test('older quiz sessions retain only their still-valid slide responses',()=>{
+ const removed={...bank[0],id:'q088',topic:'Paris perspectives',source:{kind:'documents',first:1,last:1}};
+ const legacy=q.newAttempt([bank[0],removed,bank[1]],{randomize:false});legacy.current=1;legacy.responses[bank[0].id]=bank[0].answer;legacy.responses[removed.id]=removed.answer;
+ assert.equal(q.validAttempt(legacy,bank),false);const restored=q.restoreAttempt(legacy,bank);
+ assert.ok(q.validAttempt(restored,bank));assert.deepEqual(restored.ids,[bank[0].id,bank[1].id]);assert.equal(restored.responses[bank[0].id],bank[0].answer);assert.equal(restored.responses[removed.id],undefined);assert.equal(restored.orders[removed.id],undefined);
+ assert.equal(q.restoreAttempt(q.newAttempt([removed]),bank),null);assert.equal(q.restoreAttempt(null,bank),null);
+});
+test('older practice tests preserve unchanged responses but cannot grade replaced questions',()=>{
+ assert.equal(practice.version,2);assert.equal(practice.multipleChoiceScope,'slides');
+ for(const t of practice.tests){
+  assert.ok(t.revisedQuestionIds.length>0);assert.ok(t.revisedQuestionIds.every(id=>t.questions.find(q=>q.id===id)?.type==='mc'));
+  const legacy={...p.fresh(t),version:1,finished:true};for(const x of t.questions)legacy.responses[x.id]=x.type==='mc'?0:x.type==='fill'?x.answer:'My written response.';
+  const restored=p.restore(t,legacy);assert.ok(p.valid(t,restored));assert.equal(restored.finished,false);assert.equal(p.complete(t,restored),false);assert.equal(restored.updatedScope,true);
+  for(const x of t.questions)assert.equal(restored.responses[x.id],t.revisedQuestionIds.includes(x.id)?undefined:legacy.responses[x.id]);
+  assert.equal(p.restore(t,restored),restored);
+ }
 });

@@ -1,0 +1,420 @@
+{
+  "title": "Extra Information",
+  "note": "Study notes and paraphrases based on the printed material in the six photographs and the two supplied PDFs. Handwritten annotations and worksheet responses are excluded. These notes are not verbatim transcriptions.",
+  "groups": [
+    {
+      "id": "telegrams",
+      "title": "Royal cousins & telegrams",
+      "description": "The July Crisis in the rulers’ own correspondence"
+    },
+    {
+      "id": "accounts",
+      "title": "Life on the Western Front",
+      "description": "Clapham’s memoir and Remarque’s novel"
+    },
+    {
+      "id": "videos",
+      "title": "Crash Course video notes",
+      "description": "How the war began and the debate over responsibility"
+    }
+  ],
+  "sources": [
+    {
+      "id": "royal-cousins",
+      "group": "telegrams",
+      "title": "The royal cousins",
+      "subtitle": "Background to the Willy–Nicky telegrams",
+      "citation": "Supplied photograph 1 · printed classroom background sheet",
+      "intro": "The handout introduces three related European monarchs. Family ties and personal familiarity did not prevent their countries from becoming opponents.",
+      "blocks": [
+        {
+          "title": "Nicholas II · Russia · Nicky",
+          "text": "Nicholas married Alexandra, a granddaughter of Queen Victoria. Their son Alexei had hemophilia, and the family turned to Rasputin for help. The sheet connects Russia’s defeat by Japan, domestic unrest, and Nicholas’s wartime leadership to the monarchy’s collapse. Nicholas and his family were later killed."
+        },
+        {
+          "title": "George V · Britain · Georgie",
+          "text": "George was Queen Victoria’s grandson and had a close relationship with Nicholas. Of the three rulers on the sheet, he alone retained his throne after the war. The handout emphasizes his strained relationship with Wilhelm and competition over military and naval power. George does not write any of the ten telegrams in this packet."
+        },
+        {
+          "title": "Wilhelm II · Germany · Willy",
+          "text": "Wilhelm was Queen Victoria’s eldest grandson. The sheet describes his mixed attachment to and rivalry with Britain, especially its navy. It introduces the telegram exchange as an unsuccessful effort to preserve peace immediately before Germany declared war on Russia."
+        },
+        {
+          "title": "Separate background commentary from evidence",
+          "text": "The background sheet makes judgments about personalities, Wilhelm’s disability, and whether George could have saved Nicholas. Those judgments are classroom interpretations, not evidence supplied by the telegrams themselves. Use the correspondence to analyze stated policies and demands rather than treating family relationships or personality as a complete explanation for war."
+        }
+      ],
+      "takeaway": "Know which ruler represents which country. Nicholas and Wilhelm exchange the telegrams; George appears only in the background sheet."
+    },
+    {
+      "id": "willy-nicky",
+      "group": "telegrams",
+      "title": "Ten telegrams: diplomacy overtaken by mobilization",
+      "subtitle": "Nicholas II ↔ Wilhelm II · July 29–August 1, 1914",
+      "citation": "Supplied photographs 2–6 · two telegrams per page",
+      "intro": "Both rulers profess a wish for peace, but each describes his own side’s military preparations as defensive and asks the other side to change course. The entries below paraphrase the printed telegrams in the order supplied.",
+      "blocks": [
+        {
+          "title": "Nicholas’s argument",
+          "text": "Austria-Hungary is going too far against Serbia, so Wilhelm should restrain his ally. Nicholas presents Russian preparations as protection against Austria and asks for negotiations to continue. He eventually says stopping those preparations is technically impossible."
+        },
+        {
+          "title": "Wilhelm’s argument",
+          "text": "Austria-Hungary is entitled to act against Serbia after the assassination. Russia should stay outside that conflict. Wilhelm claims to be mediating, but warns that Russian military preparations threaten his allies and Germany and will undermine mediation."
+        },
+        {
+          "title": "Why the appeals fail",
+          "text": "Nicholas wants diplomacy and military preparation to proceed together; Wilhelm makes peace depend on Russia stopping preparations. Several messages cross, and Nicholas reports a mismatch between Wilhelm’s friendly tone and the German ambassador’s message. Personal friendship cannot resolve incompatible demands, alliance commitments, and fear of an opponent’s mobilization."
+        },
+        {
+          "title": "Reading the telegrams critically",
+          "text": "A ruler’s claim that he wants peace tells us what he chose to communicate, not necessarily everything he intended. Both writers shift responsibility toward the other side. These primary sources illuminate the crisis but cannot alone prove that one country was innocent or solely responsible."
+        }
+      ],
+      "entries": [
+        {
+          "id": "telegram-1",
+          "label": "July 29 · 1:00 A.M.",
+          "title": "Nicholas to Wilhelm",
+          "reference": "Photograph 2 · first telegram",
+          "text": "Nicholas appeals to their friendship. He condemns the war against Serbia, reports strong anger in Russia, and fears that domestic pressure will force him into measures leading to a European war. He asks Wilhelm to stop his ally from going too far.",
+          "meaning": "Russian public pressure and support for Serbia collide with Germany’s support for Austria-Hungary."
+        },
+        {
+          "id": "telegram-2",
+          "label": "July 29 · 1:45 A.M.",
+          "title": "Wilhelm to Nicholas",
+          "reference": "Photograph 2 · second telegram; the handout says the messages crossed",
+          "text": "Wilhelm attributes the assassination to agitation in Serbia and argues that those responsible deserve punishment. He acknowledges the pressure of Russian public opinion and says he is using his influence to encourage Austria to reach an understanding with Russia.",
+          "meaning": "Wilhelm offers mediation while defending the legitimacy of Austria’s action."
+        },
+        {
+          "id": "telegram-3",
+          "label": "July 29 · 6:30 P.M.",
+          "title": "Wilhelm to Nicholas",
+          "reference": "Photograph 3 · first telegram",
+          "text": "Wilhelm rejects Nicholas’s condemnation of Austria’s war. He argues that Serbian assurances are unreliable and that Austria seeks guarantees rather than territory. He urges Russia to remain a spectator, encourages direct discussions with Vienna, and warns that Russian military measures would endanger his mediation.",
+          "meaning": "Keeping the conflict local means asking Russia not to intervene on Serbia’s behalf."
+        },
+        {
+          "id": "telegram-4",
+          "label": "July 29 · 8:20 P.M.",
+          "title": "Nicholas to Wilhelm",
+          "reference": "Photograph 3 · second telegram",
+          "text": "Nicholas welcomes Wilhelm’s conciliatory message but says the German ambassador spoke in a very different tone. He asks for an explanation and suggests referring the Austro-Serbian dispute to the Hague conference.",
+          "meaning": "Nicholas proposes international mediation and points to inconsistent diplomatic signals."
+        },
+        {
+          "id": "telegram-5",
+          "label": "July 30 · 1:20 A.M.",
+          "title": "Nicholas to Wilhelm",
+          "reference": "Photograph 4 · first telegram",
+          "text": "Nicholas thanks Wilhelm and says Russian military measures were decided several days earlier for defense against Austrian preparations. He hopes they will not interfere with mediation and again asks Wilhelm to pressure Austria into an understanding.",
+          "meaning": "Nicholas treats military preparation as compatible with continued negotiations."
+        },
+        {
+          "id": "telegram-6",
+          "label": "July 30 · 1:20 A.M.",
+          "title": "Wilhelm to Nicholas",
+          "reference": "Photograph 4 · second telegram; time reproduced as labeled in the handout",
+          "text": "Wilhelm says the German ambassador’s warning matched his instructions. He presents Austria’s mobilization as limited to Serbia and warns that Russian mobilization against Austria could ruin mediation. He places the choice between peace and war on Nicholas.",
+          "meaning": "The same military measures that Nicholas calls defensive appear threatening to Wilhelm."
+        },
+        {
+          "id": "telegram-7",
+          "label": "July 31",
+          "title": "Wilhelm to Nicholas",
+          "reference": "Photograph 5 · first telegram",
+          "text": "Wilhelm says Russian mobilization has undermined mediation and that reports of preparations on Germany’s eastern frontier require defensive measures. He denies responsibility for the threatened disaster and argues that Russia can preserve peace by stopping military measures against Germany and Austria-Hungary.",
+          "meaning": "His demand hardens: Russian restraint becomes the condition for peace."
+        },
+        {
+          "id": "telegram-8",
+          "label": "July 31",
+          "title": "Nicholas to Wilhelm",
+          "reference": "Photograph 5 · second telegram; the handout says the messages crossed",
+          "text": "Nicholas says he still hopes for peace but cannot technically halt military preparations, which he attributes to Austrian mobilization. He promises that Russian troops will avoid provocative action while talks with Austria continue and places hope in Wilhelm’s mediation.",
+          "meaning": "Nicholas offers restraint in action, but not the demobilization Wilhelm demands."
+        },
+        {
+          "id": "telegram-9",
+          "label": "August 1",
+          "title": "Nicholas to Wilhelm",
+          "reference": "Photograph 6 · first telegram",
+          "text": "Nicholas acknowledges that Germany may have to mobilize, but asks for the same assurance he has offered: that mobilization does not mean war and negotiations will continue. He again appeals to their friendship and hopes to prevent bloodshed.",
+          "meaning": "Nicholas still tries to separate mobilization from a decision to fight."
+        },
+        {
+          "id": "telegram-10",
+          "label": "August 1",
+          "title": "Wilhelm to Nicholas",
+          "reference": "Photograph 6 · second telegram",
+          "text": "Wilhelm says the requested response from Russia has not arrived, so he has mobilized the German army. He demands an immediate, clear response from the Russian government and asks Nicholas to order his troops not to cross Germany’s frontier.",
+          "meaning": "Deadlines and military preparations have displaced the earlier appeals to friendship."
+        }
+      ],
+      "takeaway": "The telegrams expose the gap between wanting peace and accepting the concessions the other side requires to preserve it."
+    },
+    {
+      "id": "clapham",
+      "group": "accounts",
+      "title": "Henry S. Clapham · Mud and Khaki",
+      "subtitle": "Memoirs of an Incomplete Soldier · account dated June 19, 1915",
+      "citation": "WW1_Trench_Warfare_Sources.pdf · printed source on PDF pages 1–5; source credit: Hutchinson & Co., 1930, pp. 141–153",
+      "intro": "A British soldier describes an assault near the Menin Road followed by the struggle to hold captured trenches. The account combines small changes in the battle line with prolonged danger, exhausting work, and severe psychological strain.",
+      "blocks": [
+        {
+          "title": "The attack and the battle line",
+          "text": "After an artillery bombardment, the first wave advances and Clapham’s unit follows. They enter a German trench, move wire to face the new direction of attack, and repair damaged defenses. Other units advance farther, but confusion and a gas alarm lead some men to retreat. British troops reoccupy forward trenches. The passage shows local advances, withdrawals, and consolidation; it does not establish a decisive breakthrough or the exact overall distance gained."
+        },
+        {
+          "title": "Holding ground is its own battle",
+          "text": "Capturing a trench does not make it safe. Soldiers must repair the parapet, reconnect positions, and work under machine-gun and artillery fire. The communication trench, intended to move supplies and casualties, becomes dangerous under shelling. Orders to hold the position leave little room to escape."
+        },
+        {
+          "title": "Industrial weapons and limited protection",
+          "text": "Heavy shells, shrapnel, lighter field-gun shells, machine guns, and gas combine to threaten the defenders. Shells damage their shelter and throw debris into the trench. During the evening gas attack, quick use of respirators matters, but gas also lingers in damaged areas. Defensive artillery eventually helps stop a counterattack."
+        },
+        {
+          "title": "Fear, helplessness, and emotional exhaustion",
+          "text": "Clapham finds passive waiting under bombardment especially difficult. He describes expecting death repeatedly and becoming emotionally numb after hours of danger. Heat, crowding, thirst, difficulty eating, and inadequate help for the wounded compound the strain. Physical injury is only one part of the suffering."
+        },
+        {
+          "title": "Humanity and the language of enemies",
+          "text": "Clapham describes helping an injured German, even while using a derogatory wartime term for German soldiers. Read that tension carefully: hostile national labels coexist with moments of sympathy. His account also reveals how little soldiers can do for one another under continuous fire."
+        },
+        {
+          "title": "Source strengths and limits",
+          "text": "This is a participant’s memoir, published after the events. It provides detailed evidence of one soldier’s experience and perceptions. His limited view, uncertainty about what happened elsewhere, and retrospective memory mean it cannot stand in for every soldier or a complete operational history."
+        }
+      ],
+      "takeaway": "Local territorial gains could cost enormous effort and suffering. Repeated bombardment, helpless waiting, gas, and the difficulty of helping casualties explain the experience’s traumatic character."
+    },
+    {
+      "id": "remarque",
+      "group": "accounts",
+      "title": "Erich Maria Remarque · All Quiet on the Western Front",
+      "subtitle": "A novel published in 1929 · a young German soldier’s perspective",
+      "citation": "WW1_Trench_Warfare_Sources.pdf · printed introduction and excerpt on PDF pages 7–10",
+      "intro": "The packet identifies this as a novel, not a second memoir. Remarque uses a fictional German narrator to depict the physical and psychological effects of trench combat and to challenge romantic images of war.",
+      "blocks": [
+        {
+          "title": "The sequence of the fighting",
+          "text": "A prolonged bombardment damages the trenches and traps soldiers in a dugout. Recruits struggle with fear and panic. When the shelling moves behind the defenders, an infantry attack follows. They withdraw, use surviving defenses and artillery, counterattack, enter enemy positions, and eventually return to their own line."
+        },
+        {
+          "title": "Survival replaces romantic ideals",
+          "text": "The narrator’s immediate concern is avoiding destruction, not winning glory. Fear and rage drive behavior during the attack. The contrast with ideals of honor and patriotic sacrifice is central: the passage presents fighting as a struggle for survival with a heavy moral and emotional cost."
+        },
+        {
+          "title": "Dehumanization and temporary recovery",
+          "text": "During combat, ordinary sympathy and self-control weaken. Soldiers act through instinct, fear, anger, and group momentum. After returning to their own position, exhaustion and a period of rest allow ordinary human awareness to begin returning. The closing idea is a partial recovery of humanity, not proof that the experience leaves no lasting damage."
+        },
+        {
+          "title": "Technology and trauma",
+          "text": "Artillery destroys shelter and produces helpless waiting; machine guns, grenades, and close fighting make exposed movement dangerous. Noise, dust, uncertainty, panic, and exhaustion affect soldiers even without a visible wound. Food and water become immediate priorities when the fighting briefly allows it."
+        },
+        {
+          "title": "Literary evidence has a different purpose",
+          "text": "Remarque’s wartime experience informs the novel, but the narrator’s actions are not a diary of the author’s own movements. Use the passage as evidence of a literary representation and critique of war. Compare its themes with Clapham’s memoir without treating the two genres as interchangeable."
+        }
+      ],
+      "takeaway": "Remarque challenges heroic rhetoric by showing combat narrowing life to survival, eroding empathy, and exhausting soldiers physically and mentally."
+    },
+    {
+      "id": "crash-course-209",
+      "group": "videos",
+      "title": "How World War I Started",
+      "subtitle": "Crash Course World History 209 · John Green · 9:09",
+      "citation": "WWI_video_transcripts.pdf · pages 1–4 · supplied official-caption transcript",
+      "url": "https://www.youtube.com/watch?v=Cd2ch4XV84s",
+      "intro": "Episode 209 follows the decisions through which the Sarajevo assassination became a wider European war. Its central distinction is between tracing how events unfolded and explaining why they happened.",
+      "blocks": [
+        {
+          "title": "0:00–2:00 · How is different from why",
+          "text": "A chronology follows a sequence of events. A causal explanation asks which conditions or decisions changed the outcome and implies that another choice might have produced another result. Even a chronology involves selecting which events matter."
+        },
+        {
+          "title": "2:00–4:00 · Assassination and nationalism",
+          "text": "Gavrilo Princip and fellow conspirators assassinated Archduke Franz Ferdinand in Sarajevo on June 28, 1914. The episode connects the attack to Serbian nationalism and the problem that nationalist expansion posed for Austria-Hungary’s multinational empire. It also presents Franz Ferdinand as a potential moderate, so removing him narrowed the room for compromise."
+        },
+        {
+          "title": "4:00–5:00 · Networks are not the same as a government",
+          "text": "The episode discusses possible assistance from Serbian military figures and the controversy over how far the Serbian government was involved. Distinguish the assassins, nationalist networks, individual officers, and the state as a whole. Evidence of connections does not by itself settle who authorized the attack."
+        },
+        {
+          "title": "4:00–5:00 · Austrian choices and German backing",
+          "text": "Austria-Hungary feared that tolerating Serbian expansion would encourage other nationalist movements. German support in early July, often called the blank check, reassured Austria about possible Russian intervention. Austria issued its ultimatum on July 23, after a delay of several weeks."
+        },
+        {
+          "title": "5:00–7:00 · Preparations become war",
+          "text": "Russia began preliminary military preparations before general mobilization. Serbia accepted much of the Austrian ultimatum but did not accept it in full. Austria-Hungary declared war on Serbia; Russian general mobilization followed; Germany then declared war on Russia and France. Germany’s invasion of Belgium brought Britain into the conflict."
+        },
+        {
+          "title": "7:00–8:00 · Escalation was not inevitable",
+          "text": "The episode stresses that earlier Balkan crises had remained limited. Looking backward makes the sequence appear automatic, but people acting in June and July did not know the eventual outcome. Individual diplomatic decisions helped turn a regional crisis into a major war."
+        }
+      ],
+      "entries": [
+        {
+          "id": "date-0628",
+          "label": "June 28, 1914",
+          "title": "Assassination in Sarajevo",
+          "text": "Franz Ferdinand is assassinated; Austria-Hungary confronts the Serbian nationalist challenge."
+        },
+        {
+          "id": "date-0705",
+          "label": "July 5–6",
+          "title": "Germany’s blank check",
+          "text": "Germany assures Austria-Hungary of support, including if Russia intervenes."
+        },
+        {
+          "id": "date-0723",
+          "label": "July 23",
+          "title": "Austrian ultimatum",
+          "text": "Austria-Hungary presents Serbia with harsh demands."
+        },
+        {
+          "id": "date-0725",
+          "label": "July 25–26",
+          "title": "Serbia replies; Russia prepares",
+          "text": "Serbia accepts many demands but not all. The episode distinguishes Russia’s preliminary preparations, approved on July 25 and effective on July 26, from general mobilization."
+        },
+        {
+          "id": "date-0728",
+          "label": "July 28",
+          "title": "Austria-Hungary declares war on Serbia",
+          "text": "The diplomatic crisis becomes a war in the Balkans."
+        },
+        {
+          "id": "date-0730",
+          "label": "July 30",
+          "title": "Russian general mobilization",
+          "text": "Russia’s preparations intensify, provoking German demands that it stop."
+        },
+        {
+          "id": "date-0801",
+          "label": "August 1",
+          "title": "Germany declares war on Russia",
+          "text": "Germany and France also mobilize. The last supplied Willy–Nicky telegrams fall on this date."
+        },
+        {
+          "id": "date-0803",
+          "label": "August 3",
+          "title": "Germany declares war on France",
+          "text": "Germany seeks a rapid victory in the west before concentrating on Russia."
+        },
+        {
+          "id": "date-0804",
+          "label": "August 4",
+          "title": "Belgium invaded; Britain enters",
+          "text": "German troops enter Belgium and Britain declares war on Germany. The widening war does not mean every participant is already formally at war with every other participant."
+        }
+      ],
+      "note": "The video is a secondary interpretation. Its caption wording sometimes compresses distinctions: Serbia did not reject every Austrian demand, and preliminary Russian preparations were not the same stage as general mobilization. Study the sequence without turning every narrative shortcut into a literal fact.",
+      "takeaway": "Assassination → German backing → ultimatum → military preparations → declarations of war → invasion of Belgium and British entry."
+    },
+    {
+      "id": "crash-course-210",
+      "group": "videos",
+      "title": "Who Started World War I",
+      "subtitle": "Crash Course World History 210 · John Green · 10:56",
+      "citation": "WWI_video_transcripts.pdf · pages 5–9 · supplied official-caption transcript",
+      "url": "https://www.youtube.com/watch?v=_pFCpKtwCkI",
+      "intro": "Episode 210 examines competing arguments about responsibility. It favors an explanation grounded in particular diplomatic decisions and warns against blaming an entire national population’s supposed character.",
+      "blocks": [
+        {
+          "title": "0:00–3:00 · Germany and national stereotypes",
+          "text": "The episode discusses the German-responsibility interpretation associated with historian Fritz Fischer and the legacy of Article 231 of the Versailles treaty. It rejects the idea that the German population was uniquely warlike: enthusiasm for military glory existed across Europe, and Wilhelm’s public behavior cannot represent every German."
+        },
+        {
+          "title": "3:00–4:00 · The case against Austria-Hungary and Germany",
+          "text": "Austria-Hungary issued the ultimatum and first declared war, against Serbia. Germany’s blank check encouraged Austrian risk-taking. Germany then declared war on Russia and France, and its invasion of Belgium brought Britain in. These are distinct decisions that expanded the conflict. The video argues that German assurances were intended to deter escalation, while Austrian foreign minister Berchtold read them as encouragement to act recklessly; treat this account of intentions as an interpretation."
+        },
+        {
+          "title": "4:00–6:00 · The case against Russia",
+          "text": "The episode emphasizes Russian preliminary preparations and general mobilization as escalatory choices that alarmed Austria-Hungary and Germany. It questions whether an Austrian attack on Serbia was a direct threat to Russia. This is the video’s argument about responsibility, not a reason to ignore Austrian and German decisions. To support that argument, the video points to Austrian mobilization delays during harvest leave and an initial plan aimed at Serbia rather than Russia."
+        },
+        {
+          "title": "6:00–7:00 · Why Russian leaders acted",
+          "text": "The video links Russia’s concern for Serbia and Balkan influence to strategic access through the Turkish straits and to prestige. Defeat by Japan and the failure to prevent Austria’s 1908 annexation of Bosnia made another retreat appear costly. Foreign minister Sazonov feared Russia would lose standing if it abandoned Serbia."
+        },
+        {
+          "title": "8:00–9:00 · Multiple causes, selective explanations",
+          "text": "Blame can be pushed farther and farther into the past, but that alone does not make a useful explanation. The episode acknowledges alliances, imperialism, naval rivalry, nationalism, and Social Darwinist ideas, while choosing to focus on diplomacy and a small number of decision-makers."
+        },
+        {
+          "title": "9:00–10:00 · How historians work",
+          "text": "Diplomats leave extensive records, but those records can conflict and can defend their authors’ actions. Historians must decide which sources to trust and emphasize. Compare interpretations with primary sources, explain the evidence for a claim, and recognize that a different emphasis can produce a different account."
+        }
+      ],
+      "note": "The transcript misspells Fritz Fischer’s surname as Fisher; the notes use Fischer. Treat the episode’s assignment of responsibility as an interpretation to evaluate. Article 231 concerned Germany and its allies’ responsibility for war-related loss and damage; the familiar war-guilt label does not settle the entire historical debate.",
+      "takeaway": "Build an argument from specific decisions and evidence. Shared responsibility does not mean every government made the same choices or bears identical responsibility."
+    }
+  ],
+  "comparisons": [
+    {
+      "theme": "Diplomacy and responsibility",
+      "evidence": "Nicholas and Wilhelm each portray their own military measures as defensive.",
+      "connection": "Crash Course 210 explains why diplomatic records require critical reading: officials may justify their actions and shift blame."
+    },
+    {
+      "theme": "The pace of escalation",
+      "evidence": "The telegrams run from July 29 to August 1, during Russian mobilization and just before Germany’s declaration of war on Russia.",
+      "connection": "Place the personal appeals inside Crash Course 209’s chronology to see how negotiation and military preparation overlapped."
+    },
+    {
+      "theme": "Local gains, high human costs",
+      "evidence": "Clapham describes capturing, repairing, losing, and reoccupying trenches; Remarque depicts withdrawal, counterattack, and a return to the original position.",
+      "connection": "Stalemate does not mean no movement. Local movement could coexist with little decisive strategic change and enormous suffering."
+    },
+    {
+      "theme": "Psychological damage",
+      "evidence": "Both readings emphasize prolonged bombardment, helplessness, fear, exhaustion, and emotional numbing.",
+      "connection": "Industrial warfare affects the mind as well as the body. Explain this with specific features of the accounts rather than diagnosing every narrator."
+    },
+    {
+      "theme": "Source type matters",
+      "evidence": "Telegram = contemporary diplomatic communication; Clapham = retrospective memoir; Remarque = novel; Crash Course = later educational interpretation.",
+      "connection": "Use each source for the questions it can answer, and state its limits. Similar themes do not erase differences in genre, perspective, or purpose."
+    }
+  ],
+  "terms": [
+    [
+      "Mobilization",
+      "Preparing and assembling armed forces for possible war; other governments can interpret it as a threat even when its leaders call it defensive."
+    ],
+    [
+      "Blank check",
+      "Germany’s early-July assurance of support to Austria-Hungary, which reduced Vienna’s fear of acting against Serbia."
+    ],
+    [
+      "Ultimatum",
+      "A demand backed by a deadline and threatened consequences if it is not accepted."
+    ],
+    [
+      "Parapet / parados",
+      "Protective earthworks at the front / rear of a trench."
+    ],
+    [
+      "Communication trench",
+      "A route linking the front line with rear areas for troops, supplies, and evacuation."
+    ],
+    [
+      "Consolidation",
+      "Making a captured position defensible: repairing cover, moving wire, and connecting it to other positions."
+    ],
+    [
+      "Shrapnel / crumps / whizz-bangs",
+      "Terms in Clapham’s handout for fragmenting ammunition, heavy German shells, and shells from light German field guns."
+    ],
+    [
+      "Dehumanization",
+      "The erosion of ordinary empathy, identity, or humane behavior; a central theme of Remarque’s account."
+    ],
+    [
+      "Historiography",
+      "The study of how historians interpret evidence and construct differing explanations of the past."
+    ]
+  ]
+}

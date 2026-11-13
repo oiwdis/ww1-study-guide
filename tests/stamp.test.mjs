@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync, readFileSync, writeFileSync, rmSync} from 'node:fs';
+import {mkdtempSync, readFileSync, readdirSync, writeFileSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {stampDirectory, stampText, HEADERS} from '../scripts/stamp-assets.mjs';
@@ -28,6 +28,15 @@ test('asset stamps are content hashes and stay stable when rerun',()=>{
  assert.notEqual(third.version,first.version);
  assert.match(readFileSync(join(dir,'app.js'),'utf8'),new RegExp(`\\?v=${third.version}`));
  rmSync(dir,{recursive:true});
+});
+
+test('the content hash covers Extra Information script and stylesheet',()=>{
+ const names=readdirSync(new URL('../dist/',import.meta.url)).filter(name=>/\.(?:js|mjs|css)$/.test(name));
+ assert.ok(names.includes('supplement.js'));
+ assert.ok(names.includes('supplement.css'));
+ const stamped=stampText('<link rel="stylesheet" href="supplement.css"><script src="supplement.js" type="module"></script>',names,'abc123abc123');
+ assert.match(stamped,/supplement\.css\?v=abc123abc123/);
+ assert.match(stamped,/supplement\.js\?v=abc123abc123/);
 });
 
 test('stamp text does not rewrite a longer filename',()=>{

@@ -175,11 +175,13 @@ short('Compare Vietnamese and Korean appeals for self-determination after WWI. W
 
 from practice_distractors import refine
 refine(tests)
+from practice_slide_scope import apply_slide_scope
+apply_slide_scope(tests)
 for t in tests:
     assert len(t['questions'])==24
     assert [sum(q['section']==s for q in t['questions']) for s in ['cartoons','knowledge','blanks','short']]==[5,10,7,2]
     for q in t['questions']:
         if q['type']=='mc': assert 4<=len(q['options'])<=8 and len(set(q['options']))==len(q['options'])
 assert len({q['stem'] for t in tests for q in t['questions']})==120
-(ROOT/'dist/practice-tests.json').write_text(json.dumps({'version':1,'cartoons':cartoons,'tests':tests},ensure_ascii=False,indent=2)+'\n')
+(ROOT/'dist/practice-tests.json').write_text(json.dumps({'version':2,'multipleChoiceScope':'slides','cartoons':cartoons,'tests':tests},ensure_ascii=False,indent=2)+'\n')
 print('Built 5 practice tests: 120 unique questions, 25 cartoon interpretations, 50 content MC, 35 blanks, 10 short answers.')
