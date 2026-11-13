@@ -1,0 +1,1695 @@
+[
+  {
+    "id": "event-1",
+    "sort": "1815",
+    "date": "1815",
+    "title": "Napoleonic era ends at Waterloo",
+    "era": "Background",
+    "topic": "War & society",
+    "text": "The technology reading uses Waterloo as a reference point for comparing nineteenth-century warfare with WWI.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-2",
+    "sort": "1853",
+    "date": "1853–1856",
+    "title": "Crimean War",
+    "era": "Background",
+    "topic": "War & society",
+    "text": "A background example in the readings of European conflict before the much larger industrial war of 1914.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-3",
+    "sort": "1861",
+    "date": "1861–1865",
+    "title": "American Civil War",
+    "era": "Background",
+    "topic": "War & society",
+    "text": "The technology feature links earlier ironclads and large-scale warfare to later developments.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": "The photograph prints 1860–1865; the war began in 1861."
+  },
+  {
+    "id": "event-4",
+    "sort": "1870",
+    "date": "1870–1871",
+    "title": "Franco-Prussian War",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Prussia and its allies defeat France. The conflict helps bring about German unification and French resentment over lost territory.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      },
+      {
+        "kind": "slides",
+        "first": 9,
+        "last": 9
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-5",
+    "sort": "1871",
+    "date": "1871",
+    "title": "German unification; Alsace-Lorraine changes hands",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "A powerful unified Germany alters Europe’s balance of power. France’s loss of Alsace-Lorraine contributes to a lasting rivalry.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 9,
+        "last": 9
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-6",
+    "sort": "1876",
+    "date": "1876",
+    "title": "First Ottoman constitution",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "The Young Turks later demand restoration of constitutional government as part of their challenge to Ottoman autocracy.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      }
+    ],
+    "note": "The constitution was promulgated in 1876; its suspension belongs to 1878, despite the reading’s compressed wording."
+  },
+  {
+    "id": "event-7",
+    "sort": "1882",
+    "date": "1882",
+    "title": "Triple Alliance forms",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Germany, Austria-Hungary, and Italy form the prewar alliance. Italy’s wartime choice later differs from this alignment.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "documents",
+        "first": 3,
+        "last": 3
+      },
+      {
+        "kind": "slides",
+        "first": 11,
+        "last": 14
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-8",
+    "sort": "1885",
+    "date": "1885",
+    "title": "Indian National Congress founded",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "The nationalist organization predates the Paris Peace Conference by decades.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 13,
+        "last": 13
+      }
+    ],
+    "note": "Included to clarify the handout’s misleading description of a “newly created” Congress in 1919."
+  },
+  {
+    "id": "event-9",
+    "sort": "1892",
+    "date": "1892–1894",
+    "title": "Franco-Russian alliance takes shape",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Military arrangements connect France and Russia, increasing Germany’s fear of fighting on two fronts.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 10,
+        "last": 10
+      },
+      {
+        "kind": "slides",
+        "first": 12,
+        "last": 12
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-10",
+    "sort": "1897",
+    "date": "1897–1898",
+    "title": "German seizure and lease at Jiaozhou",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "German rights in Shandong later become the subject of competing Japanese and Chinese claims at Paris.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 6,
+        "last": 7
+      }
+    ],
+    "note": "The German occupation began in 1897; the lease agreement followed in 1898."
+  },
+  {
+    "id": "event-11",
+    "sort": "1899",
+    "date": "1899",
+    "title": "Hague declaration addresses asphyxiating gas",
+    "era": "Background",
+    "topic": "War & society",
+    "text": "International restrictions did not prevent the later development and use of chemical weapons.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-12",
+    "sort": "1900",
+    "date": "1900",
+    "title": "Boxer uprising in China",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "The chronology table places the uprising in the wider crisis of the imperial order.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-13",
+    "sort": "1902",
+    "date": "1902",
+    "title": "Anglo-Japanese alliance",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "The alliance diagram shows a relationship extending the European diplomatic system into East Asia.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 12,
+        "last": 12
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-14",
+    "sort": "1904-01",
+    "date": "1904",
+    "title": "Britain and France reach an entente",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Their diplomatic understanding helps form the alignments that later become the Triple Entente.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "slides",
+        "first": 12,
+        "last": 12
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-15",
+    "sort": "1904-02",
+    "date": "1904–1905",
+    "title": "Russo-Japanese War",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "Japan defeats Russia, demonstrating changes in military and imperial power beyond western Europe.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 2
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-16",
+    "sort": "1907-01",
+    "date": "1907",
+    "title": "Britain and Russia reach an entente",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Together with the Franco-Russian and Anglo-French relationships, this completes the core Triple Entente alignment.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "slides",
+        "first": 10,
+        "last": 12
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-17",
+    "sort": "1907-02",
+    "date": "1907",
+    "title": "Hague Convention on land warfare",
+    "era": "Background",
+    "topic": "War & society",
+    "text": "The technology reading connects restrictions on poison weapons with their later violation during WWI.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-18",
+    "sort": "1908",
+    "date": "1908",
+    "title": "Austria-Hungary annexes Bosnia-Herzegovina",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "The annexation frustrates Serbian nationalist ambitions and sharpens tensions in the Balkans.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "slides",
+        "first": 25,
+        "last": 25
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-19",
+    "sort": "1909",
+    "date": "1909",
+    "title": "Young Turks depose Abdul Hamid II",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "Reform and modernization proceed alongside centralization and policies that alienate minorities.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-20",
+    "sort": "1911-01",
+    "date": "1911",
+    "title": "Chinese revolution challenges Qing rule",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "The reading’s chronology identifies the revolution associated with Sun Yat-sen; the Qing dynasty formally ends in 1912.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-21",
+    "sort": "1911-02",
+    "date": "1911–1912",
+    "title": "Italy conquers Ottoman Libya",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "The loss of Libya illustrates the erosion of Ottoman territory and European imperial competition.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-22",
+    "sort": "1912-01",
+    "date": "1912–1913",
+    "title": "Balkan Wars",
+    "era": "Background",
+    "topic": "Causes & alliances",
+    "text": "Balkan states fight over Ottoman lands and the regional settlement. Most Ottoman European territory is lost.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      },
+      {
+        "kind": "slides",
+        "first": 25,
+        "last": 25
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-23",
+    "sort": "1912-02",
+    "date": "1912",
+    "title": "Albania declares independence",
+    "era": "Background",
+    "topic": "Empire & national claims",
+    "text": "A national independence claim forms part of the Ottoman retreat from the Balkans.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 3
+      }
+    ],
+    "note": "The textbook’s 1910 reference should not be memorized as the independence date."
+  },
+  {
+    "id": "event-24",
+    "sort": "1914-06-28",
+    "date": "June 28, 1914",
+    "title": "Assassination in Sarajevo",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "Gavrilo Princip kills Franz Ferdinand and his wife. The assassination triggers the July Crisis.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 33,
+        "last": 34
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-25",
+    "sort": "1914-07-28",
+    "date": "July 28, 1914",
+    "title": "Austria-Hungary declares war on Serbia",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "The regional crisis becomes an open war and activates fears and commitments among the larger powers.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-26",
+    "sort": "1914-07-30",
+    "date": "Late July 1914",
+    "title": "Russian mobilization escalates the crisis",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "Russian support for Serbia and military preparations intensify German fears of a wider conflict.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      },
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 40
+      }
+    ],
+    "note": "Partial mobilization was ordered on July 29; general mobilization followed on July 30."
+  },
+  {
+    "id": "event-27",
+    "sort": "1914-08-01",
+    "date": "August 1, 1914",
+    "title": "Germany declares war on Russia",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "The crisis now directly involves two major powers and their partners.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-28",
+    "sort": "1914-08-03",
+    "date": "August 3, 1914",
+    "title": "Germany declares war on France",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "Germany’s strategy aims for a fast western victory before a prolonged struggle against Russia.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      },
+      {
+        "kind": "slides",
+        "first": 50,
+        "last": 50
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-29",
+    "sort": "1914-08-04",
+    "date": "August 4, 1914",
+    "title": "Germany invades Belgium; Britain enters",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "The invasion of neutral Belgium helps bring Britain into the war against Germany.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": "The reading places entry into Belgium on August 3; August 4 is the invasion date used here."
+  },
+  {
+    "id": "event-30",
+    "sort": "1914-08-20",
+    "date": "1914",
+    "title": "Japan takes German positions in China",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "Japan’s wartime occupation becomes a basis for its Shandong claims at the peace conference.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 6,
+        "last": 6
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-31",
+    "sort": "1914-09",
+    "date": "September 1914",
+    "title": "First Battle of the Marne",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "Allied resistance helps halt the German advance near Paris. The planned quick victory fails.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 52,
+        "last": 52
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-32",
+    "sort": "1914-10",
+    "date": "Autumn 1914",
+    "title": "Western Front trench system develops",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "Opposing armies establish connected defenses from the North Sea to the Swiss border.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 53,
+        "last": 53
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-33",
+    "sort": "1914-11",
+    "date": "Late October–November 1914",
+    "title": "Ottoman Empire enters the war",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "Ottoman participation alongside the Central Powers expands the conflict into additional theaters.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-34",
+    "sort": "1915-01",
+    "date": "January 1915",
+    "title": "Japan presents the Twenty-One Demands",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "The demands seek expanded Japanese influence in China and frame later Chinese objections at Paris.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 7,
+        "last": 7
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-35",
+    "sort": "1915-04-22",
+    "date": "1915",
+    "title": "Large-scale chlorine-gas warfare on the Western Front",
+    "era": "War, 1914–1918",
+    "topic": "War & society",
+    "text": "Chemical warfare adds terror and suffering; other belligerents also use gas.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 55,
+        "last": 55
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": "Britain used gas in 1915, despite the technology box’s later date."
+  },
+  {
+    "id": "event-36",
+    "sort": "1915-04-25",
+    "date": "April 25, 1915",
+    "title": "ANZAC landing at Gallipoli",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "The Allied campaign against Ottoman defenses becomes central to Australian and New Zealand wartime memory.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 8,
+        "last": 8
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-37",
+    "sort": "1915-04-26",
+    "date": "1915",
+    "title": "Treaty of London; Italy joins the Allies",
+    "era": "War, 1914–1918",
+    "topic": "Causes & alliances",
+    "text": "Territorial promises help draw Italy to the Allied side. Italy declares war on Austria-Hungary in May.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 3,
+        "last": 3
+      },
+      {
+        "kind": "slides",
+        "first": 14,
+        "last": 14
+      },
+      {
+        "kind": "slides",
+        "first": 36,
+        "last": 36
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-38",
+    "sort": "1915-05-07",
+    "date": "May 7, 1915",
+    "title": "Lusitania is sunk",
+    "era": "War, 1914–1918",
+    "topic": "War & society",
+    "text": "The loss of the passenger liner generates anger and U.S. protests but does not bring immediate U.S. entry.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 106,
+        "last": 106
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-39",
+    "sort": "1916-02",
+    "date": "1916",
+    "title": "Battle of Verdun",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "A long and costly battle exemplifies attrition and the limits of industrial offensives.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 54,
+        "last": 54
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-40",
+    "sort": "1916-05",
+    "date": "May–June 1916",
+    "title": "Battle of Jutland",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "The major British-German surface-fleet engagement does not end Britain’s strategic blockade.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-41",
+    "sort": "1916-06",
+    "date": "1916",
+    "title": "Arab Revolt; competing wartime promises",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "Arab revolt against Ottoman rule is encouraged by expectations of independence. British-French arrangements complicate those expectations.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      },
+      {
+        "kind": "documents",
+        "first": 15,
+        "last": 15
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-42",
+    "sort": "1916-07",
+    "date": "1916",
+    "title": "Battle of the Somme",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "Huge losses accompany limited advances. British tanks make their battlefield debut during the campaign.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 54,
+        "last": 55
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 1
+      },
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-43",
+    "sort": "1916-08",
+    "date": "1916",
+    "title": "Romania enters the war on the Allied side",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "Romania later invokes its agreement with the Entente and its wartime sacrifices to support territorial claims.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 10,
+        "last": 10
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-44",
+    "sort": "1916-12",
+    "date": "Winter 1916–1917",
+    "title": "Germany’s “turnip winter”",
+    "era": "War, 1914–1918",
+    "topic": "War & society",
+    "text": "Blockade, food shortages, and a failed potato harvest worsen civilian hardship.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 2,
+        "page": 2
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-45",
+    "sort": "1917-01-16",
+    "date": "January 16, 1917",
+    "title": "Zimmermann Telegram",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "Germany proposes Mexican cooperation in a possible war with the United States, offering support for recovery of Texas, New Mexico, and Arizona.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 102,
+        "last": 104
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-46",
+    "sort": "1917-02-01",
+    "date": "February 1, 1917",
+    "title": "Unrestricted submarine warfare resumes",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "Germany hopes to defeat Britain before American intervention becomes decisive.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      },
+      {
+        "kind": "slides",
+        "first": 105,
+        "last": 105
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-47",
+    "sort": "1917-03",
+    "date": "1917",
+    "title": "Russian revolutions",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "War losses and hardship help destabilize the Russian state. Revolution changes its government and its role in the war.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 80,
+        "last": 80
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-48",
+    "sort": "1917-04-06",
+    "date": "April 6, 1917",
+    "title": "United States declares war on Germany",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "Congress declares war after Wilson’s request, amid submarine warfare and other pressures.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 107,
+        "last": 108
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": "Wilson requested war on April 2; April 6 is the declaration date."
+  },
+  {
+    "id": "event-49",
+    "sort": "1917-10-26",
+    "date": "October 26, 1917",
+    "title": "Brazil enters WWI",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "German attacks on merchant shipping and ties to the United States help shape Brazil’s participation and postwar aims.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 18,
+        "last": 18
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-50",
+    "sort": "1917-11-02",
+    "date": "November 1917",
+    "title": "Balfour Declaration",
+    "era": "War, 1914–1918",
+    "topic": "Empire & national claims",
+    "text": "Britain supports a Jewish national home in Palestine, with language concerning existing communities’ civil and religious rights.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 16,
+        "last": 16
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": "The declaration dates to 1917, not the 1916 date printed in the conference handout."
+  },
+  {
+    "id": "event-51",
+    "sort": "1917-11-07",
+    "date": "November 1917",
+    "title": "Bolsheviks seize power",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "Lenin’s movement takes control as Russia’s war effort and political order break down.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 80,
+        "last": 80
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": "Often called the October Revolution because Russia then used a different calendar."
+  },
+  {
+    "id": "event-59",
+    "sort": "1917-11-08",
+    "date": "1917–1922",
+    "title": "Russian Civil War",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "The Bolsheviks fight anti-communist forces; warfare, economic collapse, and famine follow. The main struggle described in the reading centers on 1918–1921.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": "The reading’s December 1918 opening is too narrow for the full civil-war period. This range overlaps the final phase of WWI."
+  },
+  {
+    "id": "event-52",
+    "sort": "1918-01",
+    "date": "January 1918",
+    "title": "Wilson presents the Fourteen Points",
+    "era": "War, 1914–1918",
+    "topic": "Peace & diplomacy",
+    "text": "The program outlines principles for peace, including territorial settlement and an association of nations.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 115,
+        "last": 115
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-53",
+    "sort": "1918-03-03",
+    "date": "March 3, 1918",
+    "title": "Treaty of Brest-Litovsk",
+    "era": "War, 1914–1918",
+    "topic": "U.S. & Russia",
+    "text": "The Bolshevik government ends Russia’s participation in the war, accepting major territorial losses.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 80,
+        "last": 80
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-54",
+    "sort": "1918-03-21",
+    "date": "Spring 1918",
+    "title": "German offensives in the west",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "Ludendorff seeks victory before the growing American presence becomes overwhelming, but the offensives do not secure a decisive win.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-55",
+    "sort": "1918-08",
+    "date": "August 1918",
+    "title": "Allied counterattacks force German retreat",
+    "era": "War, 1914–1918",
+    "topic": "Battlefields",
+    "text": "Allied pressure, growing American strength, and German exhaustion reverse the momentum.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-56",
+    "sort": "1918-10",
+    "date": "Late October–November 1918",
+    "title": "German leadership and military morale break down",
+    "era": "War, 1914–1918",
+    "topic": "War & society",
+    "text": "Ludendorff resigns and naval mutinies accompany wider unrest, weakening the capacity to keep fighting.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      },
+      {
+        "kind": "slides",
+        "first": 110,
+        "last": 110
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-57",
+    "sort": "1918-11-11",
+    "date": "November 11, 1918 · 11 a.m.",
+    "title": "Armistice takes effect",
+    "era": "War, 1914–1918",
+    "topic": "Peace & diplomacy",
+    "text": "Fighting on the Western Front stops. A final peace treaty still has to be negotiated.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 110,
+        "last": 110
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-58",
+    "sort": "1918-12",
+    "date": "1918–1919",
+    "title": "Influenza pandemic in the readings",
+    "era": "War, 1914–1918",
+    "topic": "War & society",
+    "text": "Global movement, wartime conditions, and limited medical tools help a devastating pandemic spread.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 2
+      }
+    ],
+    "note": "The pandemic extended beyond these two years in wider historical accounts. The uploaded page also contains conflicting death estimates."
+  },
+  {
+    "id": "event-60",
+    "sort": "1919-01",
+    "date": "1919–1920",
+    "title": "Paris Peace Conference",
+    "era": "Peace & aftermath",
+    "topic": "Peace & diplomacy",
+    "text": "Victors negotiate treaties amid competing security, territorial, economic, and national demands.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 113,
+        "last": 115
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      },
+      {
+        "kind": "documents",
+        "first": 1,
+        "last": 21
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-61",
+    "sort": "1919-02",
+    "date": "February 1919",
+    "title": "Racial-equality proposal and Pan-African organizing",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "Japan proposes an equality provision; Pan-African advocates seek legal protections and participation in government. The conference does not fulfill these demands.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 6,
+        "last": 6
+      },
+      {
+        "kind": "documents",
+        "first": 17,
+        "last": 17
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-62",
+    "sort": "1919-03-01",
+    "date": "March 1, 1919",
+    "title": "Korean independence protests",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The March First Movement protests Japanese rule. Unofficial Korean representatives seek a hearing at Paris.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 19,
+        "last": 19
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-63",
+    "sort": "1919-04",
+    "date": "April 1919",
+    "title": "Amritsar massacre",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "British repression deepens Indian anger and challenges imperial claims to liberal values.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 13,
+        "last": 13
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-64",
+    "sort": "1919-05-04",
+    "date": "May 4, 1919",
+    "title": "May Fourth Movement in China",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The transfer of German Shandong rights to Japan provokes protests over sovereignty and the peace settlement.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 7,
+        "last": 7
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-65",
+    "sort": "1919-06",
+    "date": "1919",
+    "title": "Vietnamese eight-point petition",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "Nguyễn Ái Quốc, later known as Ho Chi Minh, petitions for civil rights, legal reforms, and representation under French rule.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 11,
+        "last": 11
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-66",
+    "sort": "1919-06-28",
+    "date": "June 28, 1919",
+    "title": "Treaty of Versailles signed",
+    "era": "Peace & aftermath",
+    "topic": "Peace & diplomacy",
+    "text": "Germany signs the treaty containing territorial changes, military limits, reparations, and a responsibility clause.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 116,
+        "last": 121
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-67",
+    "sort": "1919-07",
+    "date": "1919–1922",
+    "title": "Greco-Turkish conflict and Turkish nationalist struggle",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "Turkish nationalists resist postwar territorial arrangements and foreign occupation, leading to a revised settlement.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      },
+      {
+        "kind": "documents",
+        "first": 14,
+        "last": 14
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-68",
+    "sort": "1921-01",
+    "date": "1921",
+    "title": "New Economic Policy begins",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "Lenin allows limited private enterprise to revive the devastated economy while retaining Communist rule and control of major sectors.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": "The uploaded textbook prints 1923. The accepted start date is 1921."
+  },
+  {
+    "id": "event-69",
+    "sort": "1921-08",
+    "date": "1921",
+    "title": "United States makes separate peace treaties",
+    "era": "Peace & aftermath",
+    "topic": "Peace & diplomacy",
+    "text": "After rejecting ratification of Versailles, the United States concludes separate peace agreements with Germany, Austria, and Hungary.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 4,
+        "last": 4
+      },
+      {
+        "kind": "slides",
+        "first": 120,
+        "last": 120
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-70",
+    "sort": "1921-09",
+    "date": "1921 and 1924",
+    "title": "U.S. immigration restrictions",
+    "era": "Peace & aftermath",
+    "topic": "War & society",
+    "text": "Quota laws limit immigration, including arrivals from eastern and southern Europe, during a period of displacement.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 2
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-71",
+    "sort": "1922-01",
+    "date": "1922",
+    "title": "Shandong settlement restores Chinese sovereignty",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The settlement revisits Japan’s gains of 1919 and restores Chinese sovereignty in Shandong.",
+    "sources": [
+      {
+        "kind": "slides",
+        "first": 121,
+        "last": 121
+      },
+      {
+        "kind": "documents",
+        "first": 7,
+        "last": 7
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-72",
+    "sort": "1922-02",
+    "date": "1922",
+    "title": "Egypt gains nominal independence",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The reading’s chronology places limited Egyptian independence within the wider postwar Middle Eastern changes.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-73",
+    "sort": "1922-04",
+    "date": "1922",
+    "title": "German-Soviet rapprochement and cooperation",
+    "era": "Peace & aftermath",
+    "topic": "Peace & diplomacy",
+    "text": "Germany and Soviet Russia cooperate outside parts of the Versailles framework, including military and industrial links.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-74",
+    "sort": "1922-12",
+    "date": "1922",
+    "title": "Soviet Union formed",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "A new union consolidates Bolshevik control over much of the former tsarist empire, while several neighboring states remain independent.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 3
+      },
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-75",
+    "sort": "1923-01",
+    "date": "1923",
+    "title": "Ruhr occupation and German hyperinflation",
+    "era": "Peace & aftermath",
+    "topic": "War & society",
+    "text": "The reparations crisis, foreign occupation, and monetary expansion intensify economic and political instability.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-76",
+    "sort": "1923-07",
+    "date": "1923",
+    "title": "Revised Turkish settlement and republic",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The Treaty of Lausanne recognizes a revised settlement; the Republic of Turkey is proclaimed later in the year.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 14,
+        "last": 14
+      },
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-77",
+    "sort": "1924-01",
+    "date": "January 1924",
+    "title": "Lenin dies; succession struggle intensifies",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "Stalin and Trotsky become central rivals, with party organization and competing visions of socialism at stake.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-78",
+    "sort": "1924-02",
+    "date": "From 1924",
+    "title": "Recovery supported by international credit",
+    "era": "Peace & aftermath",
+    "topic": "War & society",
+    "text": "American loans, German reparations, and Allied debt payments form a circular financial flow supporting a fragile recovery.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 1
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-79",
+    "sort": "1926",
+    "date": "1926",
+    "title": "Germany joins the League of Nations",
+    "era": "Peace & aftermath",
+    "topic": "Peace & diplomacy",
+    "text": "German membership forms part of the period of diplomatic stabilization described in the reading.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 1
+      }
+    ],
+    "note": "The reading describes membership without specifying its year; 1926 supplies the date for the timeline."
+  },
+  {
+    "id": "event-80",
+    "sort": "1927",
+    "date": "1927",
+    "title": "Guomindang forces take Shanghai and turn against Communists",
+    "era": "Peace & aftermath",
+    "topic": "Empire & national claims",
+    "text": "The chronology table places this event within China’s postwar political upheaval.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 1,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-81",
+    "sort": "1928",
+    "date": "1928",
+    "title": "NEP gives way to the First Five-Year Plan",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "The sidebar points toward Stalin’s program of rapid state-directed industrialization.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-82",
+    "sort": "1929-01",
+    "date": "1929",
+    "title": "Trotsky is expelled from the Soviet Union",
+    "era": "Peace & aftermath",
+    "topic": "U.S. & Russia",
+    "text": "Stalin’s victory over his rival accompanies the consolidation of personal and party power.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 4
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-83",
+    "sort": "1929-10",
+    "date": "1929",
+    "title": "Great Depression ends the era of recovery",
+    "era": "Later context",
+    "topic": "War & society",
+    "text": "The final photographed page points forward to the collapse of the fragile postwar prosperity.",
+    "sources": [
+      {
+        "kind": "reading",
+        "reading": 3,
+        "page": 5
+      }
+    ],
+    "note": null
+  },
+  {
+    "id": "event-84",
+    "sort": "1948",
+    "date": "1948",
+    "title": "Israel is established",
+    "era": "Later context",
+    "topic": "Empire & national claims",
+    "text": "The Zionist handout looks beyond the WWI period to statehood and Palestinian displacement.",
+    "sources": [
+      {
+        "kind": "documents",
+        "first": 16,
+        "last": 16
+      }
+    ],
+    "note": "Later context from the handout, not an event during the 1919 negotiations."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "ww1-study-guide",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive, source-based World War I study guide",
+  "scripts": {
+    "test": "node --test tests/content.test.mjs",
+    "test:dom": "node tests/dom.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
