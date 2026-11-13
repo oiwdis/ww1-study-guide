@@ -1,14 +1,30 @@
 {
-  // Static assets only. The site in dist/ is already built; there is no Worker script.
+  // Static files in dist/ are served directly. Only /api/* runs this Worker first.
+  // STATS_KEY is a secret: npx wrangler secret put STATS_KEY
   "name": "ww1",
+  "main": "src/index.js",
   "compatibility_date": "2026-11-13",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "run_worker_first": ["/api/*"]
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ww1-analytics",
+      "database_id": "ab987583-79f5-4530-adb4-628fe031a067",
+      "migrations_dir": "migrations"
+    }
+  ],
   "observability": {
     "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
     "traces": {
-      "enabled": true
+      "enabled": true,
+      "head_sampling_rate": 1
     }
   }
 }

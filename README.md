@@ -28,13 +28,15 @@ Then open `http://localhost:8080`. Opening the HTML directly as a `file:` URL wi
 
 ## Deploy
 
-No build step. `dist/` is the static site. From the repository root:
+No build step. `dist/` is the static site. From the repository root, apply the D1 migration, publish the Worker, then set the stats secret (this stores no value in the repo):
 
 ```sh
+npx wrangler d1 migrations apply ww1-analytics --remote
 npx wrangler deploy
+npx wrangler secret put STATS_KEY
 ```
 
-That publishes the Worker named `ww1` using `wrangler.jsonc`, which serves `./dist` as static assets.
+`wrangler secret put` reads the secret from the prompt and deploys a new version that includes it. Static files are served directly; only `/api/*` runs the Worker. The stats page is `/stats.html`.
 
 ## Checks
 

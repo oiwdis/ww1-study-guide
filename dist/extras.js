@@ -1,10 +1,11 @@
 import {sections,answered,progress,complete,fresh,valid,isCorrect,score} from './practice-engine.mjs';
+import {track,learnerName,saveLearnerName,nameLine,setEditingName} from './analytics.js';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const names={cartoons:'Political cartoons',knowledge:'Content knowledge',blanks:'Fill in the blank',short:'Short answers'};
 const STORE='wwi-practice-v1';
 let readings,timeline,practice,attempts={},storageOK=true;
-let timelineQuery='',timelineEra='all',timelineTopic='all';
+let timelineQuery='',timelineEra='all',timelineTopic='all',searchTimer=0,timedAttempt=null,activeQuestionId=null,activeSince=0;
 const heading=(label,title,text,action='')=>`<div class="section-top"><div><p class="kicker">${label}</p><h2>${title}</h2><p>${text}</p></div>${action}</div>`;
 const scrollTop=()=>window.scrollTo({top:$('#main').offsetTop-70,behavior:'instant'});
 const announce=s=>{$('#live').textContent=s;};
@@ -24,7 +25,10 @@ export function renderExtra(active,bits){
  if(active==='practice'){
   const test=practice.tests.find(t=>t.id===Number(bits[1]));
   if(!test){renderTestList();scrollTop();return;}
-  if(!attempts[test.id]){attempts[test.id]=fresh(test);save();}
+  const existing=attempts[test.id];
+  const underway=existing&&(existing.finished||progress(test,existing)>0);
+  if(!learnerName().decided&&!underway){renderPracticeNameGate(test);scrollTop();return;}
+  if(!existing){attempts[test.id]=beginPractice(test);save();}
   const a=attempts[test.id];if(sections.includes(bits[2])){a.stage=bits[2];save();}
   a.finished?renderResults(test,a):renderTest(test,a);
  }
@@ -42,6 +46,36 @@ function renderReadings(id,page){
  <section class="reading-originals" aria-label="Original textbook pages"><div class="section-top"><div><p class="kicker">READING 0${r.id} / THE ORIGINAL PAGES</p><h3>From the textbook</h3><p>All ${r.pageCount} pages, in the order supplied in ${esc(r.filename)}. Select an image to open it at full size.</p></div><a class="btn small" href="${r.pdf}" target="_blank" rel="noopener">Open original PDF ↗</a></div>${r.id===3?'<div class="note">This bundle jumps between textbook pages. The uploaded order is preserved; the summary above follows the historical sequence.</div>':''}
  ${r.pages.map(p=>`<figure class="textbook-page" id="reading-page-${r.id}-${p.number}" tabindex="-1"><figcaption><strong>Page ${p.number} of ${r.pageCount}</strong><span>${esc(p.label)}</span></figcaption><a href="${p.image}" target="_blank" rel="noopener" aria-label="Open reading ${r.id} page ${p.number} at full size"><img src="${p.image}" loading="lazy" width="1800" height="2400" alt="Original textbook photograph, reading ${r.id}, uploaded page ${p.number}: ${esc(p.label)}"></a></figure>`).join('')}</section>`;
  if(page>=1&&page<=r.pageCount)jump(`reading-page-${r.id}-${page}`);
+ track('reading_opened',`readings/${r.id}`,{reading:r.id,...(Number.isInteger(page)&&page>=1?{page}:{})});
+}
+function beginPractice(test){
+ const a=fresh(test);
+ a.attemptId=crypto.randomUUID();a.startedAt=Date.now();a.questionMs={};
+ track('practice_started',`practice/${test.id}`,{attempt_id:a.attemptId,test_id:test.id,letter:test.letter,name:learnerName().name});
+ return a;
+}
+function renderPracticeNameGate(test){
+ $('#panel-practice').innerHTML=`<div class="exam-shell"><p><a class="source-button" href="#practice">← All practice tests</a></p><h2>${esc(test.title)}</h2><p class="mini">Add a name for this attempt, or skip.</p>${nameLine({attr:'data-extra',pending:String(test.id),confirm:true})}</div>`;
+}
+function flushQuestionTime(){
+ if(!timedAttempt||!activeQuestionId)return;
+ timedAttempt.questionMs??={};
+ timedAttempt.questionMs[activeQuestionId]=(timedAttempt.questionMs[activeQuestionId]||0)+Math.max(0,Date.now()-activeSince);
+ activeSince=Date.now();
+}
+function focusQuestion(a,id){
+ if(!a||!id)return;
+ if(timedAttempt!==a||activeQuestionId!==id){
+  if(timedAttempt&&activeQuestionId){timedAttempt.questionMs??={};timedAttempt.questionMs[activeQuestionId]=(timedAttempt.questionMs[activeQuestionId]||0)+Math.max(0,Date.now()-activeSince);}
+  timedAttempt=a;activeQuestionId=id;activeSince=Date.now();
+ }
+}
+function practiceAnswer(test,q,a){
+ const value=a.responses[q.id];
+ const base={attempt_id:a.attemptId,test_id:test.id,question_id:q.id,type:q.type,stem:q.stem.slice(0,140),time_spent_ms:Math.min(1800000,a.questionMs?.[q.id]||0),name:learnerName().name};
+ if(q.type==='mc') return {...base,chosen_index:value,chosen_text:q.options[value]||'',correct_index:q.answer,correct_text:q.options[q.answer]||'',correct:value===q.answer};
+ if(q.type==='fill') return {...base,chosen_index:null,chosen_text:String(value||'').slice(0,500),correct_index:null,correct_text:String(q.answer||'').slice(0,800),correct:isCorrect(q,value,false)};
+ return {...base,chosen_index:null,chosen_text:String(value||'').slice(0,500),correct_index:null,correct_text:String(q.model||'').slice(0,800),correct:null};
 }
 function renderTimeline(){
  $('#panel-timeline').innerHTML=heading('06 / TIMELINE','Timeline','84 dated events and periods from the slides, conference documents, and homework readings. Follow the chronology, or filter it by theme.')+
@@ -59,7 +93,7 @@ function renderEvents(){
 function renderTestList(){
  const done=practice.tests.filter(t=>attempts[t.id]?.finished).length;
  $('#panel-practice').innerHTML=heading('05 / PRACTICE TESTS','Practice tests','Each test follows your teacher’s format. Answer every question, then submit to unlock that test’s complete answer key.')+
- `<div class="exam-intro"><div><p class="kicker">YOUR PRACTICE RECORD</p><h3>${done}<span> / 5</span></h3><p>tests completed</p></div><div class="exam-format"><span><b>05</b> Cartoon interpretations</span><span><b>10</b> Content multiple choice</span><span><b>07</b> Fill in the blank</span><span><b>02</b> Short answers</span></div><p>Combination choices and chronology questions appear in every test. Cartoons come from your slide deck. Short answers include models and a four-point self-check rubric.</p></div>
+ `${nameLine({attr:'data-extra',confirm:true})}<div class="exam-intro"><div><p class="kicker">YOUR PRACTICE RECORD</p><h3>${done}<span> / 5</span></h3><p>tests completed</p></div><div class="exam-format"><span><b>05</b> Cartoon interpretations</span><span><b>10</b> Content multiple choice</span><span><b>07</b> Fill in the blank</span><span><b>02</b> Short answers</span></div><p>Combination choices and chronology questions appear in every test. Cartoons come from your slide deck. Short answers include models and a four-point self-check rubric.</p></div>
  <div class="test-grid">${practice.tests.map(t=>{const a=attempts[t.id],p=progress(t,a),g=a?.finished?score(t,a):null;return `<article class="test-card"><div class="test-card-top"><span class="test-letter">${t.letter}</span><span class="status-pill">${a?.finished?'Completed':p?'In progress':'Not started'}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.focus)}</p><div class="test-card-progress"><span>${a?.finished?`${g.correct} / ${g.total} objective points`:p?`${p} / 24 responses saved`:'24 questions · 4 sections'}</span><div class="quiz-progress"><span style="width:${p/24*100}%"></span></div></div><a class="btn ${a?.finished?'':'primary'}" href="#practice/${t.id}">${a?.finished?'Review answers':p?'Continue test':'Start test'} →</a></article>`;}).join('')}<aside class="test-note"><h3>Explain the evidence.</h3><p>For cartoons, identify the symbols, the message, and the historical context. For short answers, connect causes to consequences with named examples.</p><p class="mini">Scores are study feedback, not a prediction of your teacher’s grading.</p></aside></div><p class="mini muted" id="exam-save"></p>`;
  updateSaveLabel();
 }
@@ -69,10 +103,11 @@ function questionMarkup(q,i,a){const value=a.responses[q.id];return `<article cl
  ${q.type==='mc'?`<fieldset class="options" aria-labelledby="stem-${q.id}"><legend class="sr-only">Choose one best answer</legend>${q.options.map((o,index)=>`<label class="option ${value===index?'selected':''}"><input type="radio" name="${q.id}" value="${index}" data-exam-answer="${q.id}" ${value===index?'checked':''}><span class="option-letter">${index+1}</span><span class="option-text">${esc(o)}</span></label>`).join('')}</fieldset>`:q.type==='fill'?`<label class="field"><span class="sr-only">Your answer for question ${i+1}</span><input class="exam-blank" type="text" data-exam-answer="${q.id}" aria-labelledby="stem-${q.id}" autocomplete="off" spellcheck="false" value="${esc(value??'')}" placeholder="Type the missing term or name…"></label>`:`<p class="mini muted">Aim for a developed paragraph with specific evidence. Your response is saved; the model and rubric unlock when you submit the whole test.</p><textarea data-exam-answer="${q.id}" aria-labelledby="stem-${q.id}" rows="7" placeholder="Explain your answer…">${esc(value??'')}</textarea>`}</article>`;}
 function renderTest(t,a){
  const idx=sections.indexOf(a.stage),qs=t.questions.filter(q=>q.section===a.stage);
- $('#panel-practice').innerHTML=`<div class="exam-shell" data-exam-id="${t.id}"><div class="exam-topline"><a class="source-button" href="#practice">← All practice tests</a><span>TEST ${t.letter} · 24 QUESTIONS</span></div>${heading('YOUR PRACTICE TEST',esc(t.title),esc(t.focus))}<div class="exam-sticky"><div class="quiz-meta"><strong id="exam-progress-label"></strong><span>Answers unlock on submission</span></div><div class="quiz-progress" role="progressbar" aria-label="Test responses completed" aria-valuemin="0" aria-valuemax="24" id="exam-progress"><span></span></div><nav class="exam-steps" aria-label="Test sections">${sections.map((s,i)=>`<a href="#practice/${t.id}/${s}" ${a.stage===s?'aria-current="step"':''}><span>0${i+1}</span>${names[s]} <b data-section-progress="${s}"></b></a>`).join('')}</nav></div>
+ $('#panel-practice').innerHTML=`<div class="exam-shell" data-exam-id="${t.id}"><div class="exam-topline"><a class="source-button" href="#practice">← All practice tests</a><span>TEST ${t.letter} · 24 QUESTIONS</span></div>${nameLine({attr:'data-extra'})}${heading('YOUR PRACTICE TEST',esc(t.title),esc(t.focus))}<div class="exam-sticky"><div class="quiz-meta"><strong id="exam-progress-label"></strong><span>Answers unlock on submission</span></div><div class="quiz-progress" role="progressbar" aria-label="Test responses completed" aria-valuemin="0" aria-valuemax="24" id="exam-progress"><span></span></div><nav class="exam-steps" aria-label="Test sections">${sections.map((s,i)=>`<a href="#practice/${t.id}/${s}" ${a.stage===s?'aria-current="step"':''}><span>0${i+1}</span>${names[s]} <b data-section-progress="${s}"></b></a>`).join('')}</nav></div>
  <p class="mini muted" id="exam-save"></p><div class="exam-section-heading"><h3>${names[a.stage]}</h3><p>${a.stage==='cartoons'?'Use the visual evidence and the historical context. Each question has one best answer.':a.stage==='knowledge'?'Choose one best answer. Read combination statements and date sequences carefully.':a.stage==='blanks'?'Enter a term, name, or phrase. Capitalization and punctuation do not affect scoring.':'Explain relationships, use specific evidence, and answer every part of the prompt.'}</p></div>${qs.map(q=>questionMarkup(q,t.questions.indexOf(q),a)).join('')}
  <div class="exam-controls"><div class="button-row">${idx?`<a class="btn" href="#practice/${t.id}/${sections[idx-1]}">← Previous section</a>`:''}${idx<3?`<a class="btn primary" href="#practice/${t.id}/${sections[idx+1]}">Next section →</a>`:''}</div><button class="btn ${idx===3?'primary':'ghost'}" data-extra="submit-exam">Submit test & reveal answers →</button></div><div class="exam-submit-message" id="exam-submit-message" role="status"></div><p class="mini muted">All 24 responses are required. You can revise any response before submitting. Only this test’s answer key will unlock.</p></div>`;
  updateProgress(t,a);updateSaveLabel();
+ const first=qs[0];if(first)focusQuestion(a,first.id);
 }
 function updateProgress(t,a){
  const p=progress(t,a),label=$('#exam-progress-label');if(!label)return;
@@ -82,7 +117,7 @@ function updateProgress(t,a){
 }
 function currentTest(){const id=Number($('.exam-shell')?.dataset.examId);return practice.tests.find(t=>t.id===id);}
 function record(el){const t=currentTest();if(!t)return;const a=attempts[t.id];if(a.finished)return;const q=t.questions.find(q=>q.id===el.dataset.examAnswer);if(!q)return;
- a.responses[q.id]=q.type==='mc'?Number(el.value):el.value;save();updateProgress(t,a);
+ focusQuestion(a,q.id);a.responses[q.id]=q.type==='mc'?Number(el.value):el.value;save();updateProgress(t,a);
  const state=$(`[data-response-state="${q.id}"]`);state.textContent=answered(q,a.responses[q.id])?'Answered':'Not answered';
  if(q.type==='mc')$$('.option',el.closest('fieldset')).forEach(l=>l.classList.toggle('selected',$('input',l).checked));
  if($('#exam-submit-message'))$('#exam-submit-message').innerHTML='';
@@ -94,16 +129,21 @@ function renderResults(t,a){
  updateScore(t,a);
 }
 function updateScore(t,a){const g=score(t,a);$('#exam-score').innerHTML=`<div class="score-number">${g.correct}<span> / ${g.total}</span></div><p>Objective points · 15 multiple choice + 7 blanks</p><div class="exam-score-details"><span>Short answers: <strong>${g.reviewed===2?`${g.selfTotal} / ${g.selfMax}`:`${g.reviewed} / 2 reviewed`}</strong></span><span>${g.combined!==null?`Combined: <strong>${g.combined} / ${g.total+g.selfMax}</strong> (includes your self-scores)`:'Add both short-answer self-scores for a combined total.'}</span></div>`;}
-function onInput(e){if(e.target.dataset.examAnswer&&e.target.type!=='radio')record(e.target);if(e.target.id==='timeline-search'){timelineQuery=e.target.value;renderEvents();}}
+function onInput(e){if(e.target.dataset.examAnswer&&e.target.type!=='radio')record(e.target);if(e.target.id==='timeline-search'){timelineQuery=e.target.value;renderEvents();clearTimeout(searchTimer);searchTimer=setTimeout(()=>track('timeline_interaction','timeline',{action:'search',value:timelineQuery.slice(0,80)}),400);}}
 function onChange(e){const el=e.target;if(el.dataset.examAnswer&&el.type==='radio')record(el);
- if(el.id==='timeline-era'||el.id==='timeline-topic'){if(el.id==='timeline-era')timelineEra=el.value;else timelineTopic=el.value;renderEvents();}
+ if(el.id==='timeline-era'||el.id==='timeline-topic'){if(el.id==='timeline-era')timelineEra=el.value;else timelineTopic=el.value;renderEvents();track('timeline_interaction','timeline',{action:el.id==='timeline-era'?'era':'topic',value:el.value.slice(0,80)});}
  if(el.dataset.selfScore||el.dataset.fillOverride){const t=currentTest(),a=t&&attempts[t.id];if(!a?.finished)return;if(el.dataset.selfScore){if(el.value==='')delete a.selfScores[el.dataset.selfScore];else a.selfScores[el.dataset.selfScore]=Number(el.value);}else{if(el.checked)a.overrides[el.dataset.fillOverride]=true;else delete a.overrides[el.dataset.fillOverride];const q=t.questions.find(q=>q.id===el.dataset.fillOverride);$('.review-status',el.closest('.exam-review')).textContent=isCorrect(q,a.responses[q.id],el.checked)?'✓ Correct':'Review your wording';}save();updateScore(t,a);}
 }
 function onClick(e){const b=e.target.closest('[data-extra]');if(!b)return;
- if(b.dataset.extra==='reset-timeline'){timelineQuery='';timelineEra='all';timelineTopic='all';renderTimeline();return;}
+ if(b.dataset.extra==='reset-timeline'){timelineQuery='';timelineEra='all';timelineTopic='all';renderTimeline();track('timeline_interaction','timeline',{action:'reset'});return;}
+ if(b.dataset.extra==='change-name'||b.dataset.extra==='save-name'||b.dataset.extra==='skip-name'){
+  if(b.dataset.extra==='change-name')setEditingName(true);
+  else{saveLearnerName(b.dataset.extra==='skip-name'?'':($('#learner-name')?.value||''));setEditingName(false);}
+  renderExtra('practice',location.hash.slice(1).split('/'));return;
+ }
  const t=currentTest(),a=t&&attempts[t.id];if(!t)return;
- if(b.dataset.extra==='submit-exam'&&!a.finished){if(!complete(t,a)){const missing=t.questions.filter(q=>!answered(q,a.responses[q.id]));$('#exam-submit-message').innerHTML=`<strong>${missing.length} response${missing.length===1?'':'s'} still needed.</strong><p>Complete every question to unlock the answer key. Missing: ${missing.map(q=>`<a href="#practice/${t.id}/${q.section}" data-missing-question="${q.id}">${t.questions.indexOf(q)+1}</a>`).join(', ')}.</p>`;announce(`${missing.length} responses still needed before submission.`);return;}a.finished=true;save();renderResults(t,a);scrollTop();announce(`Test ${t.letter} completed. Its answer key is now available.`);}
+ if(b.dataset.extra==='submit-exam'&&!a.finished){if(!complete(t,a)){const missing=t.questions.filter(q=>!answered(q,a.responses[q.id]));$('#exam-submit-message').innerHTML=`<strong>${missing.length} response${missing.length===1?'':'s'} still needed.</strong><p>Complete every question to unlock the answer key. Missing: ${missing.map(q=>`<a href="#practice/${t.id}/${q.section}" data-missing-question="${q.id}">${t.questions.indexOf(q)+1}</a>`).join(', ')}.</p>`;announce(`${missing.length} responses still needed before submission.`);return;}flushQuestionTime();a.finished=true;save();const g=score(t,a);const answers=t.questions.map(q=>practiceAnswer(t,q,a));track('practice_completed',`practice/${t.id}`,{attempt_id:a.attemptId,test_id:t.id,letter:t.letter,correct:g.correct,total:g.total,percent:g.total?Math.round(g.correct/g.total*100):0,duration_ms:Math.max(0,Math.min(21600000,Date.now()-(a.startedAt||Date.now()))),name:learnerName().name,answers});renderResults(t,a);scrollTop();announce(`Test ${t.letter} completed. Its answer key is now available.`);}
  if(b.dataset.extra==='expand-review'){const all=$$('.exam-review'),open=all.some(d=>!d.open);all.forEach(d=>d.open=open);b.textContent=open?'Collapse answers':'Expand all answers';}
- if(b.dataset.extra==='retry-exam'){attempts[t.id]=fresh(t);save();if(location.hash===`#practice/${t.id}`)renderTest(t,attempts[t.id]);else location.hash=`practice/${t.id}`;scrollTop();}
+ if(b.dataset.extra==='retry-exam'){attempts[t.id]=beginPractice(t);save();if(location.hash===`#practice/${t.id}`)renderTest(t,attempts[t.id]);else location.hash=`practice/${t.id}`;scrollTop();}
 }
 document.addEventListener('click',e=>{const a=e.target.closest('[data-missing-question]');if(a){const id=a.dataset.missingQuestion;setTimeout(()=>jump(`exam-${id}`),0);}});

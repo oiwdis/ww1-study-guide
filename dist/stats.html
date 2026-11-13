@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study guide stats</title>
+<meta name="theme-color" content="#f5f3eb">
+<link rel="stylesheet" href="styles.css">
+<style>
+ body{background:var(--paper)}
+ main{max-width:980px;margin:0 auto;padding:28px 20px 70px}
+ h1{font-family:var(--serif);font-weight:400;font-size:40px;margin:0 0 8px}
+ .key-row,.filter-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}
+ .key-row input,.filter-row select{border:1px solid var(--line);background:var(--surface);padding:10px 12px;font:inherit;color:var(--ink)}
+ table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);margin:8px 0 22px;font-size:13px}
+ th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+ th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+ .attempt{border:1px solid var(--line);background:var(--surface);padding:14px 16px;margin:0 0 12px}
+ .attempt h3{margin:0 0 6px;font-size:18px}
+ .muted{color:var(--muted)}
+ .error{color:var(--rust)}
+</style>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="./"><span class="book-mark" aria-hidden="true">W</span><span>HISTORY <span class="brand-light">/ STATS</span></span></a></header>
+<main>
+<h1>Stats</h1>
+<p class="muted">Anonymous study activity. The key stays in this page only.</p>
+<form class="key-row" id="key-form">
+<label>Stats key <input id="key" type="password" autocomplete="current-password" required></label>
+<button class="btn primary" type="submit">Load</button>
+</form>
+<p id="status" class="error" role="status"></p>
+<div id="report" hidden>
+<div class="filter-row"><label>Name <select id="name"></select></label></div>
+<section><h2>Attempts by name</h2><div id="by-name"></div></section>
+<section><h2>Events</h2><div id="events"></div></section>
+<section><h2>Days</h2><div id="days"></div></section>
+<section><h2>Scores</h2><div id="scores"></div></section>
+<section><h2>Top slides and readings</h2><div id="tops"></div></section>
+<section><h2>Most-missed questions</h2><div id="missed"></div></section>
+<section><h2>Recent attempts</h2><div id="attempts"></div></section>
+</div>
+</main>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1623854f513a4814b9dbfb2ead5f1b6f"}'></script>
+<script>
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const keyEl=document.querySelector('#key'),statusEl=document.querySelector('#status'),report=document.querySelector('#report'),nameEl=document.querySelector('#name');
+function table(headers,rows){
+ if(!rows.length) return '<p class="muted">None yet.</p>';
+ return `<table><thead><tr>${headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(cell=>`<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+}
+function scoreLine(label,score){return `${label}: ${score.attempts?`${score.average_percent}% across ${score.attempts}`:'no completed attempts'}`;}
+function render(data){
+ report.hidden=false;
+ const current=nameEl.value;
+ const names=data.attempts_by_name.map(item=>item.name);
+ nameEl.innerHTML=`<option value="">All names</option>${names.map(name=>`<option>${esc(name)}</option>`).join('')}`;
+ nameEl.value=names.includes(current)?current:'';
+ document.querySelector('#by-name').innerHTML=table(['Name','Attempts','Average %'],data.attempts_by_name.map(item=>[item.name,item.attempts,item.average_percent??'']));
+ document.querySelector('#events').innerHTML=table(['Event','Count'],data.counts_by_event.map(item=>[item.event,item.count]));
+ document.querySelector('#days').innerHTML=table(['Day','Count'],data.counts_by_day.map(item=>[item.day,item.count]));
+ document.querySelector('#scores').innerHTML=`<p>${esc(scoreLine('Quiz',data.quiz_score_average))}</p><p>${esc(scoreLine('Practice tests',data.practice_score_average))}</p>`;
+ document.querySelector('#tops').innerHTML=table(['Slides','Count'],data.top_slides.map(item=>[item.page,item.count]))+table(['Readings','Count'],data.top_readings.map(item=>[item.page,item.count]));
+ document.querySelector('#missed').innerHTML=table(['Question','Attempts','Accuracy','Most common wrong answer'],data.most_missed.map(item=>[`${item.question_id}${item.stem?`: ${item.stem}`:''}`,`${item.correct}/${item.attempts}`,`${item.accuracy}%`,item.most_common_wrong?`${item.most_common_wrong.text} (${item.most_common_wrong.count})`:'' ]));
+ document.querySelector('#attempts').innerHTML=data.recent_attempts.map(item=>`<article class="attempt"><h3>${esc(item.name)} · ${esc(item.kind==='quiz'?'Quiz':'Practice '+(item.letter||''))}</h3><p class="muted">${esc(item.ts)} · ${esc(item.correct)}/${esc(item.total)} · ${esc(item.percent)}% · ${esc(Math.round((item.duration_ms||0)/1000))}s</p>${table(['Question','Chosen','Correct answer','Result','Seconds'],item.questions.map(q=>[q.stem||q.question_id,q.chosen_text??'',q.correct_text??'',q.correct==null?'':q.correct?'Correct':'Incorrect',Math.round((q.time_spent_ms||0)/1000)]))}</article>`).join('')||'<p class="muted">None yet.</p>';
+}
+async function load(){
+ statusEl.textContent='';
+ const name=nameEl.value;
+ const response=await fetch('/api/stats'+(name?`?name=${encodeURIComponent(name)}`:''),{headers:{authorization:`Bearer ${keyEl.value}`}});
+ if(!response.ok){report.hidden=true;statusEl.textContent=response.status===401?'The stats key was not accepted.':'The stats could not be loaded.';return;}
+ render(await response.json());
+}
+document.querySelector('#key-form').addEventListener('submit',event=>{event.preventDefault();load();});
+nameEl.addEventListener('change',()=>{if(keyEl.value)load();});
+</script>
+</body>
+</html>

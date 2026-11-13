@@ -5,7 +5,7 @@
   "type": "module",
   "description": "An interactive, source-based World War I study guide",
   "scripts": {
-    "test": "node --test tests/content.test.mjs",
+    "test": "node --test tests/content.test.mjs tests/api.test.mjs",
     "test:dom": "node tests/dom.test.mjs"
   },
   "devDependencies": {
