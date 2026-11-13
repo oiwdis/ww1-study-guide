@@ -9,8 +9,8 @@ Live guide: https://wwi-unit-study-guide.themaclan-2484.chatgpt.site
 - **Summary:** 14 detailed sections covering the slide deck.
 - **Slides:** all 127 original slides, with navigation and the original PDF.
 - **Readings:** three detailed summaries, each followed by the original textbook photographs (4, 3, and 5 pages).
-- **Quiz:** 112 multiple-choice questions with 4–10 choices, explanations, topic filters, and source links.
-- **Practice tests:** five distinct tests, each with 5 political-cartoon questions, 10 content multiple-choice questions, 7 blanks, and 2 short answers. Every test includes combination choices and chronology.
+- **Quiz:** 87 multiple-choice questions based only on the slide deck with 4–10 choices, explanations, topic filters, and source links.
+- **Practice tests:** five distinct tests, each with 5 political-cartoon questions, 10 content multiple-choice questions, 7 blanks, and 2 short answers. All multiple-choice questions use only the slides, including combination choices and chronology.
 - **Timeline:** 84 sourced dates and periods, with search and theme/era filters.
 - **Paris Peace Conference:** 17 country and movement perspectives, plus all 21 original document pages.
 
@@ -36,7 +36,7 @@ npm install
 npm run test:dom
 ```
 
-The first command validates content, assets, source ranges, scoring, completion gates, and saved-state handling without installing packages. The DOM check also exercises navigation, all five practice tests, answer visibility, persistence, readings, timeline filters, and the existing quiz. DOM checks are functional checks and do not substitute for visual browser review.
+The first command validates content, assets, slide-only multiple-choice sources, scoring, completion gates, and saved-state migration without installing packages. The DOM check also exercises navigation, all five practice tests, answer visibility, persistence, readings, timeline filters, and the existing quiz. DOM checks are functional checks and do not substitute for visual browser review.
 
 ## Content and structure
 

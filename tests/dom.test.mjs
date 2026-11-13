@@ -11,9 +11,9 @@ async function boot(saved={}){
  const dom=new JSDOM(read('index.html'),{url:'https://study.test/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc}),w=dom.window;
  w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};w.CSS={escape:s=>s};w.fetch=async name=>({ok:true,json:async()=>JSON.parse(read(name))});w.quizEngine=quizEngine;w.practiceEngine=practiceEngine;
  for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);
- const extras=read('extras.js').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,valid,isCorrect,score}=window.practiceEngine;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
+ const extras=read('extras.js').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,restore,isCorrect,score}=window.practiceEngine;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
  w.extras=w.eval('(function(){'+extras+';return {initExtras,renderExtra};})()');
- const app=read('app.js').replace("import {grade,newAttempt,validAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,validAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;');
+ const app=read('app.js').replace("import {grade,newAttempt,restoreAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,restoreAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;');
  await w.eval('(async()=>{'+app+'})()');
  const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)],settle=()=>new Promise(r=>setTimeout(r,35));
  const click=s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,'Missing element: '+s);el.click();};
@@ -26,7 +26,7 @@ assert.equal($('#loading').hidden,true);assert.equal($$('[data-tab]').length,7);
 input('#summary-search','trench foot');assert.equal($$('.chapter').length,1);input('#summary-search','');
 click('[data-action=expand-summary]');assert.equal($$('.chapter[open]').length,14);
 await route('slides/127');assert.match($('#slides-page').src,/127.webp/);assert.equal($$('[data-jump=slides] option').length,127);assert.equal($('[data-page-step="1"]').disabled,true);
-await route('paris');assert.equal($$('.country').length,17);input('#country-search','Balfour');assert.equal($$('.country').length,1);input('#country-search','');await route('paris/documents/21');assert.equal($$('[data-jump=documents] option').length,21);
+await route('paris');assert.equal($$('.country').length,17);assert.equal($$('[data-study-topic="Paris perspectives"]').length,0);input('#country-search','Balfour');assert.equal($$('.country').length,1);input('#country-search','');await route('paris/documents/21');assert.equal($$('[data-jump=documents] option').length,21);
 let images=0;
 for(const [id,count] of [[1,4],[2,3],[3,5]]){await route('readings/'+id);assert.equal($$('.textbook-page').length,count);images+=count;assert.equal($('.reading-picker [aria-current]').getAttribute('href'),'#readings/'+id);assert.ok($('.reading-summary').compareDocumentPosition($('.reading-originals'))&w.Node.DOCUMENT_POSITION_FOLLOWING);assert.ok($$('.reading-body>section').length>=8);await route(`readings/${id}/${count}`);assert.ok($(`#reading-page-${id}-${count}`));}
 assert.equal(images,12);
@@ -50,8 +50,11 @@ for(const t of exams.tests){
  else assert.match($('#exam-score').textContent,/29 \/ 30/);
  await route('practice');assert.match($('.exam-intro').textContent,new RegExp(t.id+'\\s*\\/ 5'));
 }
-await route('quiz');$('#quiz-size').value='10';$('#quiz-shuffle').checked=false;$('#quiz-config').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal($('[data-action=check]').disabled,true);
+await route('quiz');assert.match($('#panel-quiz').textContent,/87 questions based only on the slide deck/);assert.equal($$('#quiz-scope option[value=conference]').length,0);$('#quiz-size').value='10';$('#quiz-shuffle').checked=false;$('#quiz-config').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal($('[data-action=check]').disabled,true);
 const radio=$(`input[name=answer][value="${bank[0].answer}"]`);radio.checked=true;radio.dispatchEvent(new w.Event('change',{bubbles:true}));click('[data-action=check]');assert.match($('.feedback').textContent,/Correct/);assert.ok($$('input[name=answer]').every(x=>x.disabled));click('[data-action=finish]');assert.match($('.result-hero').textContent,/1 of 10 correct/);
 const saved=Object.fromEntries(Object.keys(w.localStorage).map(k=>[k,w.localStorage.getItem(k)]));assert.deepEqual(ctx.errors,[]);ctx.dom.window.close();
 const resumed=await boot(saved);await resumed.route('practice');assert.match(resumed.$('.exam-intro').textContent,/5\s*\/ 5/);await resumed.route('practice/2');assert.match(resumed.$('#exam-score').textContent,/28 \/ 30/);assert.equal(resumed.$$('.exam-review').length,24);resumed.click('[data-extra=retry-exam]');await resumed.settle();assert.equal(resumed.$$('.answer-key').length,0);assert.match(resumed.$('#exam-progress-label').textContent,/0 \/ 24/);await resumed.route('practice');assert.match(resumed.$('.exam-intro').textContent,/4\s*\/ 5/);assert.deepEqual(resumed.errors,[]);resumed.dom.window.close();
+const legacy={...practiceEngine.fresh(exams.tests[0]),version:1,finished:true};
+for(const q of exams.tests[0].questions)legacy.responses[q.id]=q.type==='mc'?0:q.type==='fill'?q.answer:'Saved written response.';
+const migrated=await boot({'wwi-practice-v1':JSON.stringify({1:legacy})});await migrated.route('practice/1');assert.match(migrated.$('#panel-practice .note').textContent,/unchanged responses are saved/);assert.equal(migrated.$$('.answer-key').length,0);migrated.click('[data-extra=submit-exam]');assert.match(migrated.$('#exam-submit-message').textContent,/still needed/);assert.deepEqual(migrated.errors,[]);migrated.dom.window.close();
 console.log('PASS: seven tabs, all source viewers, 12 reading pages, 84-event filtering, five complete exam flows, locked answer keys, incomplete submission, saved responses, all scoring types, self-review, reload persistence, isolated retry, and original quiz regression.');
