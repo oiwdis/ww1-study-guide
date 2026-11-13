@@ -291,7 +291,7 @@ export function buildStats(rows,nameFilter){
   list.push(item);
   byAttempt.set(id,list);
  }
- const recent_attempts=selected.slice().sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,25).map(item=>({
+ const recent_attempts=selected.slice().sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,100).map(item=>({
   attempt_id:item.detail.attempt_id,
   kind:item.event==='quiz_completed'?'quiz':'practice',
   name:item.name,
@@ -350,14 +350,18 @@ async function getStats(request,env){
   const raw=url.searchParams.get('name');
   nameFilter=raw==='Anonymous'? 'Anonymous' : displayName(raw);
  }
- const [byEvent,byDay,slides,readings,detailRows]=await Promise.all([
+ const [byEvent,byDay,slides,readings,sessions,total,detailRows]=await Promise.all([
   env.DB.prepare('SELECT event, COUNT(*) AS count FROM events GROUP BY event ORDER BY event').all(),
   env.DB.prepare("SELECT substr(ts, 1, 10) AS day, COUNT(*) AS count FROM events GROUP BY day ORDER BY day").all(),
   env.DB.prepare("SELECT page, COUNT(*) AS count FROM events WHERE event = 'slide_viewed' GROUP BY page ORDER BY count DESC LIMIT 10").all(),
   env.DB.prepare("SELECT page, COUNT(*) AS count FROM events WHERE event = 'reading_opened' GROUP BY page ORDER BY count DESC LIMIT 10").all(),
+  env.DB.prepare('SELECT COUNT(DISTINCT session_id) AS count FROM events').all(),
+  env.DB.prepare('SELECT COUNT(*) AS count FROM events').all(),
   env.DB.prepare("SELECT event, ts, page, detail FROM events WHERE event IN ('quiz_answered','quiz_completed','practice_answered','practice_completed') ORDER BY ts ASC LIMIT 10000").all(),
  ]);
  return json({
+  sessions:Number(sessions.results?.[0]?.count||0),
+  events:Number(total.results?.[0]?.count||0),
   counts_by_event:byEvent.results||[],
   counts_by_day:byDay.results||[],
   top_slides:slides.results||[],

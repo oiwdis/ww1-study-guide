@@ -38,6 +38,9 @@ test('the public analytics beacon is on every HTML page',()=>{
   assert.equal(html.includes(beacon),true,file);
   assert.ok(html.lastIndexOf(beacon)<html.lastIndexOf('</body>'));
  }
+ const stats=readFileSync(new URL('../dist/stats.html',import.meta.url),'utf8');
+ assert.equal(stats.includes('Anonymous study activity'),false);
+ assert.equal(stats.includes('Remember on this device'),true);
 });
 
 test('client signals keep country and browser family only',()=>{
@@ -88,6 +91,8 @@ test('practice completion stores each answer and stats group them by name',async
  assert.equal(body.attempts_by_name.find(item=>item.name==='Anonymous').attempts,1);
  assert.equal(body.top_slides[0].page,'slides/12');
  assert.equal(body.top_readings[0].page,'readings/1');
+ assert.equal(body.sessions,1);
+ assert.equal(body.events,7);
  assert.equal(body.quiz_score_average.average_percent,100);
  assert.equal(body.practice_score_average.average_percent,50);
  assert.equal(body.most_missed[0].question_id,'t1-q01');
