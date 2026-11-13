@@ -13,8 +13,10 @@ export function learnerName(){
   return {decided:true,name:cleanName(parsed?.name)};
  }catch{return {decided:false,name:''};}
 }
+export function hasLearnerName(){return cleanName(learnerName().name).length>=2;}
 export function saveLearnerName(value){
  const name=cleanName(value);
+ if(name.length<2) return '';
  localStorage.setItem(NAME_KEY,JSON.stringify({name}));
  return name;
 }
@@ -41,13 +43,13 @@ export function track(event,page,detail={}){
  }catch{/* tracking must not affect the study guide */}
 }
 function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-export function nameLine({attr='data-action',pending='',confirm=false}={}){
- const {decided,name}=learnerName();
- const pendingAttr=pending?` data-pending-test="${esc(pending)}"`:'';
- const save=`<button type="button" class="btn small" ${attr}="save-name"${pendingAttr}>${editingName?'Save':'Continue'}</button>`;
- const skip=`<button type="button" class="btn small ghost" ${attr}="skip-name"${pendingAttr}>Skip</button>`;
- if(!decided||editingName){
-  return `<div class="name-line"><label class="name-field">Name <input id="learner-name" class="search" maxlength="40" autocomplete="nickname" placeholder="Optional" value="${esc(name)}"></label>${confirm||editingName?save:''}${skip}</div>`;
- }
- return `<p class="name-line"><span>Name: <strong>${esc(displayName(name))}</strong></span> <button type="button" class="source-button" ${attr}="change-name">Change</button></p>`;
+export function nameLine({attr='data-action',button=''}={}){
+ if(hasLearnerName()&&!editingName) return `<p class="name-note"><span>${esc(learnerName().name)}</span> <button type="button" class="source-button" ${attr}="change-name">Not you? Change name</button></p>`;
+ const practice=attr==='data-extra';
+ const fieldId=practice?'learner-name-practice':'learner-name';
+ const hintId=practice?'name-hint-practice':'name-hint';
+ const shown=editingName?learnerName().name:'';
+ const ready=cleanName(shown).length>=2;
+ const control=button?`<button type="button" class="btn small" ${attr}="save-name" ${ready?'':'disabled'}>${esc(button)}</button>`:'';
+ return `<div class="name-prompt"><label class="name-field">Name <input id="${fieldId}" class="search" maxlength="40" autocomplete="nickname" aria-describedby="${hintId}" value="${esc(shown)}"></label><p class="mini name-hint" id="${hintId}">Enter your name to start</p>${control}</div>`;
 }

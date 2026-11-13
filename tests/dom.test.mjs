@@ -13,10 +13,10 @@ async function boot(saved={}){
  for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);
  w.navigator.sendBeacon=()=>true;
  const analytics=read('analytics.js').replace(/^export /gm,'');
- w.analytics=w.eval('(function(){'+analytics+';return {track,learnerName,saveLearnerName,cleanName,nameLine,setEditingName,isEditingName,displayName};})()');
- const extras=read('extras.js').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,valid,isCorrect,score}=window.practiceEngine;').replace(/import .*?from '\.\/analytics\.js';/,'const {track,learnerName,saveLearnerName,nameLine,setEditingName}=window.analytics;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
+ w.analytics=w.eval('(function(){'+analytics+';return {track,learnerName,saveLearnerName,cleanName,hasLearnerName,nameLine,setEditingName,isEditingName,displayName};})()');
+ const extras=read('extras.js').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,valid,isCorrect,score}=window.practiceEngine;').replace(/import .*?from '\.\/analytics\.js';/,'const {track,learnerName,saveLearnerName,hasLearnerName,nameLine,setEditingName,isEditingName}=window.analytics;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
  w.extras=w.eval('(function(){'+extras+';return {initExtras,renderExtra};})()');
- const app=read('app.js').replace("import {grade,newAttempt,validAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,validAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;').replace("import {track,learnerName,saveLearnerName,cleanName,nameLine,setEditingName,isEditingName} from './analytics.js';",'const {track,learnerName,saveLearnerName,cleanName,nameLine,setEditingName,isEditingName}=window.analytics;');
+ const app=read('app.js').replace("import {grade,newAttempt,validAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,validAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;').replace("import {track,learnerName,saveLearnerName,cleanName,hasLearnerName,nameLine,setEditingName,isEditingName} from './analytics.js';",'const {track,learnerName,saveLearnerName,cleanName,hasLearnerName,nameLine,setEditingName,isEditingName}=window.analytics;');
  await w.eval('(async()=>{'+app+'})()');
  const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)],settle=()=>new Promise(r=>setTimeout(r,35));
  const click=s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,'Missing element: '+s);el.click();};
@@ -34,9 +34,13 @@ let images=0;
 for(const [id,count] of [[1,4],[2,3],[3,5]]){await route('readings/'+id);assert.equal($$('.textbook-page').length,count);images+=count;assert.equal($('.reading-picker [aria-current]').getAttribute('href'),'#readings/'+id);assert.ok($('.reading-summary').compareDocumentPosition($('.reading-originals'))&w.Node.DOCUMENT_POSITION_FOLLOWING);assert.ok($$('.reading-body>section').length>=8);await route(`readings/${id}/${count}`);assert.ok($(`#reading-page-${id}-${count}`));}
 assert.equal(images,12);
 await route('timeline');assert.equal($$('.event').length,84);input('#timeline-search','Lusitania');assert.equal($$('.event').length,1);assert.match($('.event').textContent,/1915/);click('[data-extra=reset-timeline]');input('#timeline-era','Background','change');assert.ok($$('.event').length<84&&$$('.event').length>10);click('[data-extra=reset-timeline]');assert.equal($$('.event').length,84);
-await route('practice');assert.equal($$('.test-card').length,5);assert.match($('.exam-intro').textContent,/0\s*\/ 5/);
+await route('quiz');assert.equal($('#quiz-start').disabled,true);assert.equal($('#name-hint').textContent,'Enter your name to start');assert.equal($('[data-action=skip-name]'),null);
+await route('practice');assert.equal($$('.test-card').length,5);assert.match($('.exam-intro').textContent,/0\s*\/ 5/);assert.equal($('#panel-practice #learner-name-practice'),null);
+let named=false;
 for(const t of exams.tests){
- await route('practice/'+t.id);if($('[data-extra=skip-name]'))click('[data-extra=skip-name]');assert.equal($$('.exam-question').length,5);assert.equal($$('.exam-cartoon').length,5);assert.equal($$('.answer-key').length,0);assert.equal($$('.exam-review').length,0);
+ await route('practice/'+t.id);
+ if(!named){assert.equal($('#panel-practice [data-extra=save-name]').disabled,true);assert.equal($('#name-hint-practice').textContent,'Enter your name to start');input('#learner-name-practice','A');assert.equal($('#panel-practice [data-extra=save-name]').disabled,true);input('#learner-name-practice','  Ada  ');assert.equal($('#panel-practice [data-extra=save-name]').disabled,false);click('#panel-practice [data-extra=save-name]');named=true;}
+ assert.equal($('#panel-practice #learner-name-practice'),null);assert.match($('#panel-practice [data-extra=change-name]').textContent,/Not you\? Change name/);assert.equal($$('.exam-question').length,5);assert.equal($$('.exam-cartoon').length,5);assert.equal($$('.answer-key').length,0);assert.equal($$('.exam-review').length,0);
  click('[data-extra=submit-exam]');assert.match($('#exam-submit-message').textContent,/24 responses still needed/);assert.equal($$('.answer-key').length,0);
  for(const section of practiceEngine.sections){await route(`practice/${t.id}/${section}`);const qs=t.questions.filter(q=>q.section===section);assert.equal($$('.exam-question').length,qs.length);
   for(const q of qs){
@@ -53,7 +57,7 @@ for(const t of exams.tests){
  else assert.match($('#exam-score').textContent,/29 \/ 30/);
  await route('practice');assert.match($('.exam-intro').textContent,new RegExp(t.id+'\\s*\\/ 5'));
 }
-await route('quiz');$('#quiz-size').value='10';$('#quiz-shuffle').checked=false;$('#quiz-config').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));if(!$('[data-action=check]'))click('[data-action=skip-name]');assert.equal($('[data-action=check]').disabled,true);
+await route('quiz');assert.equal($('#learner-name'),null);assert.match($('[data-action=change-name]').textContent,/Not you\? Change name/);$('#quiz-size').value='10';$('#quiz-shuffle').checked=false;$('#quiz-config').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal($('[data-action=check]').disabled,true);
 const radio=$(`input[name=answer][value="${bank[0].answer}"]`);radio.checked=true;radio.dispatchEvent(new w.Event('change',{bubbles:true}));click('[data-action=check]');assert.match($('.feedback').textContent,/Correct/);assert.ok($$('input[name=answer]').every(x=>x.disabled));click('[data-action=finish]');assert.match($('.result-hero').textContent,/1 of 10 correct/);
 const saved=Object.fromEntries(Object.keys(w.localStorage).map(k=>[k,w.localStorage.getItem(k)]));assert.deepEqual(ctx.errors,[]);ctx.dom.window.close();
 const resumed=await boot(saved);await resumed.route('practice');assert.match(resumed.$('.exam-intro').textContent,/5\s*\/ 5/);await resumed.route('practice/2');assert.match(resumed.$('#exam-score').textContent,/28 \/ 30/);assert.equal(resumed.$$('.exam-review').length,24);resumed.click('[data-extra=retry-exam]');await resumed.settle();assert.equal(resumed.$$('.answer-key').length,0);assert.match(resumed.$('#exam-progress-label').textContent,/0 \/ 24/);await resumed.route('practice');assert.match(resumed.$('.exam-intro').textContent,/4\s*\/ 5/);assert.deepEqual(resumed.errors,[]);resumed.dom.window.close();
