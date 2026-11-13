@@ -266,71 +266,118 @@ function parsedDetail(row){
  try{return JSON.parse(row.detail||'{}')||{};}catch{return {};}
 }
 
-export function buildStats(rows,nameFilter){
- const completions=[];
- const answers=[];
+const NAMED_EVENTS=new Set(['quiz_started','quiz_answered','quiz_completed','practice_started','practice_answered','practice_completed']);
+function kindOf(event){return event.startsWith('quiz')?'quiz':event.startsWith('practice')?'practice':null;}
+function spanMs(start,end){
+ const a=Date.parse(start),b=Date.parse(end);
+ return Number.isFinite(a)&&Number.isFinite(b)&&b>=a?b-a:null;
+}
+function questionView(answer){
+ return {question_id:answer.detail.question_id,stem:answer.detail.stem||'',type:answer.detail.type||null,chosen_index:answer.detail.chosen_index,chosen_text:answer.detail.chosen_text,correct_index:answer.detail.correct_index,correct_text:answer.detail.correct_text,correct:answer.detail.correct,time_spent_ms:answer.detail.time_spent_ms};
+}
+function tally(rows,keyOf){
+ const map=new Map();
  for(const row of rows){
+  const key=keyOf(row);
+  if(!key) continue;
+  map.set(key,(map.get(key)||0)+1);
+ }
+ return [...map.entries()].map(([key,count])=>({key,count}));
+}
+export function buildStats(rows,nameFilter){
+ const items=rows.map(row=>{
   const detail=parsedDetail(row);
-  const name=displayName(detail.name);
-  const item={...row,detail,name};
-  if(row.event==='quiz_completed'||row.event==='practice_completed') completions.push(item);
-  if(row.event==='quiz_answered'||row.event==='practice_answered') answers.push(item);
- }
- const groups=new Map();
- for(const item of completions){
-  const group=groups.get(item.name)||{name:item.name,attempts:0,percent_total:0,percent_count:0};
-  group.attempts++;
-  if(Number.isFinite(item.detail.percent)){group.percent_total+=item.detail.percent;group.percent_count++;}
-  groups.set(item.name,group);
- }
- const attempts_by_name=[...groups.values()].map(group=>({
-  name:group.name,attempts:group.attempts,
-  average_percent:group.percent_count?Math.round(group.percent_total/group.percent_count*10)/10:null,
- })).sort((a,b)=>b.attempts-a.attempts||a.name.localeCompare(b.name));
- const selected=nameFilter?completions.filter(item=>item.name===nameFilter):completions;
- const selectedAnswers=nameFilter?answers.filter(item=>item.name===nameFilter):answers;
- const byAttempt=new Map();
- for(const item of answers){
+  return {...row,detail,session_id:row.session_id||'',name:NAMED_EVENTS.has(row.event)?displayName(detail.name):null};
+ });
+ const attempts=new Map();
+ const ensure=id=>{
+  if(!attempts.has(id)) attempts.set(id,{attempt_id:id,kind:null,name:'Anonymous',ts:'',started_at:null,page:null,test_id:null,letter:null,scope:null,question_count:null,session_id:'',answers:[],finished:null});
+  return attempts.get(id);
+ };
+ for(const item of items){
   const id=item.detail.attempt_id;
-  if(!id) continue;
-  const list=byAttempt.get(id)||[];
-  list.push(item);
-  byAttempt.set(id,list);
+  if(!id||!NAMED_EVENTS.has(item.event)) continue;
+  const attempt=ensure(id);
+  if(item.session_id) attempt.session_id=item.session_id;
+  if(item.name) attempt.name=item.name;
+  if(!attempt.ts||item.ts>attempt.ts) attempt.ts=item.ts;
+  const kind=kindOf(item.event);
+  if(kind) attempt.kind=kind;
+  if(item.event.endsWith('_started')){
+   attempt.started_at=item.ts;
+   attempt.page=item.page;
+   if(Number.isInteger(item.detail.question_count)) attempt.question_count=item.detail.question_count;
+   attempt.test_id=item.detail.test_id??attempt.test_id;
+   attempt.letter=item.detail.letter??attempt.letter;
+   attempt.scope=item.detail.scope??attempt.scope;
+  }else if(item.event.endsWith('_answered')){
+   attempt.answers.push(item);
+   attempt.test_id=item.detail.test_id??attempt.test_id;
+  }else if(item.event.endsWith('_completed')){
+   attempt.finished=item;
+   attempt.page=item.page||attempt.page;
+   attempt.test_id=item.detail.test_id??attempt.test_id;
+   attempt.letter=item.detail.letter??attempt.letter;
+   attempt.scope=item.detail.scope??attempt.scope;
+   if(Number.isInteger(item.detail.total)) attempt.question_count=item.detail.total;
+  }
  }
- const recent_attempts=selected.slice().sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,100).map(item=>({
-  attempt_id:item.detail.attempt_id,
-  kind:item.event==='quiz_completed'?'quiz':'practice',
-  name:item.name,
-  ts:item.ts,
-  page:item.page,
-  test_id:item.detail.test_id??null,
-  letter:item.detail.letter??null,
-  scope:item.detail.scope??null,
-  correct:item.detail.correct,
-  total:item.detail.total,
-  percent:item.detail.percent,
-  duration_ms:item.detail.duration_ms,
-  questions:(byAttempt.get(item.detail.attempt_id)||[]).map(answer=>({
-   question_id:answer.detail.question_id,
-   stem:answer.detail.stem||'',
-   type:answer.detail.type||null,
-   chosen_index:answer.detail.chosen_index,
-   chosen_text:answer.detail.chosen_text,
-   correct_index:answer.detail.correct_index,
-   correct_text:answer.detail.correct_text,
-   correct:answer.detail.correct,
-   time_spent_ms:answer.detail.time_spent_ms,
-  })),
- }));
+ const allAttempts=[...attempts.values()].map(attempt=>{
+  const graded=attempt.answers.filter(answer=>typeof answer.detail.correct==='boolean');
+  const correctSoFar=graded.filter(answer=>answer.detail.correct).length;
+  const finished=attempt.finished;
+  const status=finished?'Finished':'Not finished';
+  const percent=finished&&Number.isFinite(finished.detail.percent)?finished.detail.percent:graded.length?Math.round(correctSoFar/graded.length*100):null;
+  return {
+   attempt_id:attempt.attempt_id,kind:attempt.kind,name:attempt.name,status,ts:attempt.ts,started_at:attempt.started_at,page:attempt.page,
+   test_id:attempt.test_id,letter:attempt.letter,scope:attempt.scope,session_id:attempt.session_id,
+   question_count:attempt.question_count,answered:attempt.answers.length,correct:finished?finished.detail.correct:correctSoFar,
+   total:finished?finished.detail.total:attempt.question_count,percent,
+   duration_ms:finished?finished.detail.duration_ms:spanMs(attempt.started_at,attempt.ts),
+   questions:attempt.answers.map(questionView),
+  };
+ });
+ const sessionsByName=new Map();
+ const link=(name,sessionId)=>{
+  if(!name||!sessionId) return;
+  const set=sessionsByName.get(name)||new Set();
+  set.add(sessionId);
+  sessionsByName.set(name,set);
+ };
+ for(const item of items) link(item.name,item.session_id);
+ for(const attempt of allAttempts) link(attempt.name,attempt.session_id);
+ const personStats=name=>{
+  const mine=allAttempts.filter(attempt=>attempt.name===name);
+  const answers=mine.flatMap(attempt=>attempt.questions);
+  const graded=answers.filter(answer=>typeof answer.correct==='boolean');
+  const correct=graded.filter(answer=>answer.correct).length;
+  const finished=mine.filter(attempt=>attempt.status==='Finished'&&Number.isFinite(attempt.percent));
+  return {
+   name,attempts:mine.length,questions_answered:answers.length,
+   accuracy:graded.length?Math.round(correct/graded.length*1000)/10:null,
+   best_score:finished.length?Math.max(...finished.map(attempt=>attempt.percent)):null,
+   last_active:mine.reduce((latest,attempt)=>attempt.ts>latest?attempt.ts:latest,''),
+  };
+ };
+ const people=[...new Set(allAttempts.map(attempt=>attempt.name))].map(personStats).sort((a,b)=>b.attempts-a.attempts||(b.last_active||'').localeCompare(a.last_active||'')||a.name.localeCompare(b.name));
+ const sessions=nameFilter?sessionsByName.get(nameFilter)||new Set():null;
+ const scoped=nameFilter?items.filter(item=>(item.session_id&&sessions.has(item.session_id))||(!item.session_id&&item.name===nameFilter)):items;
+ const scopedAttempts=nameFilter?allAttempts.filter(attempt=>attempt.name===nameFilter):allAttempts;
+ const dayCounts=tally(scoped,item=>String(item.ts||'').slice(0,10)).map(({key,count})=>({day:key,count})).filter(item=>item.day);
+ const eventCounts=tally(scoped,item=>item.event).map(({key,count})=>({event:key,count})).sort((a,b)=>a.event.localeCompare(b.event));
+ const top_slides=tally(scoped.filter(item=>item.event==='slide_viewed'),item=>item.page).map(({key,count})=>({page:key,count})).sort((a,b)=>b.count-a.count).slice(0,10);
+ const top_readings=tally(scoped.filter(item=>item.event==='reading_opened'),item=>item.page).map(({key,count})=>({page:key,count})).sort((a,b)=>b.count-a.count).slice(0,10);
+ const recent_attempts=scopedAttempts.slice().sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,100);
+ const missedSource=scopedAttempts.flatMap(attempt=>attempt.questions.map(question=>({...question,event:attempt.kind==='quiz'?'quiz_answered':'practice_answered'})));
  const questions=new Map();
- for(const item of selectedAnswers){
-  if(typeof item.detail.correct!=='boolean') continue;
-  const key=`${item.event}:${item.detail.question_id}`;
-  const bucket=questions.get(key)||{event:item.event,question_id:item.detail.question_id,stem:item.detail.stem||'',attempts:0,correct:0,wrongs:new Map()};
+ for(const item of missedSource){
+  if(typeof item.correct!=='boolean'||!item.question_id) continue;
+  const key=`${item.event}:${item.question_id}`;
+  const bucket=questions.get(key)||{event:item.event,question_id:item.question_id,stem:item.stem||'',attempts:0,correct:0,wrongs:new Map()};
   bucket.attempts++;
-  if(item.detail.correct) bucket.correct++;
-  else{const label=item.detail.chosen_text||`option ${item.detail.chosen_index}`;bucket.wrongs.set(label,(bucket.wrongs.get(label)||0)+1);}
-  if(!bucket.stem&&item.detail.stem) bucket.stem=item.detail.stem;
+  if(item.correct) bucket.correct++;
+  else{const label=item.chosen_text||`option ${item.chosen_index}`;bucket.wrongs.set(label,(bucket.wrongs.get(label)||0)+1);}
+  if(!bucket.stem&&item.stem) bucket.stem=item.stem;
   questions.set(key,bucket);
  }
  const most_missed=[...questions.values()].filter(item=>item.attempts>item.correct).map(item=>{
@@ -338,11 +385,23 @@ export function buildStats(rows,nameFilter){
   for(const [text,count] of item.wrongs) if(!most_common_wrong||count>most_common_wrong.count) most_common_wrong={text,count};
   return {event:item.event,question_id:item.question_id,stem:item.stem,attempts:item.attempts,correct:item.correct,accuracy:Math.round(item.correct/item.attempts*1000)/10,most_common_wrong};
  }).sort((a,b)=>a.accuracy-b.accuracy||b.attempts-a.attempts).slice(0,20);
+ const finishedQuizzes=scopedAttempts.filter(attempt=>attempt.kind==='quiz'&&attempt.status==='Finished');
+ const finishedPractice=scopedAttempts.filter(attempt=>attempt.kind==='practice'&&attempt.status==='Finished');
  return {
   name_filter:nameFilter,
-  attempts_by_name,
-  quiz_score_average:average(selected.filter(item=>item.event==='quiz_completed'),item=>item.detail.percent),
-  practice_score_average:average(selected.filter(item=>item.event==='practice_completed'),item=>item.detail.percent),
+  sessions:new Set(scoped.map(item=>item.session_id).filter(Boolean)).size,
+  events:scoped.length,
+  counts_by_event:eventCounts,
+  counts_by_day:dayCounts,
+  top_slides,top_readings,
+  people,
+  attempts_by_name:people.map(person=>({name:person.name,attempts:person.attempts,average_percent:person.accuracy})),
+  quiz_attempts:scopedAttempts.filter(attempt=>attempt.kind==='quiz').length,
+  practice_attempts:scopedAttempts.filter(attempt=>attempt.kind==='practice').length,
+  questions_answered:scopedAttempts.reduce((sum,attempt)=>sum+attempt.answered,0),
+  accuracy:personStats(nameFilter||'').accuracy!=null&&nameFilter?personStats(nameFilter).accuracy:(()=>{const graded=scopedAttempts.flatMap(attempt=>attempt.questions).filter(question=>typeof question.correct==='boolean');const correct=graded.filter(question=>question.correct).length;return graded.length?Math.round(correct/graded.length*1000)/10:null;})(),
+  quiz_score_average:average(finishedQuizzes,attempt=>attempt.percent),
+  practice_score_average:average(finishedPractice,attempt=>attempt.percent),
   most_missed,
   recent_attempts,
  };
@@ -356,24 +415,8 @@ async function getStats(request,env){
   const raw=url.searchParams.get('name');
   nameFilter=raw==='Anonymous'? 'Anonymous' : displayName(raw);
  }
- const [byEvent,byDay,slides,readings,sessions,total,detailRows]=await Promise.all([
-  env.DB.prepare('SELECT event, COUNT(*) AS count FROM events GROUP BY event ORDER BY event').all(),
-  env.DB.prepare("SELECT substr(ts, 1, 10) AS day, COUNT(*) AS count FROM events GROUP BY day ORDER BY day").all(),
-  env.DB.prepare("SELECT page, COUNT(*) AS count FROM events WHERE event = 'slide_viewed' GROUP BY page ORDER BY count DESC LIMIT 10").all(),
-  env.DB.prepare("SELECT page, COUNT(*) AS count FROM events WHERE event = 'reading_opened' GROUP BY page ORDER BY count DESC LIMIT 10").all(),
-  env.DB.prepare('SELECT COUNT(DISTINCT session_id) AS count FROM events').all(),
-  env.DB.prepare('SELECT COUNT(*) AS count FROM events').all(),
-  env.DB.prepare("SELECT event, ts, page, detail FROM events WHERE event IN ('quiz_answered','quiz_completed','practice_answered','practice_completed') ORDER BY ts ASC LIMIT 10000").all(),
- ]);
- return json({
-  sessions:Number(sessions.results?.[0]?.count||0),
-  events:Number(total.results?.[0]?.count||0),
-  counts_by_event:byEvent.results||[],
-  counts_by_day:byDay.results||[],
-  top_slides:slides.results||[],
-  top_readings:readings.results||[],
-  ...buildStats(detailRows.results||[],nameFilter),
- });
+ const detailRows=await env.DB.prepare('SELECT event, ts, session_id, page, detail FROM events ORDER BY ts ASC LIMIT 20000').all();
+ return json(buildStats(detailRows.results||[],nameFilter));
 }
 
 export default {

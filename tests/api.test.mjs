@@ -108,6 +108,36 @@ test('practice completion stores each answer and stats group them by name',async
  assert.equal(anon.recent_attempts[0].questions[0].correct,false);
 });
 
+test('an unfinished quiz is an attempt and a name filters that session',async()=>{
+ const db=database();
+ const elliot='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+ const sam='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+ const elliotAttempt='cccccccc-cccc-4ccc-8ccc-cccccccccccc';
+ const samAttempt='dddddddd-dddd-4ddd-8ddd-dddddddddddd';
+ await post(db,{session_id:elliot,event:'slide_viewed',page:'slides/3',detail:{slide:3}});
+ await post(db,{session_id:elliot,event:'quiz_started',page:'quiz',detail:{attempt_id:elliotAttempt,scope:'all',question_count:112,name:'Elliot'}});
+ await post(db,{session_id:elliot,event:'quiz_answered',page:'quiz',detail:{attempt_id:elliotAttempt,question_id:'q001',type:'mc',chosen_index:1,chosen_text:'Right choice',correct_index:1,correct_text:'Right choice',correct:true,time_spent_ms:500,stem:'MAIN',name:'Elliot'}});
+ await post(db,{session_id:sam,event:'slide_viewed',page:'slides/9',detail:{slide:9}});
+ await post(db,{session_id:sam,event:'quiz_started',page:'quiz',detail:{attempt_id:samAttempt,scope:'all',question_count:10,name:'Sam'}});
+ await post(db,{session_id:sam,event:'quiz_answered',page:'quiz',detail:{attempt_id:samAttempt,question_id:'q014',type:'mc',chosen_index:0,chosen_text:'Wrong choice',correct_index:1,correct_text:'Right choice',correct:false,time_spent_ms:800,stem:'Unification',name:'Sam'}});
+ const body=await (await worker.fetch(new Request('https://ww1.example/api/stats?name=Elliot',{headers:{authorization:'Bearer test-secret'}}),{DB:db,STATS_KEY:'test-secret'})).json();
+ assert.equal(body.quiz_attempts,1);
+ assert.equal(body.recent_attempts.length,1);
+ assert.equal(body.recent_attempts[0].status,'Not finished');
+ assert.equal(body.recent_attempts[0].answered,1);
+ assert.equal(body.recent_attempts[0].question_count,112);
+ assert.equal(body.recent_attempts[0].correct,1);
+ assert.equal(body.quiz_score_average.attempts,0);
+ assert.deepEqual(body.top_slides.map(item=>item.page),['slides/3']);
+ assert.equal(body.counts_by_event.find(item=>item.event==='slide_viewed').count,1);
+ assert.equal(body.most_missed.length,0);
+ assert.ok(body.people.find(person=>person.name==='Sam'));
+ assert.equal(body.people.find(person=>person.name==='Elliot').questions_answered,1);
+ const all=await (await worker.fetch(new Request('https://ww1.example/api/stats',{headers:{authorization:'Bearer test-secret'}}),{DB:db,STATS_KEY:'test-secret'})).json();
+ assert.equal(all.quiz_attempts,2);
+ assert.equal(all.most_missed[0].question_id,'q014');
+});
+
 test('a text/plain beacon body is stored through the handler',async()=>{
  const db=database();
  const payload={session_id:session,event:'quiz_answered',page:'quiz',detail:{attempt_id:attempt,question_id:'q094',stem:'Why did Australia oppose Japan’s racial-equality proposal?',type:'mc',chosen_index:3,chosen_text:'Australia wanted Britain to accept the clause only after China received Japan’s Pacific islands.',correct_index:1,correct_text:'It sought to preserve the racially exclusionary White Australia immigration policy.',correct:false,time_spent_ms:409,name:'test-agent'}};

@@ -17,9 +17,12 @@ main.stats h1{font-family:var(--serif);font-weight:400;font-size:32px;letter-spa
 .key-form .check{color:var(--ink)}
 #status{min-height:1.2em;font-size:13px;margin:0 0 12px}
 #status.error{color:var(--rust)}
-.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid var(--line);background:var(--surface);margin:0 0 8px}
-.tile{padding:14px 14px 12px;border-right:1px solid var(--line);min-width:0}
-.tile:last-child{border-right:0}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);background:var(--surface);margin:0 0 8px}
+.tile{padding:14px 14px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.tile:nth-child(4n){border-right:0}
+tr.person{cursor:pointer}
+tr.person.selected td,tr.person:hover td{background:#f3f4ec}
+.name-link{background:none;border:0;padding:0;color:var(--green);font:inherit;font-weight:650;border-radius:0;text-align:left}
 .tile b{display:block;font:28px/1 var(--serif);color:var(--ink);margin:0 0 7px}
 .tile span{display:block;font-size:11px;color:var(--muted)}
 .cols{display:grid;grid-template-columns:1.4fr .85fr;gap:42px;align-items:start}
@@ -78,7 +81,7 @@ tr.detail table{font-size:12px}
  #attempts tr.attempt td{border:0;padding:0}
  #attempts tr.attempt td:nth-child(1){font-weight:650}
  #attempts tr.attempt td:nth-child(2),#attempts tr.attempt td:nth-child(4){text-align:right}
- #attempts tr.attempt td:nth-child(5){grid-column:1 / -1;color:var(--muted);font-size:12px}
+ #attempts tr.attempt td:nth-child(6){grid-column:1 / -1;color:var(--muted);font-size:12px}
  #attempts tr.detail,#attempts tr.detail td{display:block}
  #missed tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
  #missed td{display:block;border:0;padding:2px 0}
@@ -114,6 +117,8 @@ tr.detail table{font-size:12px}
 <div id="events"></div>
 </section>
 </div>
+<h2>People</h2>
+<div class="table-wrap" id="people"></div>
 <div class="section-head">
 <h2>Attempts</h2>
 <label>Name <select id="name"><option value="">All names</option></select></label>
@@ -168,11 +173,23 @@ function rank(items,kind){
  if(!items.length) return empty(kind==='slides'?'No slides viewed yet.':'No readings opened yet.');
  return `<ol class="rank">${items.map(item=>{const n=String(item.page||'').split('/').pop();const title=kind==='slides'?`Slide ${n}`:`Reading ${n}`;return `<li><span>${esc(title)}</span><b>${esc(item.count)}</b></li>`;}).join('')}</ol>`;
 }
+function selectedName(){return new URLSearchParams(location.search).get('name')||'';}
+function setName(name){
+ const url=new URL(location.href);
+ if(name) url.searchParams.set('name',name); else url.searchParams.delete('name');
+ history.replaceState(null,'',url);
+ openId='';
+ load();
+}
 function filtered(){
- const rows=(data?.recent_attempts||[]).filter(item=>!nameEl.value||item.name===nameEl.value);
+ const rows=[...(data?.recent_attempts||[])];
  const dir=sortDir==='asc'?1:-1;
- const value=item=>sortKey==='name'?item.name:sortKey==='type'?(item.kind+(item.letter||'')):sortKey==='score'?Number(item.percent)||0:sortKey==='duration'?Number(item.duration_ms)||0:item.ts||'';
+ const value=item=>sortKey==='name'?item.name:sortKey==='type'?(item.kind+(item.letter||'')):sortKey==='status'?item.status:sortKey==='score'?Number(item.percent)||0:sortKey==='duration'?Number(item.duration_ms)||0:item.ts||'';
  return rows.sort((a,b)=>{const av=value(a),bv=value(b);return av<bv?-dir:av>bv?dir:0;});
+}
+function scoreText(item){
+ if(item.status==='Finished') return `${item.correct}/${item.total} · ${item.percent}%`;
+ return `${item.answered}/${item.question_count??'—'} · ${item.correct} correct`;
 }
 function attemptsTable(){
  const rows=filtered();
@@ -184,10 +201,16 @@ function attemptsTable(){
   const open=openId===id;
   const type=item.kind==='quiz'?'Quiz':`Practice ${item.letter||''}`.trim();
   const questions=item.questions||[];
-  const detail=open?`<tr class="detail"><td colspan="5">${questions.length?`<table><thead><tr><th>Question</th><th>Chosen</th><th>Correct answer</th><th>Result</th><th>Time</th></tr></thead><tbody>${questions.map(q=>`<tr><td>${esc(q.stem||q.question_id)}</td><td>${esc(q.chosen_text??'')}</td><td>${esc(q.correct_text??'')}</td><td class="${q.correct==null?'':q.correct?'ok':'bad'}">${q.correct==null?'—':q.correct?'Correct':'Incorrect'}</td><td class="num">${esc(duration(q.time_spent_ms))}</td></tr>`).join('')}</tbody></table>`:empty('No question details for this attempt.')}</td></tr>`:'';
-  return `<tr class="attempt" data-attempt="${esc(id)}" aria-expanded="${open}"><td>${esc(item.name)}</td><td>${esc(type)}</td><td class="num">${esc(item.correct)}/${esc(item.total)} · ${esc(item.percent)}%</td><td class="num">${esc(duration(item.duration_ms))}</td><td class="num">${esc(when(item.ts))}</td></tr>${detail}`;
+  const detail=open?`<tr class="detail"><td colspan="6">${questions.length?`<table><thead><tr><th>Question</th><th>Chosen</th><th>Correct answer</th><th>Result</th><th>Time</th></tr></thead><tbody>${questions.map(q=>`<tr><td>${esc(q.stem||q.question_id)}</td><td>${esc(q.chosen_text??'')}</td><td>${esc(q.correct_text??'')}</td><td class="${q.correct==null?'':q.correct?'ok':'bad'}">${q.correct==null?'—':q.correct?'Correct':'Incorrect'}</td><td class="num">${esc(duration(q.time_spent_ms))}</td></tr>`).join('')}</tbody></table>`:empty('No question details for this attempt.')}</td></tr>`:'';
+  return `<tr class="attempt" data-attempt="${esc(id)}" aria-expanded="${open}"><td><button type="button" class="name-link" data-person="${esc(item.name)}">${esc(item.name)}</button></td><td>${esc(type)}</td><td>${esc(item.status)}</td><td class="num">${esc(scoreText(item))}</td><td class="num">${item.duration_ms==null?'—':esc(duration(item.duration_ms))}</td><td class="num">${esc(when(item.ts))}</td></tr>${detail}`;
  }).join('');
- return `<table><thead><tr>${head('name','Name')}${head('type','Type')}${head('score','Score')}${head('duration','Duration')}${head('ts','Date')}</tr></thead><tbody>${body}</tbody></table>`;
+ return `<table><thead><tr>${head('name','Name')}${head('type','Type')}${head('status','Status')}${head('score','Score')}${head('duration','Duration')}${head('ts','Date')}</tr></thead><tbody>${body}</tbody></table>`;
+}
+function peopleTable(){
+ const rows=data?.people||[];
+ if(!rows.length) return empty('No names yet.');
+ const current=selectedName();
+ return `<table><thead><tr><th>Name</th><th>Attempts</th><th>Questions</th><th>Accuracy</th><th>Best score</th><th>Last active</th></tr></thead><tbody>${rows.map(person=>`<tr class="person${person.name===current?' selected':''}" data-person="${esc(person.name)}"><td>${esc(person.name)}</td><td class="num">${esc(person.attempts)}</td><td class="num">${esc(person.questions_answered)}</td><td class="num">${person.accuracy==null?'—':`${esc(person.accuracy)}%`}</td><td class="num">${person.best_score==null?'—':`${esc(person.best_score)}%`}</td><td class="num">${esc(when(person.last_active))}</td></tr>`).join('')}</tbody></table>`;
 }
 function missedTable(){
  const rows=data?.most_missed||[];
@@ -198,13 +221,15 @@ function render(){
  if(!data) return;
  report.hidden=false;
  const quiz=data.quiz_score_average||{},practice=data.practice_score_average||{};
- document.querySelector('#tiles').innerHTML=tile(data.sessions??0,'Sessions')+tile(data.events??0,'Events')+tile(quiz.attempts||0,'Quiz attempts')+tile(practice.attempts||0,'Practice attempts')+tile(percent(quiz),'Quiz average')+tile(percent(practice),'Practice average');
+ document.querySelector('#tiles').innerHTML=tile(data.sessions??0,'Sessions')+tile(data.events??0,'Events')+tile(data.quiz_attempts||0,'Quiz attempts')+tile(data.practice_attempts||0,'Practice attempts')+tile(percent(quiz),'Quiz average, finished')+tile(percent(practice),'Practice average, finished')+tile(data.questions_answered||0,'Questions answered')+tile(data.accuracy==null?'—':`${data.accuracy}%`,'Accuracy');
  document.querySelector('#chart').innerHTML=chart(data.counts_by_day||[]);
  document.querySelector('#events').innerHTML=bars(data.counts_by_event||[]);
- const selected=nameEl.value;
- const names=[...new Set((data.attempts_by_name||[]).map(item=>item.name).concat((data.recent_attempts||[]).map(item=>item.name)))].filter(Boolean).sort();
+ const selected=selectedName();
+ const names=[...new Set((data.people||[]).map(item=>item.name).concat((data.attempts_by_name||[]).map(item=>item.name)))].filter(Boolean).sort();
+ if(selected&&!names.includes(selected)) names.push(selected);
  nameEl.innerHTML=`<option value="">All names</option>${names.map(name=>`<option>${esc(name)}</option>`).join('')}`;
  nameEl.value=names.includes(selected)?selected:'';
+ document.querySelector('#people').innerHTML=peopleTable();
  document.querySelector('#attempts').innerHTML=attemptsTable();
  document.querySelector('#missed').innerHTML=missedTable();
  document.querySelector('#slides').innerHTML=rank(data.top_slides||[],'slides');
@@ -215,7 +240,8 @@ async function load(){
  statusEl.textContent='Loading…';
  loadBtn.disabled=true;
  try{
-  const response=await fetch('/api/stats',{headers:{authorization:`Bearer ${keyEl.value}`}});
+  const name=selectedName();
+  const response=await fetch('/api/stats'+(name?`?name=${encodeURIComponent(name)}`:''),{headers:{authorization:`Bearer ${keyEl.value}`}});
   if(!response.ok){report.hidden=true;data=null;statusEl.className='error';statusEl.textContent=response.status===401?'The stats key was not accepted.':'The stats could not be loaded.';return;}
   data=await response.json();
   if(rememberEl.checked) localStorage.setItem(KEY,keyEl.value); else localStorage.removeItem(KEY);
@@ -226,10 +252,16 @@ async function load(){
 }
 document.querySelector('#key-form').addEventListener('submit',event=>{event.preventDefault();load();});
 document.querySelector('#forget').addEventListener('click',()=>{localStorage.removeItem(KEY);keyEl.value='';rememberEl.checked=false;data=null;report.hidden=true;statusEl.className='';statusEl.textContent='The saved key was removed.';});
-nameEl.addEventListener('change',()=>{openId='';if(data) document.querySelector('#attempts').innerHTML=attemptsTable();});
+nameEl.addEventListener('change',()=>setName(nameEl.value));
+document.querySelector('#people').addEventListener('click',event=>{
+ const row=event.target.closest('[data-person]');
+ if(row) setName(row.dataset.person);
+});
 document.querySelector('#attempts').addEventListener('click',event=>{
+ const person=event.target.closest('[data-person]');
+ if(person){setName(person.dataset.person);return;}
  const sort=event.target.closest('[data-sort]');
- if(sort){const key=sort.dataset.sort;if(sortKey===key)sortDir=sortDir==='desc'?'asc':'desc';else{sortKey=key;sortDir=key==='name'||key==='type'?'asc':'desc';}document.querySelector('#attempts').innerHTML=attemptsTable();return;}
+ if(sort){const key=sort.dataset.sort;if(sortKey===key)sortDir=sortDir==='desc'?'asc':'desc';else{sortKey=key;sortDir=key==='name'||key==='type'||key==='status'?'asc':'desc';}document.querySelector('#attempts').innerHTML=attemptsTable();return;}
  const row=event.target.closest('tr.attempt');
  if(!row) return;
  openId=openId===row.dataset.attempt?'':row.dataset.attempt;
