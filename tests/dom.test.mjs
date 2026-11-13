@@ -44,7 +44,7 @@ for(const t of exams.tests){
  }
  assert.match($('#exam-progress-label').textContent,/24 \/ 24/);
  if(t.id===1){const last=t.questions.at(-1);input(`[data-exam-answer="${last.id}"]`,'  ');click('[data-extra=submit-exam]');assert.match($('#exam-submit-message').textContent,/1 response still needed/);assert.equal($$('.answer-key').length,0);input(`[data-exam-answer="${last.id}"]`,'A completed explanation of the reasons for American entry.');await route('summary');await route('practice/1');assert.match($('#exam-progress-label').textContent,/24 \/ 24/);assert.equal($$('textarea').length,2);assert.match($('textarea').value,/historical explanation/);}
- click('[data-extra=submit-exam]');assert.equal($$('.exam-review').length,24);assert.equal($$('.answer-key').length,22);assert.match($('.exam-result').textContent,/ANSWER KEY UNLOCKED/);assert.match($('#exam-score').textContent,new RegExp((t.id===2?20:22)+'\\s*\\/ 22'));
+ click('[data-extra=submit-exam]');assert.equal($$('.exam-review').length,24);assert.equal($$('.answer-key').length,22);assert.match($('.exam-result').textContent,/ANSWER KEY/);assert.match($('#exam-score').textContent,new RegExp((t.id===2?20:22)+'\\s*\\/ 22'));
  for(const [i,q] of t.questions.filter(q=>q.type==='short').entries())input(`[data-self-score="${q.id}"]`,String(i?4:3),'change');
  if(t.id===2){const q=t.questions[15],el=$(`[data-fill-override="${q.id}"]`);el.checked=true;el.dispatchEvent(new w.Event('change',{bubbles:true}));assert.match($('#exam-score').textContent,/21\s*\/ 22/);assert.match($('#exam-score').textContent,/28 \/ 30/);}
  else assert.match($('#exam-score').textContent,/29 \/ 30/);

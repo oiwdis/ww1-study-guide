@@ -1,0 +1,14 @@
+{
+  // Static assets only. The site in dist/ is already built; there is no Worker script.
+  "name": "ww1",
+  "compatibility_date": "2026-11-13",
+  "assets": {
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  }
+}

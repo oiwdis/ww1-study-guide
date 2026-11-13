@@ -26,6 +26,16 @@ python3 -m http.server 8080 --directory dist
 
 Then open `http://localhost:8080`. Opening the HTML directly as a `file:` URL will not work because content is loaded with `fetch`.
 
+## Deploy
+
+No build step. `dist/` is the static site. From the repository root:
+
+```sh
+npx wrangler deploy
+```
+
+That publishes the Worker named `ww1` using `wrangler.jsonc`, which serves `./dist` as static assets.
+
 ## Checks
 
 Node.js 20 or newer is recommended.
