@@ -32,9 +32,12 @@ function sessionId(){
 export function track(event,page,detail={}){
  try{
   const body=JSON.stringify({session_id:sessionId(),event,page:page||null,detail});
-  const blob=new Blob([body],{type:'application/json'});
-  if(typeof navigator.sendBeacon==='function'&&navigator.sendBeacon('/api/event',blob)) return;
-  fetch('/api/event',{method:'POST',body,headers:{'content-type':'application/json'},keepalive:true}).catch(()=>{});
+  if(typeof fetch==='function'){
+   fetch('/api/event',{method:'POST',body,headers:{'content-type':'application/json'},keepalive:true}).catch(()=>{});
+   return;
+  }
+  // String beacons are sent as text/plain. The endpoint accepts that when the body is JSON.
+  if(typeof navigator.sendBeacon==='function') navigator.sendBeacon('/api/event',body);
  }catch{/* tracking must not affect the study guide */}
 }
 function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}

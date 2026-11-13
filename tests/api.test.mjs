@@ -108,6 +108,19 @@ test('practice completion stores each answer and stats group them by name',async
  assert.equal(anon.recent_attempts[0].questions[0].correct,false);
 });
 
+test('a text/plain beacon body is stored through the handler',async()=>{
+ const db=database();
+ const payload={session_id:session,event:'quiz_answered',page:'quiz',detail:{attempt_id:attempt,question_id:'q094',stem:'Why did Australia oppose Japan’s racial-equality proposal?',type:'mc',chosen_index:3,chosen_text:'Australia wanted Britain to accept the clause only after China received Japan’s Pacific islands.',correct_index:1,correct_text:'It sought to preserve the racially exclusionary White Australia immigration policy.',correct:false,time_spent_ms:409,name:'test-agent'}};
+ const response=await worker.fetch(new Request('https://ww1.example/api/event',{method:'POST',headers:{'content-type':'text/plain;charset=UTF-8','user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Version/17.6 Safari/605.1.15'},body:JSON.stringify(payload)}),{DB:db,STATS_KEY:'test-secret'});
+ assert.equal(response.status,204);
+ const [row]=db.rows('SELECT event, detail FROM events');
+ assert.equal(row.event,'quiz_answered');
+ assert.equal(JSON.parse(row.detail).name,'test-agent');
+ assert.equal(JSON.parse(row.detail).question_id,'q094');
+ const html=await worker.fetch(new Request('https://ww1.example/api/event',{method:'POST',headers:{'content-type':'text/html'},body:'<p>no</p>'}),{DB:db,STATS_KEY:'test-secret'});
+ assert.equal(html.status,415);
+});
+
 test('a session cannot exceed the per-minute event guard',async()=>{
  const db=database();
  const stamp=new Date().toISOString();

@@ -213,9 +213,15 @@ async function insertEvents(db,rows){
  await db.batch(rows.map(row=>db.prepare(INSERT).bind(row.id,row.ts,row.session_id,row.event,row.page,row.detail,row.country,row.ua_family,row.device_type)));
 }
 
+function jsonBodyAllowed(type){
+ const mime=String(type||'').split(';')[0].trim().toLowerCase();
+ // sendBeacon uses text/plain for a string body, and some browsers keep that
+ // type even for a JSON payload. application/json is what fetch and a JSON Blob send.
+ return mime===''||mime==='application/json'||mime==='text/plain';
+}
 async function postEvent(request,env){
  const type=request.headers.get('content-type')||'';
- if(!type.includes('application/json')) return json({error:'expected json'},415);
+ if(!jsonBodyAllowed(type)) return json({error:'expected json'},415);
  const body=await readBody(request);
  if(body.error) return json({error:'payload too large'},413);
  let payload;
