@@ -32,6 +32,18 @@ function event(detail,event='section_view',page='summary'){
  return {session_id:session,event,page,detail};
 }
 
+test('api responses are not stored by the browser',async()=>{
+ const db=database();
+ const denied=await worker.fetch(new Request('https://ww1.example/api/stats'),{DB:db,STATS_KEY:'test-secret'});
+ assert.equal(denied.headers.get('cache-control'),'no-store');
+ const missing=await worker.fetch(new Request('https://ww1.example/api/missing'),{DB:db,STATS_KEY:'test-secret'});
+ assert.equal(missing.status,404);
+ assert.equal(missing.headers.get('cache-control'),'no-store');
+ const saved=await post(db,event({section:'summary'}));
+ assert.equal(saved.status,204);
+ assert.equal(saved.headers.get('cache-control'),'no-store');
+});
+
 test('the public analytics beacon is on every HTML page',()=>{
  for(const file of ['index.html','stats.html']){
   const html=readFileSync(new URL('../dist/'+file,import.meta.url),'utf8');

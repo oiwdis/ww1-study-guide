@@ -5,7 +5,7 @@ import {JSDOM,VirtualConsole} from 'jsdom';
 import * as quizEngine from '../dist/quiz-engine.mjs';
 import * as practiceEngine from '../dist/practice-engine.mjs';
 const root=fileURLToPath(new URL('../dist/',import.meta.url));
-const read=name=>fs.readFileSync(root+name,'utf8'),bank=JSON.parse(read('quiz.json')),exams=JSON.parse(read('practice-tests.json'));
+const read=name=>fs.readFileSync(root+name,'utf8').replace(/\?v=[0-9a-f]{8,64}/g,''),bank=JSON.parse(read('quiz.json')),exams=JSON.parse(read('practice-tests.json'));
 async function boot(saved={}){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));vc.on('error',e=>errors.push(String(e)));
  const dom=new JSDOM(read('index.html'),{url:'https://study.test/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc}),w=dom.window;

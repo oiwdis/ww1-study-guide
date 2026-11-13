@@ -18,7 +18,7 @@ Practice-test answers unlock after all 24 responses in that individual test are 
 
 ## Run locally
 
-No build step or backend is required. Serve `dist` with any static HTTP server, for example:
+No build step is required to preview the site. Serve `dist` with any static HTTP server, for example:
 
 ```sh
 python3 -m http.server 8080 --directory dist
@@ -28,15 +28,22 @@ Then open `http://localhost:8080`. Opening the HTML directly as a `file:` URL wi
 
 ## Deploy
 
-No build step. `dist/` is the static site. From the repository root, apply the D1 migration, publish the Worker, then set the stats secret (this stores no value in the repo):
+From the repository root, stamp the asset URLs and publish:
+
+```sh
+npm run build && npx wrangler deploy
+```
+
+`npm run build` rewrites local JS and CSS URLs in `dist` with a content hash (`app.js?v=<hash>`, including the modules those files import). Run it again any time before deploy; the hash only changes when those files change. HTML, including `/` and `/stats`, is served with `Cache-Control: no-cache` from `dist/_headers`, so a normal reload sees the new URLs. Hashed JS and CSS can stay cached. JSON is revalidated because it is requested without a hash. `/api/*` still runs the Worker first and responds with `Cache-Control: no-store`.
+
+Apply the D1 migration once, and set the stats secret when it changes (the secret command publishes a new version and stores nothing in the repo):
 
 ```sh
 npx wrangler d1 migrations apply ww1-analytics --remote
-npx wrangler deploy
 npx wrangler secret put STATS_KEY
 ```
 
-`wrangler secret put` reads the secret from the prompt and deploys a new version that includes it. Static files are served directly; only `/api/*` runs the Worker. The stats page is `/stats.html`.
+Static files are served directly. The stats page is `/stats`.
 
 ## Checks
 
