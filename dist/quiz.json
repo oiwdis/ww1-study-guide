@@ -4,12 +4,12 @@
     "topic": "Causes",
     "stem": "Which distinction best explains the relationship between MAIN and the assassination in Sarajevo?",
     "options": [
-      "MAIN identifies four immediate diplomatic decisions; the assassination explains why the blocs already existed.",
-      "MAIN describes long-term pressures; the assassination triggered a particular crisis.",
-      "MAIN describes the underlying tensions, but the assassination was a consequence of the declarations of war.",
-      "MAIN explains why the first battles became stalemates; the assassination explains the long-term rivalries."
+      "MAIN identifies wartime strategies; the assassination explains the failure of those strategies.",
+      "MAIN describes the decisions taken after the assassination; the assassination created the rivalries.",
+      "MAIN describes the peace settlement; the assassination explains the territorial clauses.",
+      "MAIN describes long-term pressures; the assassination triggered a particular crisis."
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Militarism, alliances, imperialism, and nationalism existed before June 1914. The assassination activated those tensions in a specific diplomatic crisis.",
     "source": {
       "kind": "slides",
@@ -41,14 +41,14 @@
     "topic": "Causes",
     "stem": "How could an arms race make countries less secure even while they increased their forces?",
     "options": [
-      "Larger forces could make alliances unnecessary, leaving states unable to consult partners during a crisis.",
-      "The need to pay for new weapons could make governments treat war itself as a way to reduce military expenditure.",
-      "Rivals could misread the speed of industrial growth as proof that an opponent had already won a decisive battle.",
-      "Rivals could interpret defensive preparations as threats and accelerate their own armament.",
-      "Mobilization could be treated as a financial measure rather than as a military threat to neighboring states.",
-      "Naval expansion could shift national loyalties away from political leaders and toward international disarmament groups."
+      "Larger armies automatically ended the need for military alliances.",
+      "New weapons made governments unable to mobilize their civilian industries.",
+      "Increased spending forced all governments to follow identical foreign policies.",
+      "Naval competition removed the possibility of economic rivalry.",
+      "Military growth guaranteed that political disputes would be settled by arbitration.",
+      "Rivals could interpret defensive preparations as threats and accelerate their own armament."
     ],
-    "answer": 3,
+    "answer": 5,
     "explanation": "Each state’s search for security could alarm its neighbors and intensify competition. More weapons did not necessarily produce greater mutual trust.",
     "source": {
       "kind": "slides",
@@ -79,13 +79,13 @@
     "topic": "Causes",
     "stem": "Why did German unification worsen relations with France?",
     "options": [
-      "France gained Alsace-Lorraine but feared a German campaign to recover it.",
-      "German unification made France responsible for defending Austria-Hungary against Russia.",
-      "France lost Alsace-Lorraine, while Germany feared French efforts to reverse the defeat.",
-      "Germany’s unification placed France and Russia in the same political state, creating competition over leadership.",
-      "France lost influence after German unification chiefly because Germany took over the French overseas empire."
+      "Germany’s unification dissolved Austria-Hungary and transferred its land to France.",
+      "France’s alliance with Britain required Germany to restore the Ottoman Empire.",
+      "France and Germany merged their armies, creating disagreements over command.",
+      "France gained Alsace-Lorraine, while Germany sought compensation through colonies.",
+      "France lost Alsace-Lorraine, while Germany feared French efforts to reverse the defeat."
     ],
-    "answer": 2,
+    "answer": 4,
     "explanation": "The loss of Alsace-Lorraine linked French resentment to German fears of retaliation. Those fears encouraged further alliance-building.",
     "source": {
       "kind": "slides",
@@ -139,9 +139,9 @@
     "topic": "Causes",
     "stem": "What strategic danger did the Franco-Russian partnership pose for Germany?",
     "options": [
-      "A requirement to divide its navy between protecting Russian and French trade",
-      "A need to defend Austria-Hungary against a combined British and Italian invasion",
-      "A British attack on its Baltic coast coordinated with a French invasion from the Mediterranean",
+      "A requirement to defend French territory against Russia",
+      "An immediate naval blockade by two Mediterranean powers",
+      "The loss of all access to the Baltic Sea before fighting began",
       "A war against major enemies to both its west and east"
     ],
     "answer": 3,
@@ -157,13 +157,13 @@
     "topic": "Causes",
     "stem": "What do the dominoes and linked threats in the alliance cartoons mainly illustrate?",
     "options": [
-      "The alliances reduced local nationalism by placing disputes under a common government.",
-      "Once war began, each ally had to adopt the same battlefield strategy as its partners.",
-      "The leading military powers could control the decisions of their smaller partners without negotiation.",
-      "A local dispute could spread as other powers chose to support their partners.",
-      "The competing blocs had equal resources, making a long war the expected result before the crisis."
+      "Each state had identical military goals and resources.",
+      "All treaties required immediate war regardless of circumstances.",
+      "Nationalist movements could operate without any great-power involvement.",
+      "Alliances prevented disputes involving nonmember states.",
+      "A local dispute could spread as other powers chose to support their partners."
     ],
-    "answer": 3,
+    "answer": 4,
     "explanation": "The images illustrate connected risks and escalation. They simplify the process, so avoid treating the cartoon as proof that leaders had no choices.",
     "source": {
       "kind": "slides",
@@ -176,14 +176,14 @@
     "topic": "Causes",
     "stem": "Which statement best describes the relationship between nationalism and multiethnic empires?",
     "options": [
-      "Nationalism challenged overseas rule but strengthened dynastic control within Europe.",
-      "Nationalist movements sought to unite different peoples under one expanding empire rather than break empires apart.",
-      "Nationalists usually sought more representation within empires while rejecting separate national states.",
+      "Nationalism required every ethnic group to accept the borders of an existing empire.",
       "Claims that cultural communities should govern themselves could threaten imperial unity.",
-      "The political borders of the major empires generally matched the cultural boundaries nationalists wanted.",
-      "National unity depended primarily on loyalty to a royal dynasty rather than shared culture or language."
+      "Nationalism made cultural identity less important than membership in a dynasty.",
+      "Nationalism applied to overseas colonies but had little relevance within Europe.",
+      "Nationalism meant all political borders already matched ethnic boundaries.",
+      "Nationalism eliminated disagreements between people sharing a language."
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Nationalist demands could split empires containing many peoples. The ethnic and political maps show why cultural and state boundaries did not neatly coincide.",
     "source": {
       "kind": "slides",
@@ -196,12 +196,12 @@
     "topic": "Causes",
     "stem": "Why did Austria-Hungary fear Serbian ambitions in Bosnia-Herzegovina?",
     "options": [
-      "Serbian control of Bosnia would give Serbia direct command of the main German industrial districts.",
       "A South Slav nationalist movement could attract Slavic subjects away from Habsburg rule.",
-      "Bosnia’s nationalist movement sought to unite Austria-Hungary under Serbian dynastic leadership without changing its borders.",
-      "Serbia’s support for Ottoman restoration threatened Austria-Hungary’s alliance with Russia."
+      "Serbia sought to return all Balkan territories to the Ottoman sultan.",
+      "Serbia’s navy threatened to surpass the British fleet.",
+      "Serbian expansion would directly transfer Alsace-Lorraine to France."
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "The threat was both territorial and internal: Serbian nationalism challenged control of Bosnia-Herzegovina and could inspire other Slavic populations.",
     "source": {
       "kind": "slides",
@@ -214,13 +214,13 @@
     "topic": "Causes",
     "stem": "Which combination best explains the Balkans’ “powder keg” reputation?",
     "options": [
-      "Russian withdrawal from the war, food shortages, and demands for a new peace treaty",
-      "Industrial arms production, American investment, and disputes over Pacific island concessions",
-      "Naval rivalry, competition for African colonies, and disputes over French industrial territory",
+      "Naval competition in the Atlantic and disputes over North American colonies",
+      "A single unified Slavic government and the absence of imperial competition",
       "Nationalist ambitions, imperial decline, territorial disputes, and great-power backing",
-      "Shared ethnic boundaries, competition for railways, and Italian efforts to control German policy"
+      "Rapid industrialization without competing national or territorial claims",
+      "Stable borders, shared political institutions, and limited outside involvement"
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "The region combined local conflicts with the interests of Russia, Austria-Hungary, Germany, and the declining Ottoman Empire.",
     "source": {
       "kind": "slides",
@@ -255,14 +255,14 @@
     "topic": "Causes",
     "stem": "How did industrialization affect the war described in the slides?",
     "options": [
-      "It made control of overseas colonies less important by removing the need for imported raw materials.",
-      "It increased the importance of cavalry mobility relative to defensive firepower.",
+      "It prevented governments from sustaining long conflicts.",
       "It supported mass production and supply while increasing destructive power.",
-      "It gave offensive weapons a consistent advantage over defenses, shortening the major campaigns.",
-      "It limited the size of armies by shifting most workers permanently away from military service.",
-      "It concentrated the war effort in professional armies and reduced the role of civilians."
+      "It removed the need for civilian labor once armies were mobilized.",
+      "It guaranteed rapid breakthroughs wherever factories produced weapons.",
+      "It made military technology less important than dynastic relationships.",
+      "It replaced competition for resources with equal access to raw materials."
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Industrial economies could equip large armies and sustain war. Increased firepower made attacks more costly rather than ensuring a short conflict.",
     "source": {
       "kind": "slides",
@@ -275,12 +275,12 @@
     "topic": "Causes",
     "stem": "Why were Germany and Italy relatively late to the competition for colonies?",
     "options": [
+      "Their governments had already accepted a League ban on imperial expansion.",
+      "Their territories lacked any access to European sea routes.",
       "Their national unification occurred later than the development of older European empires.",
-      "Their colonial competition began after they lost most of their empires in the Balkan Wars.",
-      "Their leaders concentrated on overseas conquest before consolidating their European states.",
-      "Their industrialization had begun earlier than Britain’s, reducing their initial need for overseas markets."
+      "They had controlled most overseas colonies until 1914 and then withdrew."
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "The slides connect late entry to relatively late state-building; Japan’s emergence as a modern power followed a different modernization process.",
     "source": {
       "kind": "slides",
@@ -433,12 +433,12 @@
     "topic": "1914 crisis",
     "stem": "Which answer best handles the claim that the assassination alone caused WWI?",
     "options": [
-      "It overstates the trigger because Britain and Germany had already declared war before the assassination.",
-      "It explains Austria-Hungary’s response, so the motivations of Russia and Germany add little to the account.",
-      "It explains the conflict because the alliance blocs were created as a response to the assassination.",
-      "It identifies the trigger but leaves out the conditions and decisions that widened the conflict."
+      "It is sufficient because alliances and military planning began only after June 1914.",
+      "It identifies the trigger but leaves out the conditions and decisions that widened the conflict.",
+      "It is sufficient because the assassin directly commanded each European army.",
+      "It is mistaken because the assassination occurred after every major power had declared war."
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "A complete explanation links the immediate event to longer-term rivalries and specific choices about support, mobilization, and war.",
     "source": {
       "kind": "slides",
@@ -490,12 +490,12 @@
     "topic": "Warfare",
     "stem": "What was a major result of the failure to defeat France quickly in 1914?",
     "options": [
-      "The fighting shifted away from France into a mainly Austro-Italian struggle.",
-      "Germany concentrated on Russia after France accepted a negotiated withdrawal from the war.",
-      "Britain withdrew from Belgium, allowing Germany to pursue a long blockade of France.",
-      "Germany faced a prolonged two-front war and a Western Front stalemate."
+      "Germany faced a prolonged two-front war and a Western Front stalemate.",
+      "Italy automatically entered the war alongside Germany.",
+      "The Allies accepted German control of Paris in return for an armistice.",
+      "Russia withdrew immediately and the Eastern Front disappeared."
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "The Allied counterattack helped stop the advance. Germany remained engaged in both east and west rather than winning the quick victory it had sought.",
     "source": {
       "kind": "slides",
@@ -547,15 +547,15 @@
     "topic": "Warfare",
     "stem": "What common lesson do Verdun and the Somme illustrate?",
     "options": [
-      "Battles in 1916 were decided more by cavalry movement than by artillery and machine guns.",
-      "Large offensives usually achieved their planned territorial objectives within a few days.",
-      "Defensive armies suffered minor losses compared with attacking armies.",
+      "A single naval victory could end a major land campaign.",
+      "Trenches had ceased to matter once tanks appeared.",
+      "Territorial gains were generally proportional to casualties.",
+      "The Eastern Front had become entirely immobile by 1916.",
       "Industrial warfare could produce enormous losses for limited territorial gains.",
-      "The main cost of industrial war fell on civilian production rather than military manpower.",
-      "The first appearance of tanks quickly restored movement across the Western Front.",
-      "British and French success removed the need for a prolonged war of attrition."
+      "New weapons always allowed attackers to bypass prepared defenses.",
+      "Civilian production no longer influenced military endurance."
     ],
-    "answer": 3,
+    "answer": 4,
     "explanation": "The slides compare very large casualties with advances of only a few miles. This is the logic of costly attrition rather than decisive maneuver.",
     "source": {
       "kind": "slides",
@@ -586,13 +586,13 @@
     "topic": "Warfare",
     "stem": "Why did machine guns strengthen defenders?",
     "options": [
-      "Rapid fire could hit repeated waves of exposed attackers.",
-      "Their indirect fire reached enemy positions from far behind the front line.",
-      "Their armor allowed infantry to cross damaged ground while protected from shellfire.",
-      "Their primary effect was to destroy warships before supplies reached the battlefield.",
-      "Their ability to clear wire opened safer paths for advancing infantry."
+      "They made barbed wire easier for attacking infantry to cross.",
+      "They allowed troops to travel underwater toward enemy lines.",
+      "They eliminated the need for ammunition supplies.",
+      "They prevented artillery from firing at fortified positions.",
+      "Rapid fire could hit repeated waves of exposed attackers."
     ],
-    "answer": 0,
+    "answer": 4,
     "explanation": "Machine-gun fire was especially dangerous to soldiers crossing open ground. Its effect combined with wire, artillery, and defensive shelter.",
     "source": {
       "kind": "slides",
@@ -627,12 +627,12 @@
     "topic": "Warfare",
     "stem": "What role do aircraft play in the trench-system diagram?",
     "options": [
+      "Preventing all use of long-range artillery",
+      "Replacing communication trenches as the main supply route",
       "Observing enemy troop buildups and warning of attacks",
-      "Transporting wounded soldiers from dugouts as the main trench evacuation method",
-      "Carrying ammunition between front-line and reserve trenches as the main supply method",
-      "Dropping paratroopers behind fortified positions to bypass the defensive lines"
+      "Moving entire infantry divisions across no man’s land"
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "The diagram highlights reconnaissance. Observation could reveal preparations and help defenders respond before an assault.",
     "source": {
       "kind": "slides",
@@ -645,13 +645,13 @@
     "topic": "Warfare",
     "stem": "What made barbed wire especially dangerous to attacking infantry?",
     "options": [
-      "It allowed attackers to identify safe gaps in the enemy’s field of fire.",
-      "It concentrated artillery fire on empty ground, reducing the protection of dugouts.",
-      "It sheltered infantry from machine-gun fire but made them easier for aircraft to observe.",
-      "It forced defenders to remain above ground while attackers could approach through trenches.",
-      "It slowed movement while attackers remained exposed to defensive fire."
+      "It made it impossible for defenders to see approaching soldiers.",
+      "It absorbed artillery blasts and protected advancing troops.",
+      "It provided a concealed route between opposing trench systems.",
+      "It slowed movement while attackers remained exposed to defensive fire.",
+      "It replaced machine guns as the main long-range weapon."
     ],
-    "answer": 4,
+    "answer": 3,
     "explanation": "Wire was an obstacle, not just a boundary. Its tactical value depended on delaying troops within range of guns.",
     "source": {
       "kind": "slides",
@@ -684,12 +684,12 @@
     "topic": "Warfare",
     "stem": "What was the main function of communication trenches?",
     "options": [
-      "Holding the main infantry position facing the opposing army",
-      "Moving personnel and supplies between different trench lines",
-      "Providing open firing positions for long-range artillery",
-      "Sheltering reserve units in deep underground chambers"
+      "Replacing reserve trenches with civilian housing",
+      "Serving as the open ground where opposing troops met",
+      "Providing the only positions from which aircraft could launch",
+      "Moving personnel and supplies between different trench lines"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Communication trenches connected the system so movement did not require the same degree of exposure above ground.",
     "source": {
       "kind": "slides",
@@ -702,11 +702,11 @@
     "topic": "Warfare",
     "stem": "Which statement about poison gas best fits the slides?",
     "options": [
-      "Gas was used mainly to destroy vehicles, with relatively little effect on unprotected soldiers.",
-      "German use of gas was met primarily with Allied reliance on conventional weapons rather than gas attacks.",
+      "It consistently made trench defenses unusable and ended stalemates.",
+      "It injured equipment rather than people and was used mainly against tanks.",
       "Both sides used it, and different gases caused severe injuries or death.",
-      "Gas could usually be controlled precisely enough to guarantee an infantry breakthrough.",
-      "Gas masks made chemical attacks ineffective from the beginning of the war."
+      "It replaced artillery as the only weapon capable of reaching trenches.",
+      "Only Germany ever used it, while the Allies relied entirely on gas masks."
     ],
     "answer": 2,
     "explanation": "Gas caused choking, burns, blindness, and other injuries; masks were a defensive response. It added suffering without guaranteeing a decisive breakthrough.",
@@ -744,12 +744,12 @@
     "topic": "Warfare",
     "stem": "Why did new technology fail to make the war as short as many expected?",
     "options": [
-      "Industrial output strengthened attacking armies while supplies to defenders steadily disappeared.",
       "Industrial firepower often made defense stronger while both sides could sustain large armies.",
-      "Both sides had more weapons, but the speed of cavalry attacks prevented defenses from becoming established.",
-      "The main weapons were designed for naval war and had little influence on land combat."
+      "Commanders abandoned mass armies in favor of very small forces.",
+      "New technology was available only to neutral states.",
+      "Factories stopped producing weapons once the war began."
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "The slides contrast “over by Christmas” with a long, costly war. Technology increased killing power, but that did not ensure successful offensives.",
     "source": {
       "kind": "slides",
@@ -781,12 +781,12 @@
     "topic": "Trench life",
     "stem": "Which combination best describes the health risks emphasized in the trench slides?",
     "options": [
-      "Disease affected reserve troops chiefly, while front-line trenches had the best sanitation.",
-      "Shellfire and gas caused hardship, while the trench system generally provided dry living quarters.",
-      "Cold and lice were serious problems, but modern antibiotics made infected wounds relatively manageable.",
-      "Damp conditions, poor sanitation, vermin, and limited effective treatment for infection"
+      "Damp conditions, poor sanitation, vermin, and limited effective treatment for infection",
+      "Reliable clean water but no exposure to cold or parasites",
+      "Dry shelter, regular changes of clothing, and widespread antibiotic use",
+      "Injuries almost entirely limited to soldiers crossing no man’s land"
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Soldiers faced environmental and medical dangers even outside assaults. The slides emphasize that effective antibiotics were not available to them.",
     "source": {
       "kind": "slides",
@@ -799,14 +799,14 @@
     "topic": "Trench life",
     "stem": "What can a soldier’s account of rats in a dugout most directly establish?",
     "options": [
-      "A measurement of whether sanitary conditions were worse on the Eastern Front",
-      "A representative account of the views of every soldier in the writer’s regiment",
-      "A complete explanation of the army’s strategic decisions in that campaign",
       "Evidence of that soldier’s experience and the conditions they described",
-      "A reliable estimate of how often rats caused deaths across the entire army",
-      "A comparison proving that propaganda had no influence on enlistment"
+      "The strategic effectiveness of a planned offensive",
+      "The proportion of all soldiers killed by disease",
+      "The opinions of all civilians about the war",
+      "The exact rat population across every front",
+      "The casualty total for the entire army"
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Testimony provides specific evidence about lived experience. It does not alone justify precise statistical or universal claims.",
     "source": {
       "kind": "slides",
@@ -819,12 +819,12 @@
     "topic": "Trench life",
     "stem": "What does the comparison between recruiting images and trench photographs ask students to examine?",
     "options": [
-      "The claim that photographic evidence records only exceptional conditions rather than everyday experience",
-      "The contrast between industrial output before the war and military production during it",
-      "The difference between the official enlistment age and the average age of soldiers",
-      "The gap between idealized military service and the realities of war"
+      "The difference between the Eastern Front and the Pacific theater",
+      "The gap between idealized military service and the realities of war",
+      "The technical superiority of one nation’s cameras",
+      "The reason every volunteer supported the same political party"
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "The sequence contrasts honor, duty, and enthusiasm with death and hardship. It is an argument about representation and experience.",
     "source": {
       "kind": "slides",
@@ -837,13 +837,13 @@
     "topic": "Trench life",
     "stem": "Which distinction is most useful when using the film material in the slides?",
     "options": [
-      "Restoring color to archival footage turns it into the same kind of source as a fictional reenactment.",
-      "Archival footage gives an unselected record, so its editing and context are less important than a drama’s.",
-      "A modern dramatic film provides direct eyewitness testimony if its setting is historically accurate.",
-      "A film’s emotional impact is enough to establish how typical its portrayed experience was.",
-      "A dramatic film can interpret war, while archival material is evidence that still requires context."
+      "A dramatic film can interpret war, while archival material is evidence that still requires context.",
+      "Any visual source is less useful than a source containing words.",
+      "Restored archival footage cannot contain choices about selection or narration.",
+      "A modern dramatic film is automatically a firsthand record of 1914.",
+      "A film clip proves that every soldier shared the experience it depicts."
     ],
-    "answer": 4,
+    "answer": 0,
     "explanation": "All Quiet on the Western Front is a dramatic representation; They Shall Not Grow Old uses archival footage. Both should be analyzed for what they can and cannot show.",
     "source": {
       "kind": "slides",
@@ -877,9 +877,9 @@
     "topic": "Total war",
     "stem": "How does the Eastern Front differ from the Western Front in the slides?",
     "options": [
-      "It had the same prolonged pattern of nearly fixed lines as the west, with little major territorial movement.",
-      "Its main significance was the German submarine campaign against trade in the Baltic.",
-      "It was concentrated mainly in Belgium and northern France rather than the Russian borderlands.",
+      "It involved no trenches and caused relatively few losses.",
+      "It was a naval front centered on the English Channel.",
+      "It remained entirely outside the territory of the Russian Empire.",
       "It generally involved more mobile fighting across central and eastern Europe."
     ],
     "answer": 3,
@@ -895,13 +895,13 @@
     "topic": "Total war",
     "stem": "Which development connected Russian wartime losses to withdrawal from the war?",
     "options": [
-      "A successful Russian advance led the tsar to negotiate a peace at Paris before the revolution.",
       "Unrest and revolution were followed by the Treaty of Brest-Litovsk.",
-      "A change of government led Russia to ratify Versailles and join the League in 1917.",
-      "Military unrest led Russia to join Germany against Austria-Hungary under the Treaty of London.",
-      "German withdrawal from the east allowed Russia to remain neutral without territorial concessions."
+      "Russia received the Shandong concession and signed Versailles.",
+      "The United States negotiated Russian entry into the Triple Alliance.",
+      "Russia defeated Germany at the Somme and imposed reparations.",
+      "The League ordered Russia to become neutral in 1914."
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "The slides connect heavy losses to unrest, the 1917 Revolution, and the 1918 treaty ending Russia’s participation.",
     "source": {
       "kind": "slides",
@@ -934,12 +934,12 @@
     "topic": "Total war",
     "stem": "Which policy most directly illustrates total war on the home front?",
     "options": [
-      "Increasing overseas military commitments while leaving civilian production and consumption to prewar arrangements",
-      "Using professional soldiers to pursue limited objectives while relying on normal peacetime taxation",
-      "Treating factory output and public morale as separate concerns from military planning",
-      "Redirecting civilian industry and rationing goods to support military needs"
+      "Leaving production entirely unchanged despite shortages",
+      "Separating national finances completely from the war effort",
+      "Redirecting civilian industry and rationing goods to support military needs",
+      "Limiting all military spending to private donations"
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Total war draws civilian society and the economy into the conflict. The slides list economic controls, rationing, and war finance.",
     "source": {
       "kind": "slides",
@@ -993,12 +993,12 @@
     "topic": "Total war",
     "stem": "How do censorship and propaganda differ?",
     "options": [
-      "Censorship controls factory production; propaganda determines who may enlist.",
-      "Censorship deals with foreign governments; propaganda governs diplomatic treaties.",
+      "Censorship and propaganda both mean the government owns all factories.",
       "Censorship restricts information; propaganda attempts to shape beliefs or behavior.",
-      "Censorship promotes selected messages; propaganda prevents their circulation."
+      "Censorship raises loans; propaganda sets ration limits.",
+      "Censorship applies only to soldiers; propaganda applies only to neutral countries."
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Both can support morale, but they work differently. A message urging enlistment is propaganda; suppressing a report is censorship.",
     "source": {
       "kind": "slides",
@@ -1011,13 +1011,13 @@
     "topic": "Propaganda",
     "stem": "In the “I Want You” poster, Uncle Sam is an example of which element?",
     "options": [
-      "An exaggeration of the physical size of the U.S. army",
-      "A visual record of a typical recruit’s appearance",
-      "An image explaining the territorial demands of the U.S. delegation",
-      "A symbol representing the United States",
-      "A label identifying a specific military commander"
+      "A statistical measure of enlistment",
+      "An official record of every soldier’s motives",
+      "A military treaty obligation",
+      "A geographical label showing a front line",
+      "A symbol representing the United States"
     ],
-    "answer": 3,
+    "answer": 4,
     "explanation": "A recognizable figure stands for the nation. The poster’s words add a direct appeal, but the figure itself is a symbol.",
     "source": {
       "kind": "slides",
@@ -1030,12 +1030,12 @@
     "topic": "Propaganda",
     "stem": "What is the strongest main-message reading of “Daddy, what did YOU do in the Great War?”",
     "options": [
-      "Support national rationing so that future generations can avoid shortages.",
-      "Buy war bonds so that your children inherit a stronger household income after the war.",
-      "Protect your family by remaining in civilian employment rather than volunteering.",
-      "Enlist now so that your children will view your service with pride rather than disappointment."
+      "Purchase a bond so that the government can immediately end all rationing.",
+      "Reject military service because it separates fathers from their children.",
+      "Enlist now so that your children will view your service with pride rather than disappointment.",
+      "Support territorial independence for all colonial populations."
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "The poster imagines a future family conversation to use anticipated guilt and pride. Its persuasive purpose should be inferred from both words and image.",
     "source": {
       "kind": "slides",
@@ -1048,14 +1048,14 @@
     "topic": "Propaganda",
     "stem": "Which persuasive strategy is central to “Destroy This Mad Brute”?",
     "options": [
-      "Appealing to fairness by comparing the losses suffered by each side",
-      "Using family pride to encourage future generations to remember the war",
+      "Using a neutral map to describe transport routes",
+      "Reporting the results of a public-opinion survey",
+      "Explaining the legal terms of an armistice",
       "Dehumanizing the enemy to make enlistment seem a defense against danger",
-      "Invoking a recognizable national leader to lend authority to a financial appeal",
-      "Presenting military service as an opportunity for travel and adventure",
-      "Using sacrifice at home as the main alternative to front-line military service"
+      "Presenting a balanced comparison of military budgets",
+      "Promoting reconciliation through shared cultural traditions"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "The exaggerated threatening creature presents the enemy as monstrous. This is emotional persuasion, not a neutral description of an entire population.",
     "source": {
       "kind": "slides",
@@ -1068,13 +1068,13 @@
     "topic": "Propaganda",
     "stem": "What does a poster urging the purchase of Victory Bonds mainly ask its audience to do?",
     "options": [
+      "Serve in a frontline infantry unit",
+      "Increase household consumption of scarce food",
       "Finance the war through lending to the government",
-      "Accept lower consumption by surrendering household ration coupons",
-      "Pay reparations directly to civilians whose property has been damaged",
-      "Volunteer for military service in order to receive a postwar payment",
-      "Contribute industrial raw materials in place of government borrowing"
+      "Join a diplomatic mission to Paris",
+      "Accept a new national border"
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "The immediate requested action is financial support. Such posters demonstrate civilian participation in total war.",
     "source": {
       "kind": "slides",
@@ -1087,12 +1087,12 @@
     "topic": "Propaganda",
     "stem": "Which question best identifies the “main message” of a propaganda poster?",
     "options": [
-      "Which details show that the image is a literal record of events?",
-      "What response can be proven to have occurred among most viewers?",
+      "Was every detail drawn at a mathematically accurate scale?",
       "What does the creator want the audience to believe or do?",
-      "What information would make the poster a complete account of the war?"
+      "How many people accepted the message after seeing it?",
+      "Which year had the greatest overall military spending?"
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Main message concerns intended persuasion. Measuring actual influence is a separate historical question requiring more evidence.",
     "source": {
       "kind": "slides",
@@ -1105,15 +1105,15 @@
     "topic": "Propaganda",
     "stem": "“Women of Britain Say—GO!” most directly uses which appeal?",
     "options": [
-      "A claim that enlistment will produce political independence for colonies",
-      "A warning that military service will weaken Britain’s families",
+      "A demand that soldiers stop buying government bonds",
+      "An explanation of the military clauses of Versailles",
+      "A neutral calculation of casualty rates",
+      "Evidence that all women held identical political opinions",
+      "An argument for abandoning imperial possessions",
       "Family expectations and gender roles to encourage enlistment",
-      "A technical explanation of how recruiting quotas are calculated",
-      "An appeal to soldiers’ firsthand knowledge of trench conditions",
-      "Fear of diplomatic isolation if Britain leaves its alliances",
-      "Financial reward and postwar economic opportunity as reasons to serve"
+      "A promise that women alone would negotiate the peace"
     ],
-    "answer": 2,
+    "answer": 5,
     "explanation": "The poster uses an image of women and children to frame enlistment as expected duty. It cannot establish that all women agreed with its message.",
     "source": {
       "kind": "slides",
@@ -1126,10 +1126,10 @@
     "topic": "Propaganda",
     "stem": "Why is a recruiting poster insufficient evidence that most people wanted war?",
     "options": [
-      "It measures the response of its intended audience but leaves out the opinions of the artist.",
+      "Visual messages were never intended to influence civilians.",
       "It shows an attempt to persuade, not how the whole audience responded.",
-      "It shows private opinion more directly than official policy, so the state’s goals remain unknown.",
-      "It is evidence only of recruitment totals, rather than of the emotions used to encourage enlistment."
+      "A poster can be used as evidence only if it includes statistics.",
+      "Recruiting posters contain no evidence about government goals."
     ],
     "answer": 1,
     "explanation": "Intent and reception are different. The poster can reveal appeals, targets, and assumptions, while audience response requires other sources.",
@@ -1144,13 +1144,13 @@
     "topic": "Global war",
     "stem": "Which evidence best supports calling WWI a global conflict?",
     "options": [
-      "The same trench system extended across every continent involved in the war.",
+      "The fact that every country in the world formally declared war",
+      "The complete independence of European economies from overseas trade",
       "Colonial troops and resources, fighting beyond Europe, and disruption of international trade",
-      "The military alliance blocs had members on both sides of Germany.",
-      "European war plans depended chiefly on disputes over North American territory.",
-      "Each participant controlled an overseas empire and joined for the same imperial goal."
+      "The absence of any military participation from outside Europe",
+      "The fact that every battle took place within Germany"
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "A world war need not involve every state. Imperial networks, overseas campaigns, and worldwide economic effects made this conflict global.",
     "source": {
       "kind": "slides",
@@ -1163,10 +1163,10 @@
     "topic": "Global war",
     "stem": "Why must the “British Empire” total in the casualty chart be read carefully?",
     "options": [
-      "It records British civilian deaths alongside the battlefield deaths of other powers.",
-      "It represents only imperial troops serving outside Europe.",
-      "It groups all English-speaking countries together, including the United States.",
-      "It is a total of soldiers mobilized rather than soldiers who died.",
+      "It counts all Allied losses as British losses.",
+      "It excludes all troops who served overseas.",
+      "It represents civilian deaths in Germany.",
+      "It includes only soldiers from England and excludes Scotland.",
       "It includes forces from several imperial and dominion territories, not only Britain."
     ],
     "answer": 4,
@@ -1244,13 +1244,13 @@
     "topic": "U.S. entry",
     "stem": "What made unrestricted submarine warfare especially threatening to neutral states?",
     "options": [
-      "Ships could be attacked without the usual warning and search procedures, including neutral shipping.",
-      "It treated every neutral port as a naval base that could be occupied without warning.",
-      "It gave neutral captains a choice between carrying Allied cargo and joining the German navy.",
-      "It concentrated on military warships while leaving neutral trade subject only to customs inspections.",
-      "It required neutral ships to carry German troops whenever they entered a war zone."
+      "It guaranteed safe passage to all civilian cargo vessels.",
+      "It required neutral governments to join the Central Powers.",
+      "It restricted attacks only to warships that had already fired first.",
+      "It moved the fighting entirely onto land within neutral territory.",
+      "Ships could be attacked without the usual warning and search procedures, including neutral shipping."
     ],
-    "answer": 0,
+    "answer": 4,
     "explanation": "The policy put neutral trade and lives at risk while seeking to cut Britain’s supplies. This helped turn the United States against Germany.",
     "source": {
       "kind": "slides",
@@ -1281,14 +1281,14 @@
     "topic": "U.S. entry",
     "stem": "What can the U.S. export chart most reasonably support?",
     "options": [
-      "Formal neutrality coexisted with growing economic ties to Britain and France.",
-      "Economic ties remained approximately balanced despite increasing political tension.",
-      "American trade shifted toward the Central Powers as the Allied blockade weakened.",
-      "Britain’s exports to the United States grew while American exports to France declined.",
-      "The United States traded mainly with Germany until immediately before its declaration of war.",
-      "The chart measures government loans rather than the value of goods exported."
+      "The United States had equal trade with both sides throughout the war.",
+      "A declaration of war had already been issued in 1912.",
+      "Economic relationships had no connection to wartime policy.",
+      "Trade figures alone reveal the personal opinions of all American voters.",
+      "The United States exported no goods to Europe before 1917.",
+      "Formal neutrality coexisted with growing economic ties to Britain and France."
     ],
-    "answer": 0,
+    "answer": 5,
     "explanation": "Exports to the Allies rose while exports to Germany declined sharply. This challenges a simple picture of economic neutrality without proving that political neutrality had already ended.",
     "source": {
       "kind": "slides",
@@ -1322,12 +1322,12 @@
     "topic": "U.S. entry",
     "stem": "Which reading of the decoded telegram avoids overstating the evidence?",
     "options": [
-      "It reports Japan’s formal decision to leave the Allies and mediate a German-American peace.",
-      "It proposed an alliance and territorial support; it does not prove Mexico accepted.",
-      "It records an alliance Mexico had accepted and Germany was now putting into effect.",
-      "It describes territorial concessions the United States had already agreed to in peace talks."
+      "It proves Japan had already left the Allies to join Germany.",
+      "It proves Mexico declared war on the United States that same day.",
+      "It was a peace treaty formally transferring U.S. territory.",
+      "It proposed an alliance and territorial support; it does not prove Mexico accepted."
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "The document is a proposal, including conditions and diplomatic instructions. A proposed action must be distinguished from an action that actually occurred.",
     "source": {
       "kind": "slides",
@@ -1359,14 +1359,14 @@
     "topic": "War’s end",
     "stem": "Which combination best explains why Germany sought an armistice?",
     "options": [
-      "Internal political stability combined with the defeat of all Germany’s allies in a single battle",
-      "The collapse of French resistance combined with unrest in Austria-Hungary and a League mediation plan",
-      "American withdrawal combined with a German preference to preserve its navy through a negotiated peace",
-      "Military stalemate combined with economic recovery and the prospect of Russian reentry into the war",
+      "The success of the original plan to defeat France within weeks",
       "Military defeats, exhausted resources, worsening conditions, and internal unrest",
-      "Severe shortages combined with a successful final advance that secured Germany’s main western goals"
+      "A completed peace treaty, stable supplies, and continued military advances",
+      "The fulfillment of Germany’s territorial aims in western Europe",
+      "A League order already enforced by all the major powers",
+      "U.S. withdrawal, Russian reentry, and the abolition of all naval blockades"
     ],
-    "answer": 4,
+    "answer": 1,
     "explanation": "The slides list interacting military, economic, and political pressures. A ceasefire resulted before a full peace agreement existed.",
     "source": {
       "kind": "slides",
@@ -1379,12 +1379,12 @@
     "topic": "War’s end",
     "stem": "What is the most accurate relationship between shell shock and PTSD?",
     "options": [
-      "Shell shock was the contemporary diagnostic name for PTSD with the same modern criteria.",
-      "Shell shock described temporary combat fatigue that could not involve long-term symptoms.",
-      "Shell shock was restricted to neurological injury caused by shell blasts, while PTSD described wartime fear in 1914.",
-      "Shell shock was a wartime term covering symptoms that overlap with, but are not identical to, modern PTSD."
+      "Shell shock was a wartime term covering symptoms that overlap with, but are not identical to, modern PTSD.",
+      "Shell shock referred only to visible facial wounds.",
+      "They are identical diagnostic labels with unchanged criteria since 1914.",
+      "PTSD was the official term used in WWI trench medical records."
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "The slides use the terms to connect invisible injuries across time. Historical medical categories do not map perfectly onto modern diagnoses.",
     "source": {
       "kind": "slides",
@@ -1397,13 +1397,13 @@
     "topic": "War’s end",
     "stem": "Which conclusion follows from the mobilization figures in the statistics slide?",
     "options": [
+      "Mobilized troops and battlefield deaths are the same category.",
+      "The figures prove each side had equal industrial production.",
+      "The Central Powers mobilized almost twice as many troops as the Allies.",
       "The Allies mobilized more troops overall than the Central Powers.",
-      "The Allied total describes only British Empire troops, rather than the coalition.",
-      "The chart compares troop strength at one battle rather than total wartime mobilization.",
-      "The Central Powers mobilized more troops overall despite the Allies having more members.",
-      "The ratio of mobilized troops was the same as the ratio of battlefield deaths."
+      "Every Allied country mobilized more troops than Germany."
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "The slide gives approximately 42 million Allied and 23 million Central Powers troops. This is a coalition total, not a country-by-country or industrial comparison.",
     "source": {
       "kind": "slides",
@@ -1455,10 +1455,10 @@
     "topic": "Peace settlement",
     "stem": "Which statement best distinguishes the armistice from the peace settlement?",
     "options": [
-      "The armistice established the League; the later treaties formally suspended hostilities.",
+      "The armistice admitted Germany to the League; the treaty dissolved it.",
       "The armistice stopped the fighting; later treaties established terms such as borders and reparations.",
-      "The armistice settled the financial terms; the later treaties dealt only with the military ceasefire.",
-      "The armistice was a permanent peace with Germany; Versailles focused on its former allies."
+      "The armistice was a military attack plan; the treaty began mobilization.",
+      "The armistice established every final border; Versailles only announced the ceasefire."
     ],
     "answer": 1,
     "explanation": "Stopping combat did not resolve responsibility, compensation, military limits, or territorial claims. Those were questions for the peace negotiations.",
@@ -1469,18 +1469,18 @@
     }
   },
   {
-    "id": "q077",
+    "id": "q077-big-three",
     "topic": "Peace settlement",
-    "stem": "Which group correctly identifies the Big Four powers?",
+    "stem": "Which countries make up the Big Three in our Paris Peace Conference unit?",
     "options": [
-      "United States, Britain, France, Russia",
-      "United States, France, China, Japan",
-      "Britain, Russia, Italy, Japan",
-      "Britain, France, Germany, Italy",
-      "United States, Britain, France, Italy"
+      "Britain, France, Italy",
+      "United States, France, Italy",
+      "Britain, France, Japan",
+      "United States, Britain, Italy",
+      "United States, Britain, France"
     ],
     "answer": 4,
-    "explanation": "Wilson, Lloyd George, Clemenceau, and Orlando represented the four leading powers in these negotiations.",
+    "explanation": "The Big Three in this unit are the United States (Woodrow Wilson), Britain (David Lloyd George), and France (Georges Clemenceau). Italy participated in the conference but is not part of this group.",
     "source": {
       "kind": "slides",
       "first": 113,
@@ -1492,11 +1492,11 @@
     "topic": "Peace settlement",
     "stem": "What was a central purpose of Wilson’s League of Nations?",
     "options": [
-      "Preserve peace by making the victorious alliance a permanent military bloc excluding defeated states",
+      "Allocate all former colonies directly to the United States",
       "Preserve peace through international cooperation and the resolution of disputes",
-      "Restore the balance of power through secret bilateral commitments rather than open cooperation",
-      "Replace national governments with a central authority controlling their domestic policies",
-      "Give each major empire exclusive authority to settle disputes within a fixed sphere of influence"
+      "Restore the prewar Triple Alliance under German leadership",
+      "Remove the need for governments to negotiate with one another",
+      "Guarantee that every national claim would immediately become a state"
     ],
     "answer": 1,
     "explanation": "The League was intended to prevent future conflict through cooperation. Its creation did not automatically resolve every competing territorial claim.",
@@ -1511,14 +1511,14 @@
     "topic": "Peace settlement",
     "stem": "What does self-determination mean in this unit?",
     "options": [
-      "The principle that a shared language automatically produces a politically independent state",
-      "A victorious coalition’s authority to decide the political future of defeated peoples",
-      "An empire’s right to grant selected legal reforms without transferring political power",
-      "A state’s right to choose which neighboring territories it can annex for security",
-      "The right of each state to ignore international agreements after signing them",
-      "A people’s claim to decide its political status and government"
+      "A people’s claim to decide its political status and government",
+      "A requirement that every state adopt identical economic policies",
+      "A victor’s unrestricted right to annex territory",
+      "A government’s power to censor all wartime news",
+      "A rule that dynastic succession overrides national claims",
+      "An automatic guarantee that ethnic and state boundaries already match"
     ],
-    "answer": 5,
+    "answer": 0,
     "explanation": "Self-determination is a principle about political choice and sovereignty. Its inconsistent application is a central issue in the peace settlement.",
     "source": {
       "kind": "slides",
@@ -1531,12 +1531,12 @@
     "topic": "Peace settlement",
     "stem": "Which difference made it difficult to apply self-determination consistently?",
     "options": [
-      "The peace conference treated cultural and political boundaries as identical throughout Europe.",
       "National populations overlapped, while the victors also pursued security, territory, and imperial interests.",
-      "Allied governments applied national independence mainly to their own overseas possessions.",
-      "Most disputed areas contained a single national community whose claims did not overlap."
+      "Every ethnic community already lived inside an uncontested independent state.",
+      "The Allies agreed to give up all overseas possessions immediately.",
+      "Only defeated European powers had any nationalist movements."
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Mixed populations made boundaries difficult; imperial interests further limited the principle outside Europe. The maps and mandate discussion expose both problems.",
     "source": {
       "kind": "slides",
@@ -1549,13 +1549,13 @@
     "topic": "Peace settlement",
     "stem": "What was a League mandate?",
     "options": [
-      "A neutral zone jointly governed by every former belligerent",
-      "A financial obligation imposed on a defeated state to compensate civilian damage",
-      "A territory recognized as immediately independent and admitted to the League on equal terms",
       "A territory administered by a designated power under a League framework",
-      "A territory annexed outright without any international administrative framework"
+      "An unrestricted submarine zone imposed around a neutral country",
+      "A loan sold to civilians to pay for a military campaign",
+      "A state’s formal approval of the Treaty of Versailles",
+      "An agreement ending Russia’s participation in the war"
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Mandates placed former German or Ottoman territories under administration by other powers. They were not the same as immediate independence.",
     "source": {
       "kind": "slides",
@@ -1587,14 +1587,14 @@
     "topic": "Peace settlement",
     "stem": "What do the before-and-after European maps most clearly show?",
     "options": [
-      "The redrawing of borders so that each state contained one ethnic community",
-      "The preservation of the prewar imperial system with only minor border adjustments",
       "The breakup of empires and the creation or enlargement of several states",
-      "The restoration of the Ottoman and Habsburg empires under constitutional governments",
-      "The creation of new states mainly from British and French territory",
-      "The expansion of Germany into the territories of its defeated eastern allies"
+      "The disappearance of every multinational state",
+      "The survival of Austria-Hungary with all its prewar borders",
+      "The transfer of all former Russian territory to Germany",
+      "The end of every minority population’s political grievances",
+      "The unification of Europe into one state"
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Austria-Hungary disappeared and countries such as Poland and Czechoslovakia appeared on the postwar map. Redrawn borders did not eliminate all minority questions.",
     "source": {
       "kind": "slides",
@@ -1607,12 +1607,12 @@
     "topic": "Peace settlement",
     "stem": "Why did Wilson’s signature not make the United States a party to the ratified Versailles settlement?",
     "options": [
+      "Wilson signed only the Treaty of Brest-Litovsk.",
+      "Britain had sole authority to ratify treaties on behalf of the United States.",
       "The Senate did not give the consent required for U.S. ratification.",
-      "The treaty required a national referendum that Wilson declined to hold.",
-      "The House of Representatives alone had to consent, and the Senate approved without reservations.",
-      "The League’s members had to ratify American membership before the Senate could consider the treaty."
+      "The League refused to allow any American participation."
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Signature and ratification are separate. Senate opposition, including concerns about League obligations, prevented U.S. ratification and membership.",
     "source": {
       "kind": "slides",
@@ -1625,13 +1625,13 @@
     "topic": "Peace settlement",
     "stem": "Which concern helped drive U.S. opposition to League membership?",
     "options": [
-      "Concern that ratification would transfer the presidency’s domestic powers to Britain",
-      "Fear that League membership would require the United States to abandon all trade with Europe",
-      "Fear that membership would require immediate American administration of every mandate",
+      "A belief that Germany had already become a member of the Triple Entente",
+      "A requirement that the American president permanently reside in Paris",
       "Fear that international obligations could limit U.S. freedom of action and Congress’s war powers",
-      "Concern that the League gave Germany exclusive authority over American military decisions"
+      "A demand that the United States immediately acquire all German colonies",
+      "A treaty clause automatically ending U.S. trade with France"
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Opposition included concerns about entanglement and constitutional authority, alongside domestic political conflict. It was not a rejection of every form of diplomacy.",
     "source": {
       "kind": "slides",
@@ -1644,14 +1644,14 @@
     "topic": "Peace settlement",
     "stem": "What does the phrase “a peace built on quicksand” suggest?",
     "options": [
-      "The treaty avoided imposing any economic obligations, leaving reconstruction unfunded.",
-      "Unresolved grievances and weak support could undermine the settlement’s durability.",
-      "The treaty’s main weakness was that it left the prewar borders and empires unchanged.",
-      "The settlement could remain stable only if all defeated countries recovered their former empires.",
-      "The peace depended chiefly on Germany accepting immediate membership in the League.",
-      "The conference had resolved colonial disputes but postponed every European border question."
+      "The treaty guaranteed another war on a fixed timetable.",
+      "Territorial disputes disappeared once the League was created.",
+      "Germany’s economy was unaffected by the settlement.",
+      "Every major power received all of its original demands.",
+      "The armistice had already produced a universally accepted final settlement.",
+      "Unresolved grievances and weak support could undermine the settlement’s durability."
     ],
-    "answer": 1,
+    "answer": 5,
     "explanation": "The metaphor highlights instability and dissatisfaction. It is not proof that a later war was inevitable or that the settlement had no achievements.",
     "source": {
       "kind": "slides",
