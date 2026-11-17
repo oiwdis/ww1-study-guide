@@ -93,5 +93,7 @@ e('1948','1948','Israel is established','Later context','Empire & national claim
 for item in items:
  if item['title']=='Russian Civil War':item['sort']='1917-11-08'
 items.sort(key=lambda x:x['sort'])
+from course_scope import excluded
+items=[item for item in items if not excluded(item)]
 Path(__file__).resolve().parents[1].joinpath('dist/timeline.json').write_text(json.dumps(items,ensure_ascii=False,indent=2))
 print('Saved',len(items),'dated timeline entries.')

@@ -2,7 +2,7 @@
 
 A static, interactive study guide based on the supplied classroom slides, Paris Peace Conference handouts, three homework reading bundles, royal telegrams, Western Front accounts, and two Crash Course video transcripts.
 
-Live guide: https://wwi-unit-study-guide.themaclan-2484.chatgpt.site
+Live guide: https://wwi-unit-study-guide.themaclan-2478.chatgpt.site
 
 ## Included
 
@@ -11,7 +11,7 @@ Live guide: https://wwi-unit-study-guide.themaclan-2484.chatgpt.site
 - **Readings:** three detailed summaries, each followed by the original textbook photographs (4, 3, and 5 pages).
 - **Quiz:** 87 multiple-choice questions based only on the slide deck with 4–10 choices, explanations, topic filters, and source links.
 - **Practice tests:** five distinct tests, each with 5 political-cartoon questions, 10 content multiple-choice questions, 7 blanks, and 2 short answers. All multiple-choice questions use only the slides, including combination choices and chronology.
-- **Timeline:** 84 sourced dates and periods, with search and theme/era filters.
+- **Timeline:** 78 sourced dates and periods, with search and theme/era filters.
 - **Extra Information:** six source guides covering the royal-cousins background, all ten Willy–Nicky telegrams, Clapham’s memoir, Remarque’s novel, and Crash Course 209 and 210. Includes category filters, search, dated telegram paraphrases, a crisis chronology, comparisons, terms, and links to both videos.
 - **Paris Peace Conference:** 17 country and movement perspectives, plus all 21 original document pages.
 

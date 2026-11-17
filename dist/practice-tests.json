@@ -582,23 +582,23 @@
           ]
         },
         {
-          "id": "t1-q21",
           "type": "fill",
           "section": "blanks",
-          "stem": "Lenin’s 1921 partial return to market activity was called the _____.",
-          "answer": "New Economic Policy",
+          "stem": "The American president who proposed the Fourteen Points was Woodrow _____.",
+          "answer": "Wilson",
           "accepted": [
-            "New Economic Policy",
-            "NEP"
+            "Wilson",
+            "Woodrow Wilson"
           ],
-          "explanation": "The NEP permitted some private trade while the Communist Party retained political control.",
+          "explanation": "Wilson proposed a peace program that included international cooperation through a League of Nations.",
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 113,
+              "last": 115
             }
-          ]
+          ],
+          "id": "t1-q21-wwi"
         },
         {
           "id": "t1-q22",
@@ -1663,84 +1663,79 @@
           ]
         },
         {
-          "id": "t3-q17",
           "type": "fill",
           "section": "blanks",
-          "stem": "The Bolshevik leader who introduced the NEP was Vladimir _____.",
-          "answer": "Lenin",
+          "stem": "The 1917 German policy of attacking shipping without warning was called _____ submarine warfare.",
+          "answer": "unrestricted",
           "accepted": [
-            "Lenin",
-            "Vladimir Lenin",
-            "Vladimir Ilyich Lenin"
+            "unrestricted",
+            "unrestricted submarine warfare"
           ],
-          "explanation": "Lenin introduced the New Economic Policy in 1921 after civil war and economic collapse.",
+          "explanation": "Unrestricted submarine warfare threatened shipping and helped bring the United States into the war.",
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 99,
+              "last": 109
             }
-          ]
+          ],
+          "id": "t3-q17-wwi"
         },
         {
-          "id": "t3-q18",
           "type": "fill",
           "section": "blanks",
-          "stem": "The revolutionary leader associated with world revolution and later exile in 1929 was Leon _____.",
-          "answer": "Trotsky",
+          "stem": "The movement of people and resources into readiness for war is called _____.",
+          "answer": "mobilization",
           "accepted": [
-            "Trotsky",
-            "Leon Trotsky",
-            "Lev Trotsky"
+            "mobilization",
+            "mobilisation"
           ],
-          "explanation": "Trotsky lost the succession struggle to Stalin and was expelled from the Soviet Union.",
+          "explanation": "Mobilization prepared armed forces for conflict and contributed to escalation in the July Crisis.",
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 29,
+              "last": 46
             }
-          ]
+          ],
+          "id": "t3-q18-wwi"
         },
         {
-          "id": "t3-q19",
           "type": "fill",
           "section": "blanks",
-          "stem": "The Soviet leader associated with “socialism in one country” was Joseph _____.",
-          "answer": "Stalin",
+          "stem": "The country Germany invaded on its route into France, prompting British entry, was _____.",
+          "answer": "Belgium",
           "accepted": [
-            "Stalin",
-            "Joseph Stalin",
-            "Josef Stalin"
+            "Belgium"
           ],
-          "explanation": "Stalin consolidated power after Lenin’s death and defeated rivals including Trotsky.",
+          "explanation": "The invasion of Belgium expanded the conflict and prompted Britain to enter the war.",
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 29,
+              "last": 46
             }
-          ]
+          ],
+          "id": "t3-q19-wwi"
         },
         {
-          "id": "t3-q20",
           "type": "fill",
           "section": "blanks",
-          "stem": "The abbreviation for the Union of Soviet Socialist Republics is _____.",
-          "answer": "USSR",
+          "stem": "The international organization Wilson proposed to help prevent future wars was the _____.",
+          "answer": "League of Nations",
           "accepted": [
-            "USSR",
-            "U.S.S.R.",
-            "Soviet Union"
+            "League of Nations",
+            "the League of Nations"
           ],
-          "explanation": "The USSR was formally established in 1922.",
+          "explanation": "The League was intended to preserve peace through cooperation and the resolution of disputes.",
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 115,
+              "last": 120
             }
-          ]
+          ],
+          "id": "t3-q20-wwi"
         },
         {
           "id": "t3-q21",
@@ -1822,24 +1817,24 @@
           ]
         },
         {
-          "id": "t3-q24",
           "type": "short",
           "section": "short",
-          "stem": "Why did Lenin introduce the NEP, and what did it change—and leave in place—in Soviet Russia?",
-          "model": "Civil war, requisitioning and strict wartime controls had devastated production and provoked resistance. Lenin introduced the New Economic Policy in 1921 as a practical response to this crisis. It allowed some private trade and small business, and gave peasants greater incentives to produce and sell surpluses. These changes helped revive economic activity, but they did not create a multiparty democracy or end Communist Party control. The state retained authority over major parts of the economy and political life. The NEP therefore represented a limited economic compromise within the new Soviet order, rather than the abandonment of the revolution’s ruling party.",
+          "stem": "How did unrestricted submarine warfare and the Zimmermann Telegram contribute to American entry into World War I?",
+          "model": "Unrestricted submarine warfare threatened merchant shipping and American lives, making neutrality more difficult to maintain. Germany hoped attacks on shipping would weaken Britain, but the policy also increased conflict with the United States. The Zimmermann Telegram proposed cooperation between Germany and Mexico if the United States entered the war, making German policy appear threatening closer to home. Together, these developments strengthened arguments for intervention. They should be understood alongside broader American economic and political ties to the Allies. The United States declared war on Germany in April 1917; its entry followed an accumulation of tensions rather than a single isolated incident.",
           "rubric": [
-            "Identify economic collapse or resistance after war and civil war as a cause.",
-            "Describe a specific market concession under the NEP.",
-            "Explain how incentives or trade could aid recovery.",
-            "Distinguish economic concessions from continued Communist political control."
+            "Explain the threat posed by unrestricted submarine warfare.",
+            "Identify the proposed German alliance with Mexico.",
+            "Connect both developments to the weakening of American neutrality.",
+            "Place U.S. entry in April 1917 and avoid reducing it to one isolated cause."
           ],
           "sources": [
             {
-              "kind": "reading",
-              "reading": 3,
-              "page": 4
+              "kind": "slides",
+              "first": 99,
+              "last": 109
             }
-          ]
+          ],
+          "id": "t3-q24-wwi"
         }
       ],
       "revisedQuestionIds": [

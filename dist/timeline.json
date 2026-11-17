@@ -1057,28 +1057,6 @@
     "note": "Often called the October Revolution because Russia then used a different calendar."
   },
   {
-    "id": "event-59",
-    "sort": "1917-11-08",
-    "date": "1917–1922",
-    "title": "Russian Civil War",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "The Bolsheviks fight anti-communist forces; warfare, economic collapse, and famine follow. The main struggle described in the reading centers on 1918–1921.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 3
-      },
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 4
-      }
-    ],
-    "note": "The reading’s December 1918 opening is too narrow for the full civil-war period. This range overlaps the final phase of WWI."
-  },
-  {
     "id": "event-52",
     "sort": "1918-01",
     "date": "January 1918",
@@ -1384,23 +1362,6 @@
     "note": null
   },
   {
-    "id": "event-68",
-    "sort": "1921-01",
-    "date": "1921",
-    "title": "New Economic Policy begins",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "Lenin allows limited private enterprise to revive the devastated economy while retaining Communist rule and control of major sectors.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 4
-      }
-    ],
-    "note": "The uploaded textbook prints 1923. The accepted start date is 1921."
-  },
-  {
     "id": "event-69",
     "sort": "1921-08",
     "date": "1921",
@@ -1496,28 +1457,6 @@
     "note": null
   },
   {
-    "id": "event-74",
-    "sort": "1922-12",
-    "date": "1922",
-    "title": "Soviet Union formed",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "A new union consolidates Bolshevik control over much of the former tsarist empire, while several neighboring states remain independent.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 3
-      },
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 4
-      }
-    ],
-    "note": null
-  },
-  {
     "id": "event-75",
     "sort": "1923-01",
     "date": "1923",
@@ -1551,23 +1490,6 @@
       {
         "kind": "reading",
         "reading": 1,
-        "page": 4
-      }
-    ],
-    "note": null
-  },
-  {
-    "id": "event-77",
-    "sort": "1924-01",
-    "date": "January 1924",
-    "title": "Lenin dies; succession struggle intensifies",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "Stalin and Trotsky become central rivals, with party organization and competing visions of socialism at stake.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
         "page": 4
       }
     ],
@@ -1619,40 +1541,6 @@
       {
         "kind": "reading",
         "reading": 1,
-        "page": 4
-      }
-    ],
-    "note": null
-  },
-  {
-    "id": "event-81",
-    "sort": "1928",
-    "date": "1928",
-    "title": "NEP gives way to the First Five-Year Plan",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "The sidebar points toward Stalin’s program of rapid state-directed industrialization.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
-        "page": 4
-      }
-    ],
-    "note": null
-  },
-  {
-    "id": "event-82",
-    "sort": "1929-01",
-    "date": "1929",
-    "title": "Trotsky is expelled from the Soviet Union",
-    "era": "Peace & aftermath",
-    "topic": "U.S. & Russia",
-    "text": "Stalin’s victory over his rival accompanies the consolidation of personal and party power.",
-    "sources": [
-      {
-        "kind": "reading",
-        "reading": 3,
         "page": 4
       }
     ],

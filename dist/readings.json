@@ -200,18 +200,6 @@
         "text": "Wilson wanted an organization to preserve peace and encourage cooperation. The U.S. Senate refused ratification of Versailles, and the United States never joined the League. The League could still work on health, labor, and communications, but its ability to enforce decisions against aggressive states was much weaker. Its practical achievements and its security failures should be distinguished."
       },
       {
-        "title": "Civil war and the Soviet Union",
-        "text": "The Bolsheviks faced anti-communist forces supported by former Allied powers. Fighting, confiscation of crops, ruined infrastructure, and famine devastated Russia. By 1921 the Communists had defeated most major enemies, although the broader civil-war period extended beyond the text’s simplified starting point. The Soviet Union formed in 1922, incorporating Russia, Ukraine, Belarus, and the Transcaucasian federation. Finland, the Baltic states, and Poland remained outside it at this point."
-      },
-      {
-        "title": "The New Economic Policy",
-        "text": "Lenin’s NEP allowed limited private trade and small-scale enterprise while the state retained major industries, banks, and railways. It was a tactical retreat from comprehensive state control to restore production after economic collapse. It did not mean abandoning Communist political rule or the long-term goal of industrialization. The policy began in 1921; the photographed page’s 1923 date is incorrect."
-      },
-      {
-        "title": "Stalin and Trotsky",
-        "text": "After Lenin’s death in January 1924, Trotsky and Stalin competed for leadership. Trotsky stressed international revolution; Stalin emphasized “socialism in one country.” Stalin built support within the party bureaucracy, marginalized opponents, and forced Trotsky into exile in 1929. The reading connects this consolidation of power to the coming drive for rapid industrialization."
-      },
-      {
         "title": "Hyperinflation and a fragile recovery",
         "text": "German reparations difficulties and French occupation of the Ruhr intensified the crisis of 1923. Printing money helped drive hyperinflation, eroding savings and social stability. Currency stabilization and international lending supported recovery after 1924. U.S. banks lent to Germany, Germany paid reparations to Britain and France, and those countries serviced U.S. wartime debts. This circular flow depended heavily on continued credit."
       },
@@ -224,22 +212,19 @@
       "Armistice": "An agreement to stop fighting; it is not the same as a final peace treaty.",
       "Reparations": "Payments or compensation required for war damage.",
       "Self-determination": "A people’s claim to determine its political status and government.",
-      "NEP": "New Economic Policy: limited market activity under continuing Communist rule.",
       "Hyperinflation": "An extremely rapid rise in prices and collapse in a currency’s purchasing power.",
-      "Ephemeral": "Short-lived; the reading uses it to characterize the unstable postwar peace.",
-      "USSR": "Union of Soviet Socialist Republics, created in 1922."
+      "Ephemeral": "Short-lived; the reading uses it to characterize the unstable postwar peace."
     },
     "connections": [
       "Trace the connection between U.S. loans, German reparations, and Allied war debts.",
       "Compare Wilson’s ideals with the actual distribution of power at Paris.",
-      "Distinguish economic concessions under the NEP from political democratization.",
       "Connect the source’s mixed pandemic estimates to the need to identify what a historical statistic measures."
     ],
     "notes": [
       "The original bundle order is preserved below. The summary follows the historical sequence instead of the upload sequence.",
-      "Key date correction: NEP began in 1921, not 1923. Wilson requested a declaration of war on April 2, 1917; Congress declared war on April 6.",
       "The pandemic sidebar and main paragraph disagree about deaths and infection totals. Their shared point is the pandemic’s global scale; the practice tests do not require one disputed death estimate.",
-      "Some page edges are cropped. Sections only named in a contents list or appearing beyond the photographed text are not treated as fully supplied readings."
+      "Some page edges are cropped. Sections only named in a contents list or appearing beyond the photographed text are not treated as fully supplied readings.",
+      "Wilson requested a declaration of war on April 2, 1917; Congress declared war on April 6."
     ],
     "pages": [
       {
@@ -254,12 +239,12 @@
       },
       {
         "number": 3,
-        "label": "Textbook page 774 · Peace treaties and Russian civil war",
+        "label": "Textbook page 774 · Peace treaties",
         "image": "assets/readings/reading-3/page-3.webp"
       },
       {
         "number": 4,
-        "label": "Textbook page 775 · NEP, Stalin, and an ephemeral peace",
+        "label": "Textbook page 775 · An ephemeral peace",
         "image": "assets/readings/reading-3/page-4.webp"
       },
       {
