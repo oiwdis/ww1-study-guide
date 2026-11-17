@@ -179,6 +179,8 @@ from practice_slide_scope import apply_slide_scope
 apply_slide_scope(tests)
 from course_scope import filter_tests
 filter_tests(tests)
+from question_wording import apply_wording
+for test in tests: apply_wording(test["questions"])
 for t in tests:
     assert len(t['questions'])==24
     assert [sum(q['section']==s for q in t['questions']) for s in ['cartoons','knowledge','blanks','short']]==[5,10,7,2]

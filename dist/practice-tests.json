@@ -107,7 +107,7 @@
           "id": "t1-q01",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What mechanism does the chain of threats most clearly criticize?",
+          "stem": "What danger does the cartoon’s chain of threats warn about?",
           "options": [
             "A dispute can widen when states promise to defend partners.",
             "Diplomatic threats settle disputes before military commitments become relevant.",
@@ -152,7 +152,7 @@
           "id": "t1-q03",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which interpretation best explains the arrangement of the figures around China?",
+          "stem": "Why does the cartoon show foreign powers gathered around China?",
           "options": [
             "One European power is defending China against the ambitions of all the others.",
             "Foreign powers are competing for influence while Chinese control is threatened.",
@@ -176,7 +176,7 @@
           "id": "t1-q04",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What does the missing keystone chiefly represent?",
+          "stem": "What does the missing center stone in the League of Nations bridge represent?",
           "options": [
             "Russia’s exclusion from the Paris settlement.",
             "The rejection of Japan’s racial equality proposal.",
@@ -201,7 +201,7 @@
           "id": "t1-q05",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What is the main point of the mutually pointing fingers in “Who Did It?”",
+          "stem": "Why are the countries pointing at one another in “Who Did It?”?",
           "options": [
             "The cartoon presents one neutral state as an impartial judge of the other powers.",
             "The cartoon singles out Germany while treating every other state as an innocent witness.",
@@ -227,7 +227,7 @@
           "id": "t1-q06",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statements distinguish underlying causes from the immediate trigger of WWI?",
+          "stem": "Which statements correctly explain the difference between WWI’s long-term causes and the event that triggered the crisis?",
           "options": [
             "B only",
             "A only",
@@ -321,7 +321,7 @@
           "id": "t1-q09",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which military development most directly frustrated hopes for an easy advance on the Western Front?",
+          "stem": "What made it difficult for armies to advance quickly on the Western Front?",
           "options": [
             "Aircraft made it unnecessary to hold captured territory with ground troops.",
             "Rapid tank deployment gave attackers reliable breakthroughs from the opening months.",
@@ -342,7 +342,7 @@
           "id": "t1-q10",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which policies illustrate total war in the home-front slide?",
+          "stem": "Which government policies show total war affecting civilians at home?",
           "options": [
             "A and B only",
             "A only",
@@ -415,7 +415,7 @@
           "id": "t1-q13",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which sequence best explains Russia’s withdrawal as presented in the Eastern Front slide?",
+          "stem": "Which sequence correctly explains how Russia left WWI?",
           "options": [
             "A decisive Russian victory → occupation of Germany → the Treaty of Versailles.",
             "Western Front stalemate → British withdrawal → a Russian naval blockade.",
@@ -436,7 +436,7 @@
           "id": "t1-q14",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which three states do the imperialism slides identify as relatively late entrants into the colonial race?",
+          "stem": "Which three countries joined the competition for colonies relatively late, according to the slides?",
           "options": [
             "Britain, France and Russia.",
             "Germany, Britain and France.",
@@ -458,7 +458,7 @@
           "id": "t1-q15",
           "type": "mc",
           "section": "knowledge",
-          "stem": "How do the armistice and the Paris negotiations differ in the slides?",
+          "stem": "How did the armistice differ from the peace talks in Paris?",
           "options": [
             "The conference stopped fighting in 1914; the armistice imposed the final settlement in 1918.",
             "The November 1918 armistice stopped fighting; the 1919–1920 conference worked on the peace terms.",
@@ -604,7 +604,7 @@
           "id": "t1-q22",
           "type": "fill",
           "section": "blanks",
-          "stem": "The extreme collapse in the purchasing power of German money in 1923 is called _____.",
+          "stem": "The rapid rise in German prices that made money lose much of its value in 1923 is called _____.",
           "answer": "hyperinflation",
           "accepted": [
             "hyperinflation",
@@ -694,7 +694,7 @@
           "id": "t2-q01",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What does sitting on the lid suggest about the powers’ policy toward the Balkans?",
+          "stem": "Why does the cartoon show the major powers sitting on the lid of a container labeled “Balkan troubles”?",
           "options": [
             "They are dividing influence in a region whose internal tensions no longer matter.",
             "They have removed nationalist demands by agreeing on a permanent settlement.",
@@ -739,7 +739,7 @@
           "id": "t2-q03",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What does the staircase numbered I–XIV suggest about Wilson’s proposals?",
+          "stem": "What do the fourteen steps in the staircase cartoon represent?",
           "options": [
             "Germany must accept fourteen separate territorial annexations as the only route to peace.",
             "The steps show a sequence of secret alliances intended to restore the old balance of power.",
@@ -763,7 +763,7 @@
           "id": "t2-q04",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Using the translated heading, what contradiction does the German map emphasize?",
+          "stem": "The German map criticizes the Entente powers for supporting self-determination. Using the translated heading, what contradiction does it point out?",
           "options": [
             "The Entente advocates national unity while requiring its own states to merge politically.",
             "The Entente supports open diplomacy while relying exclusively on public referendums.",
@@ -788,7 +788,7 @@
           "id": "t2-q05",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What makes the bridge cartoon especially ironic?",
+          "stem": "Why is it ironic that the United States is the missing stone in the League of Nations bridge?",
           "options": [
             "The bridge has been completed despite disagreement over every treaty provision.",
             "The U.S. Senate demands immediate membership while Wilson refuses to join.",
@@ -814,7 +814,7 @@
           "id": "t2-q06",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which sequence correctly orders the declarations and entries shown for the opening crisis?",
+          "stem": "Which list puts the opening declarations of war and entries into WWI in the correct order?",
           "options": [
             "Austria-Hungary declares war on Serbia → Germany declares war on Russia → Germany declares war on France → Britain enters",
             "Austria-Hungary declares war on Serbia → Britain enters → Germany declares war on Russia → Germany declares war on France",
@@ -915,7 +915,7 @@
           "id": "t2-q10",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statements correctly describe wartime information policies in the slides?",
+          "stem": "Which statements correctly describe how governments used censorship and propaganda during WWI?",
           "options": [
             "C only",
             "A and C only",
@@ -1032,7 +1032,7 @@
           "id": "t2-q15",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statement matches the U.S. ratification outcome shown in the slides?",
+          "stem": "What did the United States decide about formally approving the Treaty of Versailles?",
           "options": [
             "The United States ratified the treaty only after France and Britain withdrew.",
             "The United States ratified the treaty but refused to sign it.",
@@ -1091,7 +1091,7 @@
           "id": "t2-q18",
           "type": "fill",
           "section": "blanks",
-          "stem": "The powerful all-big-gun battleship type associated with the Anglo-German naval race was the _____.",
+          "stem": "The new type of battleship with many large guns that fueled the British–German naval race was the _____.",
           "answer": "dreadnought",
           "accepted": [
             "dreadnought",
@@ -1267,7 +1267,7 @@
           "id": "t3-q01",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which aspect of the alliance cartoon best captures a security dilemma?",
+          "stem": "How does the alliance cartoon show that trying to protect an ally could make a wider war more likely?",
           "options": [
             "Threats meant to protect a friend prompt counter-threats from other states.",
             "Stronger promises of protection are shown reducing every state’s willingness to make counter-threats.",
@@ -1290,7 +1290,7 @@
           "id": "t3-q02",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What does the Chinese official’s position help communicate?",
+          "stem": "What does the Chinese official’s position in the cartoon show about China’s role in the negotiations?",
           "options": [
             "China’s representative is mediating an equal commercial agreement among the powers.",
             "China objects but lacks equal control over the division being discussed.",
@@ -1314,7 +1314,7 @@
           "id": "t3-q03",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What can a historian most safely conclude from “Who Did It?” alone?",
+          "stem": "What can a historian learn from “Who Did It?” without using any other source?",
           "options": [
             "The countries’ public accusations exactly matched their private diplomatic aims.",
             "The cartoon demonstrates that alliance commitments made every decision unavoidable.",
@@ -1344,7 +1344,7 @@
           "id": "t3-q04",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which claim would go beyond what the nationalism cartoon can establish?",
+          "stem": "Which statement cannot be proved by the nationalism cartoon alone?",
           "options": [
             "That the artist simplifies a complicated political force.",
             "That the marchers appear to be following a shared cause.",
@@ -1370,7 +1370,7 @@
           "id": "t3-q05",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which actual proposal best fits the peaceful exit represented by the Fourteen Points staircase?",
+          "stem": "Which of Wilson’s proposals would help countries settle disputes peacefully, as suggested by the staircase cartoon?",
           "options": [
             "An association of nations to help preserve peace.",
             "The preservation of all old imperial borders regardless of national claims.",
@@ -1488,7 +1488,7 @@
           "id": "t3-q10",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which combination does the armistice slide give as reasons for German surrender?",
+          "stem": "According to the armistice slide, why did Germany surrender?",
           "options": [
             "Growing resources, political stability and a decisive victory in France.",
             "An agreed final peace treaty that had already resolved all German territorial claims.",
@@ -1510,7 +1510,7 @@
           "id": "t3-q11",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which comparisons between the fronts agree with the slide deck?",
+          "stem": "Which statements correctly compare the Eastern and Western Fronts?",
           "options": [
             "C only",
             "All three (A, B, and C)",
@@ -1544,7 +1544,7 @@
           "id": "t3-q12",
           "type": "mc",
           "section": "knowledge",
-          "stem": "How did industrialization strengthen the militarism described in the slides?",
+          "stem": "How did industrialization help countries build stronger armed forces?",
           "options": [
             "The growth of factories reduced the destructive power of weapons used in the war.",
             "Mechanized production ended the need to mobilize soldiers or move supplies.",
@@ -1598,7 +1598,7 @@
           "id": "t3-q14",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Why does the impact-of-war slide say that not all injuries were visible?",
+          "stem": "What does the impact-of-war slide mean when it says some injuries were not visible?",
           "options": [
             "Shell shock was simply another name for every broken bone.",
             "Surviving a battle meant a soldier no longer needed medical support.",
@@ -1620,7 +1620,7 @@
           "id": "t3-q15",
           "type": "mc",
           "section": "knowledge",
-          "stem": "What distinction does the U.S. export chart invite students to make about neutrality before 1917?",
+          "stem": "What does the U.S. export chart show about the difference between staying officially neutral and trading with the Allies?",
           "options": [
             "Remaining formally outside the war did not mean trading equally with both coalitions.",
             "A neutral country’s trading pattern must be identical to its military commitments.",
@@ -1859,7 +1859,7 @@
           "id": "t4-q01",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Whose absence from the bargaining table is most important to the Africa cartoon’s criticism?",
+          "stem": "Which people had little say in how their land was divided, according to the Africa cartoon?",
           "options": [
             "The imperial states that wanted territory.",
             "The European official cutting the cake.",
@@ -1882,7 +1882,7 @@
           "id": "t4-q02",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which conclusion would be least justified by the Balkan cartoon alone?",
+          "stem": "Which statement has the least support in the “Balkan troubles” cartoon?",
           "options": [
             "Containing a crisis is different from solving its causes.",
             "Major powers are concerned about Balkan tension.",
@@ -1906,7 +1906,7 @@
           "id": "t4-q03",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which consequence of U.S. nonmembership best fits the bridge’s structural metaphor?",
+          "stem": "What does the missing U.S. stone suggest about the League of Nations after the United States chose not to join?",
           "options": [
             "The smaller members became able to enforce decisions without any great-power support.",
             "U.S. nonmembership had no effect because all members had identical economic and diplomatic power.",
@@ -1931,7 +1931,7 @@
           "id": "t4-q04",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which response shows the strongest source criticism of the German empire map?",
+          "stem": "How should a historian evaluate the German map that criticizes the Entente’s empires?",
           "options": [
             "Treat the cartoon’s framing as proof that every territory had the same political relationship to its ruler.",
             "Assume the translated heading records an Entente promise already fully implemented.",
@@ -1962,7 +1962,7 @@
           "id": "t4-q05",
           "type": "mc",
           "section": "cartoons",
-          "stem": "What motivation is most clearly shown by the foreign powers gathered around the Chinese “pie”?",
+          "stem": "What do the foreign powers want from China in the Chinese “pie” cartoon?",
           "options": [
             "A shared plan to withdraw all foreign influence from China.",
             "Support for Chinese control over every foreign concession.",
@@ -1984,7 +1984,7 @@
           "id": "t4-q06",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which sequence moves from the outbreak of war to the peace negotiations in the correct order?",
+          "stem": "Which list puts the start of WWI, later wartime events, and peace talks in the correct order?",
           "options": [
             "War begins → United States enters → armistice → Paris Peace Conference",
             "War begins → United States enters → Paris Peace Conference → armistice",
@@ -2022,7 +2022,7 @@
           "id": "t4-q07",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which ideas are identified as core principles of Wilson’s Fourteen Points in the slides?",
+          "stem": "Which ideas were part of Wilson’s Fourteen Points?",
           "options": [
             "B only",
             "A and B only",
@@ -2051,7 +2051,7 @@
           "id": "t4-q08",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which tension made Wilson’s self-determination difficult to apply consistently?",
+          "stem": "Why was Wilson’s idea of self-determination difficult to put into practice?",
           "options": [
             "All delegates agreed on the same definition of a nation but disagreed only about the spelling of place names.",
             "Mixed populations and imperial interests complicated drawing borders and granting independence.",
@@ -2078,7 +2078,7 @@
           "id": "t4-q09",
           "type": "mc",
           "section": "knowledge",
-          "stem": "What happened to parts of the former Ottoman Empire under the mandate arrangements in the slides?",
+          "stem": "What happened to parts of the former Ottoman Empire under the mandate system?",
           "options": [
             "They became equal constituent states of a single European federation.",
             "They remained Ottoman provinces with unchanged rulers and boundaries.",
@@ -2100,7 +2100,7 @@
           "id": "t4-q10",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statements follow from the postwar maps and mandate discussion?",
+          "stem": "Which statements correctly describe the new borders and mandates created after WWI?",
           "options": [
             "B only",
             "A and B only",
@@ -2129,7 +2129,7 @@
           "id": "t4-q11",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which pairing correctly locates the two major European fronts?",
+          "stem": "Which answer correctly identifies where the Eastern and Western Fronts were located?",
           "options": [
             "Western Front: Britain and Ireland; Eastern Front: Spain and Portugal.",
             "Western Front: Russia and East Prussia; Eastern Front: Belgium and France.",
@@ -2151,7 +2151,7 @@
           "id": "t4-q12",
           "type": "mc",
           "section": "knowledge",
-          "stem": "A poster says “Back Him Up” and promotes Victory Bonds. What action is it primarily trying to motivate?",
+          "stem": "A poster says “Back Him Up” and advertises Victory Bonds. What does it ask people to do?",
           "options": [
             "Volunteering for a specific battlefield medical unit.",
             "Accepting a reduced household food ration.",
@@ -2178,7 +2178,7 @@
           "id": "t4-q13",
           "type": "mc",
           "section": "knowledge",
-          "stem": "What does comparing the ethnic map with the political map help explain about multiethnic empires?",
+          "stem": "Why might an empire’s political borders cause conflict when they include several ethnic groups? Use the ethnic and political maps.",
           "options": [
             "National identification depended only on the size of a state’s army.",
             "Every minority group already possessed an independent government.",
@@ -2227,7 +2227,7 @@
           "id": "t4-q15",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statement best describes the relationship between the Versailles settlement and later instability?",
+          "stem": "How did problems in the Versailles settlement contribute to later instability?",
           "options": [
             "The delegates’ eventual signatures demonstrate that all states considered the terms fair and workable.",
             "The settlement created grievances and weaknesses, but later events and decisions also mattered.",
@@ -2472,7 +2472,7 @@
           "id": "t5-q01",
           "type": "mc",
           "section": "cartoons",
-          "stem": "How does the alliance cartoon connect a small-state dispute to great-power politics?",
+          "stem": "How does the alliance cartoon show a dispute involving a small country spreading to the major powers?",
           "options": [
             "The protectors’ promises are shown ending the dispute without producing any counter-threats.",
             "The larger powers allow the small figure’s dispute to remain local by declining any response.",
@@ -2501,7 +2501,7 @@
           "id": "t5-q02",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which use of the nationalism cartoon in an essay would be strongest?",
+          "stem": "Which statement uses the nationalism cartoon as evidence most carefully?",
           "options": [
             "Use the flag to establish that every nationalist leader supported the same foreign policy.",
             "Use the marchers to calculate exactly how much popular support nationalism had in 1914.",
@@ -2529,7 +2529,7 @@
           "id": "t5-q03",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which additional evidence would best help evaluate the accusations in “Who Did It?”",
+          "stem": "What other evidence would help check the accusations made in “Who Did It?”?",
           "options": [
             "A later set of recruiting posters without information about the decisions to mobilize.",
             "A comparison of wartime industrial output without evidence of the July negotiations.",
@@ -2551,7 +2551,7 @@
           "id": "t5-q04",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which perspective is most strongly expressed by the caption “It’s the only way out, Wilhelm!”?",
+          "stem": "What does the caption “It’s the only way out, Wilhelm!” urge Germany to do?",
           "options": [
             "Germany should reject Wilson’s proposals because continued fighting offers the clearest escape.",
             "The numbered proposals are merely optional additions to an already completed peace treaty.",
@@ -2576,7 +2576,7 @@
           "id": "t5-q05",
           "type": "mc",
           "section": "cartoons",
-          "stem": "Which underlying issue best explains the pressure inside “Balkan troubles”?",
+          "stem": "What tensions does the container in “Balkan troubles” represent?",
           "options": [
             "Nationalist claims and imperial rivalry in a region of weakening Ottoman control.",
             "Competition between Balkan national movements after Ottoman authority had become stronger and more stable.",
@@ -2602,7 +2602,7 @@
           "id": "t5-q06",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which order correctly connects a prewar alliance to the assassination and two later U.S.-related developments?",
+          "stem": "Which list puts the prewar alliance, the assassination, and the two events involving the United States in the correct order?",
           "options": [
             "Franco-Russian alliance → Lusitania sinking → Sarajevo assassination → Zimmermann Telegram",
             "Franco-Russian alliance → Sarajevo assassination → Zimmermann Telegram → Lusitania sinking",
@@ -2669,7 +2669,7 @@
           "id": "t5-q08",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which combination best explains why the war was genuinely global?",
+          "stem": "Why is WWI considered a global war rather than only a European war?",
           "options": [
             "The war involved colonial resources, but colonial subjects did not take part as soldiers or laborers.",
             "European empires mobilized colonial people and resources, while fighting and diplomacy extended beyond Europe.",
@@ -2696,7 +2696,7 @@
           "id": "t5-q09",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which contrast between the fronts is most useful?",
+          "stem": "How did fighting on the Eastern Front generally differ from fighting on the Western Front?",
           "options": [
             "Industrial weapons mattered in the west but were absent from the fighting in the east.",
             "The Eastern Front was more continuously fortified and densely held along its entire length than the Western Front.",
@@ -2723,7 +2723,7 @@
           "id": "t5-q10",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statements about wartime propaganda are reasonable?",
+          "stem": "Which statements explain how to use wartime propaganda as historical evidence?",
           "options": [
             "All three (A, B, and C)",
             "A and C only",
@@ -2752,7 +2752,7 @@
           "id": "t5-q11",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Why should “casualties” and “deaths” not be used interchangeably when studying battle statistics?",
+          "stem": "Why do “casualties” and “deaths” mean different things in battle statistics?",
           "options": [
             "Casualties counts the dead alone, while deaths also includes prisoners of war.",
             "Casualties excludes wounded soldiers who survived long enough to receive treatment.",
@@ -2779,7 +2779,7 @@
           "id": "t5-q12",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which contrast best illustrates the uneven application of self-determination emphasized in the slides?",
+          "stem": "Which example shows that self-determination was not applied equally to all peoples after WWI?",
           "options": [
             "New states appeared in Europe while former Ottoman territories became mandates under outside administration.",
             "The same independence settlement applied automatically to every national group in every region.",
@@ -2801,7 +2801,7 @@
           "id": "t5-q13",
           "type": "mc",
           "section": "knowledge",
-          "stem": "Which statement accurately contrasts the effects of the war on old empires and the new settlement?",
+          "stem": "What happened to old empires after WWI, and did the new settlement resolve every dispute?",
           "options": [
             "The mandate system ended outside control in all territories of the defeated empires.",
             "The peace settlement restored the prewar imperial borders while replacing only individual rulers.",
@@ -2845,7 +2845,7 @@
           "id": "t5-q15",
           "type": "mc",
           "section": "knowledge",
-          "stem": "How should a student use the contrast between recruiting propaganda and soldiers’ trench accounts?",
+          "stem": "What can you learn by comparing recruiting posters with soldiers’ descriptions of trench life?",
           "options": [
             "Treat the recruiting message as a complete record of everyday trench conditions.",
             "Assume one soldier’s account precisely describes every soldier’s experience throughout the war.",

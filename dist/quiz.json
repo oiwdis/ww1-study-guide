@@ -2,12 +2,12 @@
   {
     "id": "q001",
     "topic": "Causes",
-    "stem": "Which distinction best explains the relationship between MAIN and the assassination in Sarajevo?",
+    "stem": "How do the MAIN causes of WWI differ from the assassination of Franz Ferdinand?",
     "options": [
-      "MAIN identifies four immediate diplomatic decisions; the assassination explains why the blocs already existed.",
-      "MAIN describes long-term pressures; the assassination triggered a particular crisis.",
-      "MAIN describes the underlying tensions, but the assassination was a consequence of the declarations of war.",
-      "MAIN explains why the first battles became stalemates; the assassination explains the long-term rivalries."
+      "MAIN describes four decisions made during the crisis; the assassination explains why the alliances already existed.",
+      "MAIN describes long-term tensions; the assassination triggered the immediate crisis.",
+      "MAIN describes long-term tensions, but the assassination happened after countries declared war.",
+      "MAIN explains why battles became stalemates; the assassination explains the long-term rivalries."
     ],
     "answer": 1,
     "explanation": "Militarism, alliances, imperialism, and nationalism existed before June 1914. The assassination activated those tensions in a specific diplomatic crisis.",
@@ -20,7 +20,7 @@
   {
     "id": "q002",
     "topic": "Causes",
-    "stem": "A government argues that peace depends on a permanently battle-ready army and expanding its navy. Which concept best fits?",
+    "stem": "A country keeps a large army ready for war and builds more warships. Which MAIN cause does this show?",
     "options": [
       "Imperialism",
       "Self-determination",
@@ -59,7 +59,7 @@
   {
     "id": "q004",
     "topic": "Causes",
-    "stem": "Which rivalry is the clearest naval-arms-race example in the slides?",
+    "stem": "Which two countries competed to build the strongest navy before WWI?",
     "options": [
       "Serbia and the Ottoman Empire",
       "Italy and Austria-Hungary",
@@ -137,7 +137,7 @@
   {
     "id": "q008",
     "topic": "Causes",
-    "stem": "What strategic danger did the Franco-Russian partnership pose for Germany?",
+    "stem": "Why did Germany see the alliance between France and Russia as a military threat?",
     "options": [
       "A requirement to divide its navy between protecting Russian and French trade",
       "A need to defend Austria-Hungary against a combined British and Italian invasion",
@@ -155,7 +155,7 @@
   {
     "id": "q009",
     "topic": "Causes",
-    "stem": "What do the dominoes and linked threats in the alliance cartoons mainly illustrate?",
+    "stem": "What danger of alliances do the dominoes and chain-of-threats cartoons show?",
     "options": [
       "The alliances reduced local nationalism by placing disputes under a common government.",
       "Once war began, each ally had to adopt the same battlefield strategy as its partners.",
@@ -174,7 +174,7 @@
   {
     "id": "q010",
     "topic": "Causes",
-    "stem": "Which statement best describes the relationship between nationalism and multiethnic empires?",
+    "stem": "Why could nationalism threaten an empire made up of several ethnic groups?",
     "options": [
       "Nationalism challenged overseas rule but strengthened dynastic control within Europe.",
       "Nationalist movements sought to unite different peoples under one expanding empire rather than break empires apart.",
@@ -212,7 +212,7 @@
   {
     "id": "q012",
     "topic": "Causes",
-    "stem": "Which combination best explains the Balkans’ “powder keg” reputation?",
+    "stem": "Why were the Balkans called a “powder keg,” meaning a region where a conflict could easily grow into a larger war?",
     "options": [
       "Russian withdrawal from the war, food shortages, and demands for a new peace treaty",
       "Industrial arms production, American investment, and disputes over Pacific island concessions",
@@ -231,7 +231,7 @@
   {
     "id": "q013",
     "topic": "Causes",
-    "stem": "Which term most precisely describes extending a state’s control over other peoples and territories?",
+    "stem": "What is it called when a country takes control of other peoples and territories?",
     "options": [
       "Militarism",
       "Collective security",
@@ -291,7 +291,7 @@
   {
     "id": "q016",
     "topic": "Causes",
-    "stem": "A poster says national honor requires supporting the country even at great personal cost. Which cause is it primarily drawing upon?",
+    "stem": "A poster tells people to support their country even at great personal cost. Which MAIN cause does it appeal to?",
     "options": [
       "Alliance commitments",
       "Imperialism",
@@ -374,7 +374,7 @@
   {
     "id": "q020",
     "topic": "1914 crisis",
-    "stem": "Which sequence correctly orders the opening declarations of war?",
+    "stem": "Which list puts the first declarations of war in the correct order?",
     "options": [
       "Austria-Hungary against Serbia → Germany against Russia → Germany against France → Britain against Germany",
       "Austria-Hungary against Serbia → Britain against Germany → Germany against France → Germany against Russia",
@@ -392,7 +392,7 @@
   {
     "id": "q021",
     "topic": "1914 crisis",
-    "stem": "Which immediate development was central to Britain’s entry in August 1914?",
+    "stem": "What event led Britain to enter the war in August 1914?",
     "options": [
       "The Bolshevik seizure of power",
       "Germany’s invasion of Belgium",
@@ -431,7 +431,7 @@
   {
     "id": "q023",
     "topic": "1914 crisis",
-    "stem": "Which answer best handles the claim that the assassination alone caused WWI?",
+    "stem": "Why is it incomplete to say that Franz Ferdinand’s assassination was the only cause of WWI?",
     "options": [
       "It overstates the trigger because Britain and Germany had already declared war before the assassination.",
       "It explains Austria-Hungary’s response, so the motivations of Russia and Germany add little to the account.",
@@ -468,7 +468,7 @@
   {
     "id": "q025",
     "topic": "Warfare",
-    "stem": "What was the central strategic aim of the Schlieffen Plan?",
+    "stem": "What was Germany trying to achieve with the Schlieffen Plan?",
     "options": [
       "Use submarines to force a peace before any land invasion",
       "Capture Britain before mobilizing against France",
@@ -525,7 +525,7 @@
   {
     "id": "q028",
     "topic": "Warfare",
-    "stem": "Which location best matches the Western Front in the slides?",
+    "stem": "Where was the Western Front?",
     "options": [
       "German East Africa and South Africa",
       "Northern Italy and the Adriatic",
@@ -545,7 +545,7 @@
   {
     "id": "q029",
     "topic": "Warfare",
-    "stem": "What common lesson do Verdun and the Somme illustrate?",
+    "stem": "What do the battles of Verdun and the Somme show about the costs and results of trench warfare?",
     "options": [
       "Battles in 1916 were decided more by cavalry movement than by artillery and machine guns.",
       "Large offensives usually achieved their planned territorial objectives within a few days.",
@@ -566,7 +566,7 @@
   {
     "id": "q030",
     "topic": "Warfare",
-    "stem": "In a battle report, what does “casualties” generally include?",
+    "stem": "In a battle report, who is counted as a casualty?",
     "options": [
       "All troops mobilized, including those never in combat",
       "Only soldiers confirmed killed on the battlefield",
@@ -719,7 +719,7 @@
   {
     "id": "q038",
     "topic": "Warfare",
-    "stem": "Which weapon most directly linked attacks at sea to civilian trade and supplies?",
+    "stem": "Which weapon was used at sea to attack ships carrying trade goods and supplies?",
     "options": [
       "Submarine",
       "Tank",
@@ -779,7 +779,7 @@
   {
     "id": "q041",
     "topic": "Trench life",
-    "stem": "Which combination best describes the health risks emphasized in the trench slides?",
+    "stem": "Which group of problems best describes the health dangers of trench life?",
     "options": [
       "Disease affected reserve troops chiefly, while front-line trenches had the best sanitation.",
       "Shellfire and gas caused hardship, while the trench system generally provided dry living quarters.",
@@ -797,7 +797,7 @@
   {
     "id": "q042",
     "topic": "Trench life",
-    "stem": "What can a soldier’s account of rats in a dugout most directly establish?",
+    "stem": "What can we learn from one soldier’s description of rats in a dugout?",
     "options": [
       "A measurement of whether sanitary conditions were worse on the Eastern Front",
       "A representative account of the views of every soldier in the writer’s regiment",
@@ -817,7 +817,7 @@
   {
     "id": "q043",
     "topic": "Trench life",
-    "stem": "What does the comparison between recruiting images and trench photographs ask students to examine?",
+    "stem": "Why compare recruiting posters with photographs of life in the trenches?",
     "options": [
       "The claim that photographic evidence records only exceptional conditions rather than everyday experience",
       "The contrast between industrial output before the war and military production during it",
@@ -835,13 +835,13 @@
   {
     "id": "q044",
     "topic": "Trench life",
-    "stem": "Which distinction is most useful when using the film material in the slides?",
+    "stem": "How should a historian use a dramatic war film differently from footage recorded during the war?",
     "options": [
-      "Restoring color to archival footage turns it into the same kind of source as a fictional reenactment.",
-      "Archival footage gives an unselected record, so its editing and context are less important than a drama’s.",
-      "A modern dramatic film provides direct eyewitness testimony if its setting is historically accurate.",
-      "A film’s emotional impact is enough to establish how typical its portrayed experience was.",
-      "A dramatic film can interpret war, while archival material is evidence that still requires context."
+      "Adding color to old footage makes it the same kind of source as a fictional reenactment.",
+      "Footage from the war shows everything without selection, so historians can ignore how it was edited.",
+      "A modern dramatic film is an eyewitness account if it gets the historical setting right.",
+      "A film’s emotional impact proves that most soldiers had the experience it shows.",
+      "A dramatic film interprets the war; footage from the war records evidence that still needs context."
     ],
     "answer": 4,
     "explanation": "All Quiet on the Western Front is a dramatic representation; They Shall Not Grow Old uses archival footage. Both should be analyzed for what they can and cannot show.",
@@ -854,7 +854,7 @@
   {
     "id": "q045",
     "topic": "Trench life",
-    "stem": "Which condition described in the quotations directly concerns parasites in soldiers’ clothing?",
+    "stem": "Which problem involved parasites living in soldiers’ clothing?",
     "options": [
       "Lice infestation",
       "Shell shock",
@@ -893,7 +893,7 @@
   {
     "id": "q047",
     "topic": "Total war",
-    "stem": "Which development connected Russian wartime losses to withdrawal from the war?",
+    "stem": "How did Russia’s wartime losses help lead to its withdrawal from WWI?",
     "options": [
       "A successful Russian advance led the tsar to negotiate a peace at Paris before the revolution.",
       "Unrest and revolution were followed by the Treaty of Brest-Litovsk.",
@@ -932,7 +932,7 @@
   {
     "id": "q049",
     "topic": "Total war",
-    "stem": "Which policy most directly illustrates total war on the home front?",
+    "stem": "Which government action shows how total war affected civilians at home?",
     "options": [
       "Increasing overseas military commitments while leaving civilian production and consumption to prewar arrangements",
       "Using professional soldiers to pursue limited objectives while relying on normal peacetime taxation",
@@ -1009,7 +1009,7 @@
   {
     "id": "q053",
     "topic": "Propaganda",
-    "stem": "In the “I Want You” poster, Uncle Sam is an example of which element?",
+    "stem": "What does Uncle Sam represent in the “I Want You” poster?",
     "options": [
       "An exaggeration of the physical size of the U.S. army",
       "A visual record of a typical recruit’s appearance",
@@ -1028,7 +1028,7 @@
   {
     "id": "q054",
     "topic": "Propaganda",
-    "stem": "What is the strongest main-message reading of “Daddy, what did YOU do in the Great War?”",
+    "stem": "What is the main message of the poster “Daddy, what did YOU do in the Great War?”?",
     "options": [
       "Support national rationing so that future generations can avoid shortages.",
       "Buy war bonds so that your children inherit a stronger household income after the war.",
@@ -1046,7 +1046,7 @@
   {
     "id": "q055",
     "topic": "Propaganda",
-    "stem": "Which persuasive strategy is central to “Destroy This Mad Brute”?",
+    "stem": "How does the poster “Destroy This Mad Brute” try to persuade viewers?",
     "options": [
       "Appealing to fairness by comparing the losses suffered by each side",
       "Using family pride to encourage future generations to remember the war",
@@ -1066,7 +1066,7 @@
   {
     "id": "q056",
     "topic": "Propaganda",
-    "stem": "What does a poster urging the purchase of Victory Bonds mainly ask its audience to do?",
+    "stem": "What does a Victory Bonds poster ask people to do?",
     "options": [
       "Finance the war through lending to the government",
       "Accept lower consumption by surrendering household ration coupons",
@@ -1085,7 +1085,7 @@
   {
     "id": "q057",
     "topic": "Propaganda",
-    "stem": "Which question best identifies the “main message” of a propaganda poster?",
+    "stem": "Which question should you ask to identify a propaganda poster’s main message?",
     "options": [
       "Which details show that the image is a literal record of events?",
       "What response can be proven to have occurred among most viewers?",
@@ -1103,7 +1103,7 @@
   {
     "id": "q058",
     "topic": "Propaganda",
-    "stem": "“Women of Britain Say—GO!” most directly uses which appeal?",
+    "stem": "How does the poster “Women of Britain Say—GO!” encourage men to enlist?",
     "options": [
       "A claim that enlistment will produce political independence for colonies",
       "A warning that military service will weaken Britain’s families",
@@ -1124,7 +1124,7 @@
   {
     "id": "q059",
     "topic": "Propaganda",
-    "stem": "Why is a recruiting poster insufficient evidence that most people wanted war?",
+    "stem": "Why can’t a recruiting poster prove that most people supported the war?",
     "options": [
       "It measures the response of its intended audience but leaves out the opinions of the artist.",
       "It shows an attempt to persuade, not how the whole audience responded.",
@@ -1161,7 +1161,7 @@
   {
     "id": "q061",
     "topic": "Global war",
-    "stem": "Why must the “British Empire” total in the casualty chart be read carefully?",
+    "stem": "What does the “British Empire” total in the casualty chart include?",
     "options": [
       "It records British civilian deaths alongside the battlefield deaths of other powers.",
       "It represents only imperial troops serving outside Europe.",
@@ -1242,7 +1242,7 @@
   {
     "id": "q065",
     "topic": "U.S. entry",
-    "stem": "What made unrestricted submarine warfare especially threatening to neutral states?",
+    "stem": "Why did unrestricted submarine warfare threaten countries that had not joined the war?",
     "options": [
       "Ships could be attacked without the usual warning and search procedures, including neutral shipping.",
       "It treated every neutral port as a naval base that could be occupied without warning.",
@@ -1261,7 +1261,7 @@
   {
     "id": "q066",
     "topic": "U.S. entry",
-    "stem": "Which statement correctly connects the Lusitania to U.S. entry?",
+    "stem": "How did the sinking of the Lusitania relate to the United States entering WWI?",
     "options": [
       "Its 1917 sinking occurred after the U.S. declaration and had no earlier role in opinion.",
       "It was sunk after the armistice as a protest against Versailles.",
@@ -1279,14 +1279,14 @@
   {
     "id": "q067",
     "topic": "U.S. entry",
-    "stem": "What can the U.S. export chart most reasonably support?",
+    "stem": "What does the U.S. export chart show about American trade before the United States entered the war?",
     "options": [
-      "Formal neutrality coexisted with growing economic ties to Britain and France.",
-      "Economic ties remained approximately balanced despite increasing political tension.",
+      "The United States stayed officially neutral while its trade ties with Britain and France grew.",
+      "American trade with the two sides stayed roughly balanced as political tensions increased.",
       "American trade shifted toward the Central Powers as the Allied blockade weakened.",
-      "Britain’s exports to the United States grew while American exports to France declined.",
-      "The United States traded mainly with Germany until immediately before its declaration of war.",
-      "The chart measures government loans rather than the value of goods exported."
+      "British exports to the United States grew while American exports to France fell.",
+      "The United States traded mainly with Germany until just before entering the war.",
+      "The chart shows government loans, not the value of goods sold abroad."
     ],
     "answer": 0,
     "explanation": "Exports to the Allies rose while exports to Germany declined sharply. This challenges a simple picture of economic neutrality without proving that political neutrality had already ended.",
@@ -1320,12 +1320,12 @@
   {
     "id": "q069",
     "topic": "U.S. entry",
-    "stem": "Which reading of the decoded telegram avoids overstating the evidence?",
+    "stem": "What does the Zimmermann Telegram show about Germany’s proposed alliance with Mexico?",
     "options": [
-      "It reports Japan’s formal decision to leave the Allies and mediate a German-American peace.",
-      "It proposed an alliance and territorial support; it does not prove Mexico accepted.",
-      "It records an alliance Mexico had accepted and Germany was now putting into effect.",
-      "It describes territorial concessions the United States had already agreed to in peace talks."
+      "Japan had formally agreed to leave the Allies and help negotiate peace between Germany and America.",
+      "Germany offered Mexico an alliance and help recovering territory; the message does not prove Mexico accepted.",
+      "Mexico had already accepted the alliance, and Germany was putting it into action.",
+      "The United States had already agreed in peace talks to give up territory."
     ],
     "answer": 1,
     "explanation": "The document is a proposal, including conditions and diplomatic instructions. A proposed action must be distinguished from an action that actually occurred.",
@@ -1357,7 +1357,7 @@
   {
     "id": "q071",
     "topic": "War’s end",
-    "stem": "Which combination best explains why Germany sought an armistice?",
+    "stem": "Why did Germany ask for an armistice in 1918?",
     "options": [
       "Internal political stability combined with the defeat of all Germany’s allies in a single battle",
       "The collapse of French resistance combined with unrest in Austria-Hungary and a League mediation plan",
@@ -1377,7 +1377,7 @@
   {
     "id": "q072",
     "topic": "War’s end",
-    "stem": "What is the most accurate relationship between shell shock and PTSD?",
+    "stem": "How are the wartime term “shell shock” and the modern term PTSD related?",
     "options": [
       "Shell shock was the contemporary diagnostic name for PTSD with the same modern criteria.",
       "Shell shock described temporary combat fatigue that could not involve long-term symptoms.",
@@ -1395,7 +1395,7 @@
   {
     "id": "q073",
     "topic": "War’s end",
-    "stem": "Which conclusion follows from the mobilization figures in the statistics slide?",
+    "stem": "According to the statistics slide, how did the total number of Allied troops mobilized compare with the Central Powers?",
     "options": [
       "The Allies mobilized more troops overall than the Central Powers.",
       "The Allied total describes only British Empire troops, rather than the coalition.",
@@ -1453,7 +1453,7 @@
   {
     "id": "q076",
     "topic": "Peace settlement",
-    "stem": "Which statement best distinguishes the armistice from the peace settlement?",
+    "stem": "What is the difference between the 1918 armistice and the later peace settlement?",
     "options": [
       "The armistice established the League; the later treaties formally suspended hostilities.",
       "The armistice stopped the fighting; later treaties established terms such as borders and reparations.",
@@ -1529,12 +1529,12 @@
   {
     "id": "q080",
     "topic": "Peace settlement",
-    "stem": "Which difference made it difficult to apply self-determination consistently?",
+    "stem": "Why was it difficult to give every national group its own state after WWI?",
     "options": [
-      "The peace conference treated cultural and political boundaries as identical throughout Europe.",
-      "National populations overlapped, while the victors also pursued security, territory, and imperial interests.",
-      "Allied governments applied national independence mainly to their own overseas possessions.",
-      "Most disputed areas contained a single national community whose claims did not overlap."
+      "The conference assumed political borders already matched cultural boundaries everywhere in Europe.",
+      "Different national groups lived in the same areas, and the victors also wanted security, territory, and control of colonies.",
+      "The Allies gave independence mainly to people in their own overseas colonies.",
+      "Most disputed areas contained only one national group, so claims rarely overlapped."
     ],
     "answer": 1,
     "explanation": "Mixed populations made boundaries difficult; imperial interests further limited the principle outside Europe. The maps and mandate discussion expose both problems.",
@@ -1566,7 +1566,7 @@
   {
     "id": "q082",
     "topic": "Peace settlement",
-    "stem": "Which pair of powers held the main Middle Eastern mandates shown in the slides?",
+    "stem": "Which two countries controlled the main Middle Eastern mandates shown in the slides?",
     "options": [
       "China and Brazil",
       "Britain and France",
@@ -1585,7 +1585,7 @@
   {
     "id": "q083",
     "topic": "Peace settlement",
-    "stem": "What do the before-and-after European maps most clearly show?",
+    "stem": "What changed on the map of Europe between the start and end of WWI?",
     "options": [
       "The redrawing of borders so that each state contained one ethnic community",
       "The preservation of the prewar imperial system with only minor border adjustments",
@@ -1605,12 +1605,12 @@
   {
     "id": "q084",
     "topic": "Peace settlement",
-    "stem": "Why did Wilson’s signature not make the United States a party to the ratified Versailles settlement?",
+    "stem": "Why did the United States not formally approve the Treaty of Versailles, even though Wilson signed it?",
     "options": [
-      "The Senate did not give the consent required for U.S. ratification.",
-      "The treaty required a national referendum that Wilson declined to hold.",
-      "The House of Representatives alone had to consent, and the Senate approved without reservations.",
-      "The League’s members had to ratify American membership before the Senate could consider the treaty."
+      "The U.S. Senate did not give the approval needed for the United States to accept the treaty.",
+      "The treaty required a national public vote that Wilson refused to hold.",
+      "Only the House of Representatives had to approve it, and the Senate supported it without objections.",
+      "League members had to approve American membership before the Senate could consider the treaty."
     ],
     "answer": 0,
     "explanation": "Signature and ratification are separate. Senate opposition, including concerns about League obligations, prevented U.S. ratification and membership.",
@@ -1623,7 +1623,7 @@
   {
     "id": "q085",
     "topic": "Peace settlement",
-    "stem": "Which concern helped drive U.S. opposition to League membership?",
+    "stem": "Why did some Americans oppose joining the League of Nations?",
     "options": [
       "Concern that ratification would transfer the presidency’s domestic powers to Britain",
       "Fear that League membership would require the United States to abandon all trade with Europe",
@@ -1642,7 +1642,7 @@
   {
     "id": "q086",
     "topic": "Peace settlement",
-    "stem": "What does the phrase “a peace built on quicksand” suggest?",
+    "stem": "Why does the phrase “a peace built on quicksand” describe the settlement as unstable?",
     "options": [
       "The treaty avoided imposing any economic obligations, leaving reconstruction unfunded.",
       "Unresolved grievances and weak support could undermine the settlement’s durability.",
@@ -1662,7 +1662,7 @@
   {
     "id": "q087",
     "topic": "Peace settlement",
-    "stem": "Which change explains the slide’s contrast between “Shantung: 1919 v. 1922”?",
+    "stem": "How did control of Shandong (also called Shantung) change between 1919 and 1922?",
     "options": [
       "Shandong became a British mandate in 1919, then a French colony in 1922.",
       "China gained Shandong in 1919, then transferred it to Germany in 1922.",
