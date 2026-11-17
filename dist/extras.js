@@ -1,4 +1,4 @@
-import {sections,answered,progress,complete,fresh,restore,isCorrect,score} from './practice-engine.mjs';
+import {sections,answered,progress,complete,fresh,restore,isCorrect,score} from './practice-engine.mjs?v=20261117';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const names={cartoons:'Political cartoons',knowledge:'Content knowledge',blanks:'Fill in the blank',short:'Short answers'};
@@ -14,7 +14,7 @@ const refs=arr=>`<div class="extra-sources">${arr.map(source).join('')}</div>`;
 function save(){try{localStorage.setItem(STORE,JSON.stringify(attempts));}catch{storageOK=false;}updateSaveLabel();}
 function updateSaveLabel(){const el=$('#exam-save');if(el)el.textContent=storageOK?'Progress saves automatically in this browser.':'Browser storage is unavailable. Keep this page open to retain your progress.';}
 export async function initExtras(){
- [readings,timeline,practice]=await Promise.all(['readings.json','timeline.json','practice-tests.json'].map(async name=>{const r=await fetch(name);if(!r.ok)throw new Error(`Could not load ${name}`);return r.json();}));
+ [readings,timeline,practice]=await Promise.all(['readings.json','timeline.json','practice-tests.json'].map(async name=>{const r=await fetch(name,{cache:'no-store'});if(!r.ok)throw new Error(`Could not load ${name}`);return r.json();}));
  try{const saved=JSON.parse(localStorage.getItem(STORE)||'{}');for(const t of practice.tests){const restored=restore(t,saved?.[t.id]);if(restored)attempts[t.id]=restored;}localStorage.setItem(STORE,JSON.stringify(attempts));}catch{storageOK=false;}
  document.addEventListener('click',onClick);document.addEventListener('input',onInput);document.addEventListener('change',onChange);
 }

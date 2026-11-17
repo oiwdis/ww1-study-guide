@@ -1,6 +1,6 @@
-import {grade,newAttempt,restoreAttempt} from './quiz-engine.mjs';
-import {initExtras,renderExtra} from './extras.js';
-import {initSupplement,renderSupplement} from './supplement.js';
+import {grade,newAttempt,restoreAttempt} from './quiz-engine.mjs?v=20261117';
+import {initExtras,renderExtra} from './extras.js?v=20261117';
+import {initSupplement,renderSupplement} from './supplement.js?v=20261117';
 const $=(s,root=document)=>root.querySelector(s),$$=(s,root=document)=>[...root.querySelectorAll(s)];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
@@ -91,4 +91,4 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 });
 document.addEventListener('keydown',e=>{const tab=e.target.closest('[role=tab]');if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){const tabs=$$('[role=tab]',tab.parentElement);let idx=tabs.indexOf(tab);idx=e.key==='Home'?0:e.key==='End'?tabs.length-1:(idx+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;e.preventDefault();tabs[idx].focus();tabs[idx].click();return;}if(['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName)||e.altKey||e.ctrlKey||e.metaKey)return;const kind=active==='slides'?'slides':active==='paris'&&!$('#paris-documents').hidden?'documents':null;if(kind&&['ArrowLeft','ArrowRight'].includes(e.key)){const n=pageState[kind]+(e.key==='ArrowRight'?1:-1);if(n>=1&&n<=(kind==='slides'?127:21)){e.preventDefault();goSource(kind,n,true);}}});
 window.addEventListener('hashchange',()=>{if(data)route();});
-try{[data,bank,pages,paris]=await Promise.all(['summary.json','quiz.json','assets/page-index.json','paris.json'].map(async p=>{const r=await fetch(p);if(!r.ok)throw new Error(`Could not load ${p}`);return r.json();}));if(storageOK){try{const stored=JSON.parse(localStorage.getItem(STORE));attempt=restoreAttempt(stored,bank);if(attempt)save();}catch{}}await initExtras();data.sections.push(...await initSupplement());renderSummary();renderParis();renderQuizSetup();$('#loading').hidden=true;route();}catch(error){$('#loading').innerHTML=`<p>The study guide could not load all its files. Please refresh the page.</p><button class="btn" onclick="location.reload()">Reload guide</button>`;console.error(error);}
+try{[data,bank,pages,paris]=await Promise.all(['summary.json','quiz.json','assets/page-index.json','paris.json'].map(async p=>{const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw new Error(`Could not load ${p}`);return r.json();}));if(storageOK){try{const stored=JSON.parse(localStorage.getItem(STORE));attempt=restoreAttempt(stored,bank);if(attempt)save();}catch{}}await initExtras();data.sections.push(...await initSupplement());renderSummary();renderParis();renderQuizSetup();$('#loading').hidden=true;route();}catch(error){$('#loading').innerHTML=`<p>The study guide could not load all its files. Please refresh the page.</p><button class="btn" onclick="location.reload()">Reload guide</button>`;console.error(error);}

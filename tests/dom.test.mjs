@@ -11,11 +11,11 @@ async function boot(saved={}){
  const dom=new JSDOM(read('index.html'),{url:'https://study.test/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc}),w=dom.window;
  w.printCalls=0;w.print=()=>{w.printCalls++;};w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};w.CSS={escape:s=>s};w.fetch=async name=>({ok:true,json:async()=>JSON.parse(read(name))});w.quizEngine=quizEngine;w.practiceEngine=practiceEngine;
  for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);
- const extras=read('extras.js').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,restore,isCorrect,score}=window.practiceEngine;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
+ const extras=read('extras.js').replaceAll('?v=20261117','').replace(/import .*?from '\.\/practice-engine\.mjs';/,'const {sections,answered,progress,complete,fresh,restore,isCorrect,score}=window.practiceEngine;').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
  w.extras=w.eval('(function(){'+extras+';return {initExtras,renderExtra};})()');
  const supplement=read('supplement.js').replace(/export (async )?function/g,(_,a)=>(a||'')+'function');
  w.supplement=w.eval('(function(){'+supplement+';return {initSupplement,renderSupplement};})()');
- const app=read('app.js').replace("import {grade,newAttempt,restoreAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,restoreAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;').replace("import {initSupplement,renderSupplement} from './supplement.js';",'const {initSupplement,renderSupplement}=window.supplement;');
+ const app=read('app.js').replaceAll('?v=20261117','').replace("import {grade,newAttempt,restoreAttempt} from './quiz-engine.mjs';",'const {grade,newAttempt,restoreAttempt}=window.quizEngine;').replace("import {initExtras,renderExtra} from './extras.js';",'const {initExtras,renderExtra}=window.extras;').replace("import {initSupplement,renderSupplement} from './supplement.js';",'const {initSupplement,renderSupplement}=window.supplement;');
  await w.eval('(async()=>{'+app+'})()');
  const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)],settle=()=>new Promise(r=>setTimeout(r,35));
  const click=s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,'Missing element: '+s);el.click();};

@@ -5,7 +5,7 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
 let content, query = '', group = 'all';
 
 export async function initSupplement() {
-  const response = await fetch('extra-information.json');
+  const response = await fetch('extra-information.json',{cache:'no-store'});
   if (!response.ok) throw new Error('Could not load extra-information.json');
   content = await response.json();
   $('#panel-extra').addEventListener('input', event => {
