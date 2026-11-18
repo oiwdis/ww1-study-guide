@@ -15,8 +15,8 @@ export function valid(test,a){
 }
 export function restore(test,a){
  if(valid(test,a))return a;
- if(!a||a.version!==1||a.testId!==test.id||!a.responses||typeof a.responses!=='object'||Array.isArray(a.responses))return null;
- const restored=fresh(test),revised=new Set(test.revisedQuestionIds||[]);
+ if(!a||![1,2].includes(a.version)||a.testId!==test.id||!a.responses||typeof a.responses!=='object'||Array.isArray(a.responses))return null;
+ const restored=fresh(test),revised=new Set(a.version===1?(test.revisedQuestionIds||[]):[]);
  for(const q of test.questions){
   if(!revised.has(q.id)&&answered(q,a.responses[q.id]))restored.responses[q.id]=a.responses[q.id];
   if(q.type==='fill'&&a.overrides?.[q.id]===true)restored.overrides[q.id]=true;

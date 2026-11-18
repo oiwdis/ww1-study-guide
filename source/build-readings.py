@@ -66,5 +66,7 @@ for r in readings:
  r['pages']=[{'number':i,'label':label,'image':f'assets/readings/reading-{r["id"]}/page-{i}.webp'} for i,label in enumerate(r.pop('pageLabels'),1)]
  r['blocks']=[{'title':a,'text':b} for a,b in r['blocks']]
  r['pdf']=f'assets/readings/reading-{r["id"]}.pdf'
+from course_scope import filter_readings
+readings=filter_readings(readings)
 (root/'readings.json').write_text(json.dumps(readings,ensure_ascii=False,indent=2))
 print('Saved three complete reading summaries and 12 original-page references.')

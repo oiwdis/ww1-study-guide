@@ -45,7 +45,7 @@ test('readings include every original page and substantial summaries',()=>{
  for(const r of readings){assert.equal(r.pages.length,r.pageCount);assert.ok(r.blocks.length>=8);assert.ok(r.blocks.every(b=>b.title&&b.text));assert.ok(statSync(join(root,r.pdf)).size>1e6);for(const page of r.pages)assert.ok(existsSync(join(root,page.image)));}
 });
 test('timeline is ordered and has valid source links',()=>{
- assert.equal(timeline.length,84);assert.equal(new Set(timeline.map(e=>e.id)).size,84);
+ assert.equal(timeline.length,78);assert.equal(new Set(timeline.map(e=>e.id)).size,78);
  for(let i=0;i<timeline.length;i++){const e=timeline[i];assert.ok(e.date&&e.title&&e.text&&e.era&&e.topic);e.sources.forEach(source);if(i)assert.ok(timeline[i-1].sort<=e.sort);}
 });
 test('87 slide-only quiz questions and 148 original pages remain valid',()=>{
@@ -70,4 +70,22 @@ test('older practice tests preserve unchanged responses but cannot grade replace
   for(const x of t.questions)assert.equal(restored.responses[x.id],t.revisedQuestionIds.includes(x.id)?undefined:legacy.responses[x.id]);
   assert.equal(p.restore(t,restored),restored);
  }
+});
+
+test('removed Soviet topics stay out of study notes and all assessment content',()=>{
+ const excluded=/Russian Civil War|New Economic Policy|\bNEP\b|\bUSSR\b|Soviet Union|Stalin|Trotsky/i;
+ for(const name of ['readings.json','timeline.json','practice-tests.json','quiz.json','summary.json'])assert.equal(excluded.test(JSON.stringify(json(name))),false,name);
+ assert.ok(timeline.some(e=>e.title==='American Civil War'));
+});
+test('updated practice content preserves unrelated saved answers and relocks completion',()=>{
+ const t=practice.tests.find(t=>t.id===3),a=p.fresh(t);
+ for(const q of t.questions)a.responses[q.id]=q.type==='mc'?q.answer:q.type==='fill'?q.answer:'My existing response.';
+ a.responses['t3-q17']='Lenin';delete a.responses['t3-q17-wwi'];a.finished=true;
+ a.selfScores['t3-q24']=4;
+ const restored=p.restore(t,a);
+ assert.ok(p.valid(t,restored));assert.equal(restored.finished,false);
+ assert.equal(restored.responses['t3-q17'],undefined);assert.equal(restored.responses['t3-q17-wwi'],undefined);
+ assert.equal(restored.selfScores['t3-q24'],undefined);
+ assert.equal(restored.responses[t.questions[0].id],t.questions[0].answer);
+ assert.equal(p.complete(t,restored),false);
 });

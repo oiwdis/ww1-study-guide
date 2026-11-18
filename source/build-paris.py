@@ -3,23 +3,23 @@ from pathlib import Path
 people=[]
 def p(name,leader,pages,tag,goal,motives,tension,outcome,note=None):
  people.append(dict(name=name,leader=leader,pages=pages,tag=tag,goal=goal,motives=motives,tension=tension,outcome=outcome,note=note))
-p('Britain','David Lloyd George',[1],'Big Four','Protect the British Empire and European security while restoring trade.',[
+p('Britain','David Lloyd George',[1],'Big Three','Protect the British Empire and European security while restoring trade.',[
 'Preserve imperial holdings, trade routes, and Britain’s international influence. Indian self-rule was not part of the British delegation’s agenda.',
 'Secure France, remove the German naval threat, settle territorial disputes, and support a League of Nations.',
 'Demand reparations to address wartime losses, but rehabilitate Germany sufficiently to stabilize Europe and revive its role as a buyer of British goods.'
 ],'Punishing Germany too severely could undermine the German recovery Britain needed for trade. Public demands for compensation also limited compromise.','The handout presents Britain as balancing French security demands with the need for a functioning European economy.')
-p('France','Georges Clemenceau',[2],'Big Four','Prevent another German invasion and obtain compensation for devastation.',[
+p('France','Georges Clemenceau',[2],'Big Three','Prevent another German invasion and obtain compensation for devastation.',[
 'Weaken Germany militarily, strategically, and economically after repeated invasions of French territory.',
 'Seek British and American guarantees of French security and compensation for deaths, destruction, lost production, and damaged land.',
 'Prioritize practical security over confidence that Wilson’s international principles alone could prevent future attacks.'
 ],'France wanted a much weaker Germany; Wilson and British leaders feared that an excessively punitive settlement could destabilize Europe.','The handout also describes René Massigli’s attempts at rapprochement with Germany, showing that French policy included diplomatic alternatives. The U.S. Senate did not ratify the proposed American security guarantee.')
-p('Italy','Vittorio Orlando',[3],'Big Four','Obtain the territorial rewards promised for entering the war on the Allied side.',[
+p('Italy','Vittorio Orlando',[3],'Allied power','Obtain the territorial rewards promised for entering the war on the Allied side.',[
 'Invoke the secret Treaty of London (1915), through which Britain and France promised territorial gains in return for Italian participation.',
 'Use Italy’s heavy casualties and financial losses to argue that sacrifice deserved compensation and great-power status.',
 'Press claims to former Austro-Hungarian territories and wider imperial gains.'
 ],'Italian claims conflicted with other national claims, Wilsonian self-determination, and Allied concern about Italian expansion.','Orlando temporarily left the conference in protest. Italy gained territory but did not receive everything its leaders sought; disappointment encouraged a sense of an incomplete victory.',
 'The handout’s list of colonial rewards is oversimplified. Focus on the Treaty of London promises, competing claims, and Italy’s dissatisfaction rather than memorizing its claim that Italy received “a couple of small German colonies.”')
-p('United States','Woodrow Wilson',[4,5],'Big Four','Create a durable peace through self-determination, diplomacy, and a League of Nations.',[
+p('United States','Woodrow Wilson',[4,5],'Big Three','Create a durable peace through self-determination, diplomacy, and a League of Nations.',[
 'Use the Fourteen Points as a basis for a more open international order, with national sovereignty and cooperation instead of recurring war.',
 'Favor a less punitive treatment of Germany than France sought, while negotiating compromises to secure the League.',
 'Raise questions about the wishes of people in former Ottoman territories and the conflict between national aspirations and imperial claims.'

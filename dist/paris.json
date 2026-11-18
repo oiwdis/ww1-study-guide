@@ -6,7 +6,7 @@
       "pages": [
         1
       ],
-      "tag": "Big Four",
+      "tag": "Big Three",
       "goal": "Protect the British Empire and European security while restoring trade.",
       "motives": [
         "Preserve imperial holdings, trade routes, and Britain’s international influence. Indian self-rule was not part of the British delegation’s agenda.",
@@ -15,7 +15,8 @@
       ],
       "tension": "Punishing Germany too severely could undermine the German recovery Britain needed for trade. Public demands for compensation also limited compromise.",
       "outcome": "The handout presents Britain as balancing French security demands with the need for a functioning European economy.",
-      "note": null
+      "note": null,
+      "representative": "Katelyn"
     },
     {
       "name": "France",
@@ -23,7 +24,7 @@
       "pages": [
         2
       ],
-      "tag": "Big Four",
+      "tag": "Big Three",
       "goal": "Prevent another German invasion and obtain compensation for devastation.",
       "motives": [
         "Weaken Germany militarily, strategically, and economically after repeated invasions of French territory.",
@@ -32,7 +33,8 @@
       ],
       "tension": "France wanted a much weaker Germany; Wilson and British leaders feared that an excessively punitive settlement could destabilize Europe.",
       "outcome": "The handout also describes René Massigli’s attempts at rapprochement with Germany, showing that French policy included diplomatic alternatives. The U.S. Senate did not ratify the proposed American security guarantee.",
-      "note": null
+      "note": null,
+      "representative": "Aidan"
     },
     {
       "name": "Italy",
@@ -40,7 +42,7 @@
       "pages": [
         3
       ],
-      "tag": "Big Four",
+      "tag": "Allied power",
       "goal": "Obtain the territorial rewards promised for entering the war on the Allied side.",
       "motives": [
         "Invoke the secret Treaty of London (1915), through which Britain and France promised territorial gains in return for Italian participation.",
@@ -49,7 +51,8 @@
       ],
       "tension": "Italian claims conflicted with other national claims, Wilsonian self-determination, and Allied concern about Italian expansion.",
       "outcome": "Orlando temporarily left the conference in protest. Italy gained territory but did not receive everything its leaders sought; disappointment encouraged a sense of an incomplete victory.",
-      "note": "The handout’s list of colonial rewards is oversimplified. Focus on the Treaty of London promises, competing claims, and Italy’s dissatisfaction rather than memorizing its claim that Italy received “a couple of small German colonies.”"
+      "note": "The handout’s list of colonial rewards is oversimplified. Focus on the Treaty of London promises, competing claims, and Italy’s dissatisfaction rather than memorizing its claim that Italy received “a couple of small German colonies.”",
+      "representative": "Nina"
     },
     {
       "name": "United States",
@@ -58,7 +61,7 @@
         4,
         5
       ],
-      "tag": "Big Four",
+      "tag": "Big Three",
       "goal": "Create a durable peace through self-determination, diplomacy, and a League of Nations.",
       "motives": [
         "Use the Fourteen Points as a basis for a more open international order, with national sovereignty and cooperation instead of recurring war.",
@@ -67,7 +70,8 @@
       ],
       "tension": "Wilson’s principles conflicted with Allied security and colonial interests. At home, opponents resisted commitments that might limit U.S. freedom of action.",
       "outcome": "The League was established, but the U.S. Senate rejected ratification of Versailles. The United States never joined the League and signed separate peace treaties in 1921.",
-      "note": "The handout overstates U.S. rejection of Article 231: Wilson ultimately accepted the treaty containing it. Separate Wilson’s preferred principles from the compromises he actually signed."
+      "note": "The handout overstates U.S. rejection of Article 231: Wilson ultimately accepted the treaty containing it. Separate Wilson’s preferred principles from the compromises he actually signed.",
+      "representative": "Knox"
     },
     {
       "name": "Japan",
@@ -84,7 +88,8 @@
       ],
       "tension": "Japan’s Shandong demand conflicted with Chinese sovereignty. Its equality proposal met resistance linked to immigration exclusion, especially from Australia.",
       "outcome": "Japan secured important territorial gains, while its racial-equality proposal was rejected. The contrast contributed to resentment toward the Western powers.",
-      "note": "Japan signed the Treaty of Versailles and joined the League. Do not treat the handout’s “walked out” wording as a claim that Japan abandoned the final settlement."
+      "note": "Japan signed the Treaty of Versailles and joined the League. Do not treat the handout’s “walked out” wording as a claim that Japan abandoned the final settlement.",
+      "representative": "Elliot"
     },
     {
       "name": "China",
@@ -101,7 +106,8 @@
       ],
       "tension": "Japan’s wartime agreements and great-power bargaining outweighed China’s appeal to sovereignty. Chinese delegates also faced distrust and pressure at home.",
       "outcome": "The Shandong decision helped trigger the May Fourth Movement. China refused to sign Versailles. The slide deck later contrasts the 1919 decision with the restoration of Chinese sovereignty in Shandong in 1922.",
-      "note": null
+      "note": null,
+      "representative": "Adam"
     },
     {
       "name": "Australia",
@@ -136,7 +142,8 @@
       ],
       "tension": "Romania wanted promised gains, while the Allies questioned the consequences of its wartime decisions and disputed parts of its demands.",
       "outcome": "Queen Marie helped advocate Romania’s case; disputes over terms and reparations remained.",
-      "note": "Historical correction: Romania was already independent before WWI, and the postwar settlement greatly enlarged it, including recognition of Transylvania. The handout’s claim that it “never got the land” is misleading. Its most useful theme is the struggle to secure claims and favorable recognition."
+      "note": "Historical correction: Romania was already independent before WWI, and the postwar settlement greatly enlarged it, including recognition of Transylvania. The handout’s claim that it “never got the land” is misleading. Its most useful theme is the struggle to secure claims and favorable recognition.",
+      "representative": "Fiona"
     },
     {
       "name": "Vietnam",
@@ -153,7 +160,8 @@
       ],
       "tension": "French imperial interests and the conference’s priorities limited attention to even these moderate demands.",
       "outcome": "The eight-point petition received no meaningful response from the peacemakers but increased the petitioner’s visibility among Vietnamese activists.",
-      "note": "The 1919 petition did not demand immediate full independence. Distinguish these specific reforms from Ho Chi Minh’s later independence movement."
+      "note": "The 1919 petition did not demand immediate full independence. Distinguish these specific reforms from Ho Chi Minh’s later independence movement.",
+      "representative": "Kaia"
     },
     {
       "name": "South Africa",
@@ -187,7 +195,8 @@
       ],
       "tension": "Official representation did not mean independence or representation of all Indian political opinion. British imperial interests limited how self-determination was applied.",
       "outcome": "India joined the League despite lacking self-government. The 1919 Amritsar massacre and continued repression sharpened anger toward British rule.",
-      "note": "The Indian National Congress was founded in 1885; it was not newly created at the time of the conference. Keep the official colonial delegation distinct from nationalist demands."
+      "note": "The Indian National Congress was founded in 1885; it was not newly created at the time of the conference. Keep the official colonial delegation distinct from nationalist demands.",
+      "representative": "Nadav"
     },
     {
       "name": "Ottoman lands / Turkish nationalists",
@@ -256,7 +265,8 @@
       ],
       "tension": "Even moderate demands challenged the racial hierarchy of colonial rule. The powers that promoted some European national claims remained reluctant to extend the same principles overseas.",
       "outcome": "The conference powers made no firm commitment to these demands. Pan-African organizing nevertheless created a forum for shared political advocacy.",
-      "note": "Historical correction: Blaise Diagne was Senegalese, not Haitian as the sheet labels him. The later Négritude movement should not be treated as an already established 1919 movement."
+      "note": "Historical correction: Blaise Diagne was Senegalese, not Haitian as the sheet labels him. The later Négritude movement should not be treated as an already established 1919 movement.",
+      "representative": "Flora"
     },
     {
       "name": "Brazil",
@@ -291,7 +301,8 @@
       ],
       "tension": "Korean claims challenged the authority of Japan, an Allied power. The gap between great-power rhetoric and actual support for colonized peoples limited the petition’s influence.",
       "outcome": "The representatives achieved little at Paris. Their experience became an example of the uneven application of self-determination.",
-      "note": null
+      "note": null,
+      "representative": "Avery"
     }
   ],
   "comparisons": [
