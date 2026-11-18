@@ -51,7 +51,7 @@ STEMS={
 't1-q03':'Why does the cartoon show foreign powers gathered around China?',
 't1-q04':'What does the missing center stone in the League of Nations bridge represent?',
 't1-q05':'Why are the countries pointing at one another in “Who Did It?”?',
-'t1-q06':'Which statements correctly explain the difference between WWI’s long-term causes and the event that triggered the crisis?',
+'t1-q06':'Which statements about the causes of WWI are correct?',
 't1-q09':'What made it difficult for armies to advance quickly on the Western Front?',
 't1-q10':'Which government policies show total war affecting civilians at home?',
 't1-q13':'Which sequence correctly explains how Russia left WWI?',
